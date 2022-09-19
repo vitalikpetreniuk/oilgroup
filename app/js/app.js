@@ -3,8 +3,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-    $('.submenu .back').on('click', function (){
-        $('.submenu').removeClass('active');
+    $('.submenu .back').on('click', function (e){
+        e.stopPropagation();
+        $(this).parent('.submenu').removeClass('active');
     })
     $(".menu-btn").on("click", function(){
         $('body').toggleClass('fixed')
@@ -18,46 +19,64 @@ document.addEventListener("DOMContentLoaded", function() {
     //     if (scroll >= 198) sticky.addClass('fixed');
     //     else sticky.removeClass('fixed');
     // });
-    var didScroll;
-    var lastScrollTop = 0;
-    var delta = 5;
-    var navbarHeight = $('header').outerHeight();
+    // var didScroll;
+    // var lastScrollTop = 0;
+    // var delta = 5;
+    // var navbarHeight = $('header').outerHeight();
+    //
+    // $(window).scroll(function(event){
+    //     didScroll = true;
+    // });
+    //
+    // setInterval(function() {
+    //     if (didScroll) {
+    //         hasScrolled();
+    //         didScroll = false;
+    //     }
+    // }, 250);
+    //
+    // function hasScrolled() {
+    //     var st = $(this).scrollTop();
+    //
+    //     // Make sure they scroll more than delta
+    //     if(Math.abs(lastScrollTop - st) <= delta)
+    //         return;
+    //         // If they scrolled down and are past the navbar, add class .nav-up.
+    //         // This is necessary so you never see what is "behind" the navbar.
+    //         if (st > lastScrollTop && st > navbarHeight){
+    //             // Scroll Down
+    //             $('header').removeClass('nav-down').addClass('nav-up');
+    //         } else {
+    //             // Scroll Up
+    //             if(st + $(window).height() < $(document).height()) {
+    //                 $('header').removeClass('nav-up').addClass('nav-down');
+    //             }
+    //         }
+    //
+    //
+    //     lastScrollTop = st;
+    // }
+    var prevScrollpos = window.pageYOffset;
 
-    $(window).scroll(function(event){
-        didScroll = true;
-    });
+    /* Get the header element and it's position */
+    var headerDiv = document.querySelector("header.header");
+    var headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
 
-    setInterval(function() {
-        if (didScroll) {
-            hasScrolled();
-            didScroll = false;
+    window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+
+        /* if we're scrolling up, or we haven't passed the header,
+           show the header at the top */
+        if (prevScrollpos > currentScrollPos  || currentScrollPos < headerBottom){
+            headerDiv.style.top = "0";
         }
-    }, 250);
-
-    function hasScrolled() {
-        var st = $(this).scrollTop();
-
-        // Make sure they scroll more than delta
-        if(Math.abs(lastScrollTop - st) <= delta)
-            return;
-        if ( $(".header").not().mouseover() ) {
-            // If they scrolled down and are past the navbar, add class .nav-up.
-            // This is necessary so you never see what is "behind" the navbar.
-            if (st > lastScrollTop && st > navbarHeight){
-                // Scroll Down
-                $('header').removeClass('nav-down').addClass('nav-up');
-            } else {
-                // Scroll Up
-                if(st + $(window).height() < $(document).height()) {
-                    $('header').removeClass('nav-up').addClass('nav-down');
-                }
-            }
+        else{
+            /* otherwise we're scrolling down & have passed the header so hide it */
+            headerDiv.style.top = "-178px";
         }
 
-
-        lastScrollTop = st;
+        prevScrollpos = currentScrollPos;
     }
-
     function windowSize(){
         if ($(window).width() <= '992'){
                 $('.collapse').readmore({
@@ -68,8 +87,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 $('.filt-btn').on('click', function (){
                     $('.filter').toggleClass('active');
                 });
-            $(".has-children").on('click', function(){
-                $(".submenu").addClass('active');
+            $(".menu-item-has-children").on('click', function(){
+                $(this).children(".submenu").addClass('active');
             });
             $('.submenu .row .title').on("click", function (){
                 $(this).parent().toggleClass("active")
@@ -112,11 +131,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 $(this).addClass('active');
                 // $('body').addClass('fixed')
             });
-            $(".has-children").mouseover(function(){
-                $(".submenu").addClass('active');
+            $(".menu-item-has-children").mouseover(function(){
+                $(this).children(".submenu").addClass('active');
             });
-            $('.has-children').mouseleave(function(){
-                $('.submenu').removeClass('active');
+            $('.menu-item-has-children').mouseleave(function(){
+                $(this).children('.submenu').removeClass('active');
             });
             $('.tabs .tab:nth-of-type(1)').addClass('active');
 
@@ -137,6 +156,7 @@ document.addEventListener("DOMContentLoaded", function() {
         $('.modal').removeClass('open');
         $('body').removeClass('fixed');
     });
+
     $(window).on('load resize',windowSize);
     $('.tabs > ul').on('click', 'li:not(.active)', function() {
         $(this)
@@ -144,6 +164,11 @@ document.addEventListener("DOMContentLoaded", function() {
             .closest('.tabs').find('.tab').removeClass('active').eq($(this).index()).addClass('active');
     });
 });
+lightbox.option({
+    'resizeDuration': 200,
+    'disableScrolling': true,
+    'fitImagesInViewport': true
+})
 if($('.mapper').length > 0) {
     mapboxgl.accessToken = 'pk.eyJ1IjoiY2ljZXJvYWdlbnR1ciIsImEiOiJja2lyOTBuOXYwOGJ5MnhzY2kyMXRocG9nIn0.fYRg2TLIuWCaZuxVjhsadg';
 
