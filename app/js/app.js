@@ -1,11 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
-
-
-
-
-    $('.submenu .back').on('click', function (e){
+    $('.mega-sub-menu .back').on('click', function (e){
         e.stopPropagation();
-        $(this).parent('.submenu').removeClass('active');
+        $(this).parent('.mega-sub-menu').removeClass('active');
     })
     $(".menu-btn").on("click", function(){
         $('body').toggleClass('fixed')
@@ -88,9 +84,9 @@ document.addEventListener("DOMContentLoaded", function() {
                     $('.filter').toggleClass('active');
                 });
             $(".menu-item-has-children").on('click', function(){
-                $(this).children(".submenu").addClass('active');
+                $(this).closest().children(".mega-sub-menu").addClass('active');
             });
-            $('.submenu .row .title').on("click", function (){
+            $('.mega-sub-menu .row .title').on("click", function (){
                 $(this).parent().toggleClass("active")
                 $(this).parent().siblings().removeClass("active");
             })
@@ -123,22 +119,21 @@ document.addEventListener("DOMContentLoaded", function() {
             $('.tabs').removeClass('swiper');
             $('.tab-inn').removeClass('swiper-wrapper')
             $('.tab').removeClass('swiper-slide')
-            $(".submenu").mouseleave(function(){
-                $(this).removeClass('active');
-                // $('body').removeClass('fixed')
-            });
-            $(".submenu").mouseover(function(){
-                $(this).addClass('active');
-                // $('body').addClass('fixed')
-            });
+            // $(".mega-sub-menu").mouseleave(function(){
+            //     $(this).removeClass('active');
+            //     // $('body').removeClass('fixed')
+            // });
+            // $(".mega-sub-menu").mouseover(function(){
+            //     $(this).addClass('active');
+            //     // $('body').addClass('fixed')
+            // });
             $(".menu-item-has-children").mouseover(function(){
-                $(this).children(".submenu").addClass('active');
+                $(this).children(".mega-sub-menu").addClass('active');
             });
             $('.menu-item-has-children').mouseleave(function(){
-                $(this).children('.submenu').removeClass('active');
+                $(this).children('.mega-sub-menu').removeClass('active');
             });
             $('.tabs .tab:nth-of-type(1)').addClass('active');
-
 
         }
     }
@@ -427,4 +422,5 @@ if($('.mapper').length > 0) {
             map.getSource('single-point').setData(event.result.geometry);
         });
     });
+
 }

@@ -19,15 +19,20 @@ header.header
     padding: 11px 0
     width: 100%
     .container
-      display: flex
-      justify-content: flex-end
+      ul
+        display: flex
+        justify-content: flex-end
+        list-style: none
+        margin-bottom: 0
+        li
+          &:not(:last-of-type)
+            margin-right: 27px
     a
       color: #ffffff
       font-weight: 400
       font-size: 12px
       line-height: 11px
-      &:not(:last-of-type)
-        margin-right: 27px
+
   .mid-bar
     padding: 13px 0
     border-bottom: 2px solid #EFEFEF
@@ -144,7 +149,7 @@ header.header
     padding: 17px 0
     .lang-mob
       display: none
-    ul.main-menu
+    ul#mega-menu-primary
       padding-inline-start: 0
       padding: 0 14%
       margin-bottom: 0
@@ -156,17 +161,25 @@ header.header
 
       font-size: 16px
       line-height: 15px
-      li
+      .mega-sub-menu
+        padding-inline-start: 0
+        margin-bottom: 0
+        list-style: none
+      & > li
+        .mega-menu-description
+          display: none
         &.active
           a
             font-weight: 500
         &:hover
-          a
+
+          & > a
             color: $blue
             text-decoration: unset
         &.menu-item-has-children
           //position: relative
-          a
+
+          & > a
             position: relative
             &:after
               position: absolute
@@ -179,83 +192,111 @@ header.header
           color: #000
           padding: 4px
           transition: 0.4s
-    .submenu
-      //display: none
-      opacity: 0
-      position: absolute
-      width: 100%
-      //height: calc(100vh - 198px)
-      //overflow-y: scroll
-      left: 0
-      z-index: -1
-      height: 0px
-      overflow: hidden
-      background-color: #ffffff
-      top: 178px
-      transition: 0.4s
-      .container
-        padding: 45px 15px 45px
-      .row
-        display: none
-      .back
-        display: none
-      &.active
-        display: block
-        opacity: 1
-        height: auto
-        z-index: 5
-        .row
-          display: flex
-      .row
-        & > div
-          &:nth-child(6n+1), &:nth-child(6n+5)
-            .title
-              a
-                color: #003887
-          &:nth-child(6n+2)
-            .title
-              a
-                color: #C32230
-          &:nth-child(6n+3)
-            .title
-              a
-                color: #F07D00
-          &:nth-child(6n+4)
-            .title
-              a
-                color: #E93F33
-          &:nth-child(6n+6)
-            .title
-              a
-                color: #646464
-        .title
-          font-size: 14px
-          line-height: 150%
-          letter-spacing: 0.02em
-          text-transform: uppercase
-          margin-bottom: 16px
-          min-height: 42px
-          font-weight: 600
-        ul
+
+        & > .mega-sub-menu
+          //display: none
+          opacity: 0
+          position: absolute
           padding-inline-start: 0
-          margin-bottom: 38px
+          margin-bottom: 0
           list-style: none
-          li
-            margin-bottom: 25px
-            a
-              line-height: 140%
-              color: #222222
-              transition: 0.4s ease-out
-              &:hover
-                text-decoration: unset
-                color: #626262
+          width: 100%
+          //height: calc(100vh - 198px)
+          //overflow-y: scroll
+          left: 0
+          z-index: -1
+          height: 0px
+          overflow: hidden
+          background-color: #ffffff
+          top: 194px
+          transition: 0.4s
+          padding: 45px 15px 45px
+          .back
+            display: none
+          &.active
+            display: block
+            opacity: 1
+            height: auto
+            z-index: 5
+            .row
+              display: flex
+          .mega-menu-row
+            & > ul
+              display: flex
+              margin-bottom: 0
+              & > li
+                width: 25%
+                display: block
+                ul
+                  margin-bottom: 25px
+                  li
+                    &:not(:last-of-type)
+                      margin-bottom: 25px
+                &:nth-child(6n+1), &:nth-child(6n+5)
+                  .mega-menu-title
+                    color: #003887
+                &:nth-child(6n+2)
+                  .mega-menu-title
+                      color: #C32230
+                &:nth-child(6n+3)
+                  .mega-menu-title
+                      color: #F07D00
+                &:nth-child(6n+4)
+                  .mega-menu-title
+                      color: #E93F33
+                &:nth-child(6n+6)
+                  .mega-menu-title
+                      color: #646464
+            & > ul
+              &:nth-child(6n+1), &:nth-child(6n+5)
+                .mega-menu-title
+                  a
+                    color: #003887
+              &:nth-child(6n+2)
+                .title
+                  a
+                    color: #C32230
+              &:nth-child(6n+3)
+                .title
+                  a
+                    color: #F07D00
+              &:nth-child(6n+4)
+                .title
+                  a
+                    color: #E93F33
+              &:nth-child(6n+6)
+                .title
+                  a
+                    color: #646464
+            .mega-menu-title
+              font-size: 14px
+              line-height: 150%
+              display: block
+              letter-spacing: 0.02em
+              text-transform: uppercase
+              margin-bottom: 16px
+              min-height: 42px
+              font-weight: 600
+            ul
+              padding-inline-start: 0
+              //margin-bottom: 38px
+              list-style: none
+              li
+                //margin-bottom: 25px
+                a
+                  line-height: 140%
+                  color: #222222
+                  transition: 0.4s ease-out
+                  display: block
+                  &:hover
+                    text-decoration: unset
+                    color: #626262
 header.header
   transition: all 0.2s ease-in-out
   z-index: 50
 
 .content
   height: 1000px
-
 header.fixedToTop
   position: fixed
   top: 0
@@ -264,1130 +305,1126 @@ header.fixedToTop
 
   + .content
     margin-top: 8rem
-main.main
-  section
-    &.top-banner
-      position: relative
-      padding: 77px 0
-      &:after
-        content: ""
-        display: block
-        position: absolute
-        width: 100%
-        height: 100%
-        left: 0
-        top: 0
-        background: linear-gradient(90deg, #F5F5F5 26.2%, rgba(245, 245, 245, 0) 96.95%)
-        z-index: 2
-      &>img
-        position: absolute
-        width: 100%
-        height: 100%
-        object-fit: cover
-        top: 0
-        left: 0
-      .container
-        max-width: 1600px
-        .text-block
-          position: relative
-          max-width: 529px
-          box-shadow: 4px 15px 15px rgba(0, 0, 0, 0.1)
-          background: #FFFFFF
-          padding: 50px
-          border-left: 6px solid $blue
-          z-index: 3
-          border-radius: 5px
-          h1
-            font-weight: 600
-            font-size: 36px
-            line-height: 140%
-            margin-bottom: 10px
-          p
-            font-weight: 400
-            font-size: 16px
-            line-height: 192%
-            color: #464647
-            &:last-of-type
-              margin-bottom: 0
-    &.phones-contact
-      padding: 30px 0 48px
-      background-color: #ffffff
-      &.no-bg
-        background: unset
-        padding: 35px 0 25px
-      .row
-        &>div
-          padding: 0 10px
-          .inn
-            border-radius: 10px
-          &:nth-of-type(1)
-            &:hover
-              .phones
-                a
-                  &:nth-of-type(1)
-                    &:after
-                      right: 35px
-            .inn
-              background:  $blue
-              color: #ffffff
-              display: flex
-              align-items: center
-              padding: 15px 110px 15px 45px
-              height: 96px
-              position: relative
-            .title
-              font-weight: 400
-              font-size: 16px
-              line-height: 15px
-              margin-right: 59px
+section
+  &.top-banner
+    position: relative
+    padding: 77px 0
+    &:after
+      content: ""
+      display: block
+      position: absolute
+      width: 100%
+      height: 100%
+      left: 0
+      top: 0
+      background: linear-gradient(90deg, #F5F5F5 26.2%, rgba(245, 245, 245, 0) 96.95%)
+      z-index: 2
+    &>img
+      position: absolute
+      width: 100%
+      height: 100%
+      object-fit: cover
+      top: 0
+      left: 0
+    .container
+      max-width: 1600px
+      .text-block
+        position: relative
+        max-width: 529px
+        box-shadow: 4px 15px 15px rgba(0, 0, 0, 0.1)
+        background: #FFFFFF
+        padding: 50px
+        border-left: 6px solid $blue
+        z-index: 3
+        border-radius: 5px
+        h1
+          font-weight: 600
+          font-size: 36px
+          line-height: 140%
+          margin-bottom: 10px
+        p
+          font-weight: 400
+          font-size: 16px
+          line-height: 192%
+          color: #464647
+          &:last-of-type
+            margin-bottom: 0
+  &.phones-contact
+    padding: 30px 0 48px
+    background-color: #ffffff
+    &.no-bg
+      background: unset
+      padding: 35px 0 25px
+    .row
+      &>div
+        padding: 0 10px
+        .inn
+          border-radius: 10px
+        &:nth-of-type(1)
+          &:hover
             .phones
               a
-                color: white
-                display: block
-                font-weight: 700
-                text-decoration: none
-                font-size: 20px
                 &:nth-of-type(1)
                   &:after
-                    content: ""
-                    position: absolute
-                    display: block
-                    width: 20px
-                    height: 20px
-                    right: 43px
-                    top: 39px
-                    transition: 0.4s
-                    background: no-repeat center center / 100% 100% url('../images/dest/phone.png')
-          &:nth-of-type(2)
-            .inn
-              height: 96px
-              background: no-repeat center right 43px / 16px 16px url('../images/dest/arr.png')  #5E5E67
-              transition: 0.4s ease-out
-              &:hover
-                background: no-repeat center right 36px / 16px 16px url('../images/dest/arr.png')  #535357
-              a
-                display: block
-                padding: 35px 43px
-                color: white
-                text-decoration: unset
-
-    &.brands
-      background-color: #094174
-      padding: 80px 0 90px
-      &.no-bg
-        background-color: unset
-        padding: 0px 0 40px
-        &.dumb
-          padding: 50px 0 45px
-        &.services
-          .brand-inn
-            flex-wrap: wrap
-            margin-right: -15px
-            .brand-block
-              width: calc(25% - 15px)
-              margin-bottom: 15px
-              &:after
-                content: ""
-                position: absolute
-                z-index: 1
-                width: 100%
-                height: 100%
-                top: 0
-                left: 0
-                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 49.88%, #000000 100%)
-              &:hover
-                img
-                  filter: grayscale(1)
-
-        h2.title
-          margin-bottom: 85px
-      h2.title
-        margin-bottom: 40px
-      .brand-inn
-        display: flex
-        margin-right: -12px
-        .brand-block
-          margin-right: 15px
-          width: calc(100%/6 - 15px)
-          height: 448px
-          position: relative
-          border-radius: 10px
-          overflow: hidden
-
-          & > .block
-            position: absolute
-            z-index: 3
+                    right: 35px
+          .inn
+            background:  $blue
+            color: #ffffff
             display: flex
-            flex-direction: column
-            left: 34px
-            bottom: 50px
-            .title
-              font-size: 20px
-              line-height: 140%
-              text-transform: uppercase
-              color: #FFFFFF
-              display: block
-              margin-bottom: 10px
-            .link
-              font-size: 14px
-              line-height: 140%
-              font-weight: 400
-              transition: 0.4s
-              text-decoration-line: underline
-              color: #FFFFFF
-          &.turq
-            border-bottom: 11px solid #14B0A9
-            &:hover
-              &>.block .link
-                color: #14B0A9
-          &.orange
-            border-bottom: 11px solid #F07D00
-            &:hover
-              &>.block .link
-                color: #F07D00
-          &.lred
-            border-bottom: 11px solid #E93F33
-            &:hover
-              &>.block .link
-                color: #E93F33
-          &.blue
-            border-bottom: 11px solid #003887
-            &:hover
-              &>.block .link
-                color: #003887
-          &.red
-            border-bottom: 11px solid #C32230
-            &:hover
-              &>.block .link
-                color: #C32230
-          & > a
-            display: block
-            width: 100%
-            height: 100%
-            display: flex
-            justify-content: center
             align-items: center
+            padding: 15px 110px 15px 45px
+            height: 96px
+            position: relative
+          .title
+            font-weight: 400
+            font-size: 16px
+            line-height: 15px
+            margin-right: 59px
+          .phones
+            a
+              color: white
+              display: block
+              font-weight: 700
+              text-decoration: none
+              font-size: 20px
+              &:nth-of-type(1)
+                &:after
+                  content: ""
+                  position: absolute
+                  display: block
+                  width: 20px
+                  height: 20px
+                  right: 43px
+                  top: 39px
+                  transition: 0.4s
+                  background: no-repeat center center / 100% 100% url('../images/dest/phone.png')
+        &:nth-of-type(2)
+          .inn
+            height: 96px
+            background: no-repeat center right 43px / 16px 16px url('../images/dest/arr.png')  #5E5E67
+            transition: 0.4s ease-out
             &:hover
-              img
-                filter: grayscale(0)
-            .bg
+              background: no-repeat center right 36px / 16px 16px url('../images/dest/arr.png')  #535357
+            a
+              display: block
+              padding: 35px 43px
+              color: white
+              text-decoration: unset
+
+  &.brands
+    background-color: #094174
+    padding: 80px 0 90px
+    &.no-bg
+      background-color: unset
+      padding: 0px 0 40px
+      &.dumb
+        padding: 50px 0 45px
+      &.services
+        .brand-inn
+          flex-wrap: wrap
+          margin-right: -15px
+          .brand-block
+            width: calc(25% - 15px)
+            margin-bottom: 15px
+            &:after
+              content: ""
               position: absolute
-              object-fit: cover
+              z-index: 1
               width: 100%
+              height: 100%
               top: 0
               left: 0
-              height: calc(100% + 11px)
-              filter: grayscale(1)
-              transition: 0.4s
-
-            .logo
-              position: relative
-              z-index: 2
-              max-width: 70%
-              max-height: 106px
-
-    &.markets
-      padding: 80px 0 100px
-      h2.title
-        margin-bottom: 35px
-      .tabs
-        .swiper-button-next:after, .swiper-button-prev:after
-          display: none
-
-        & > ul
-          padding-inline-start: unset
-          display: flex
-          flex-wrap: wrap
-          list-style: none
-          margin-bottom: 15px
-          li
-            padding: 10px 18px
-            background-color: #ffffff
-            border-radius: 5px
-            margin-bottom: 10px
-            margin-right: 10px
-            cursor: pointer
-            font-size: 16px
-            line-height: 150%
-            transition: 0.4s
-            &.active, &:hover
-              background-color: $blue
-              color: #ffffff
-        .tab-inn
-          .tab
-            display: none
-            @include tab
-            &.active
-              display: flex
-    &.consult
-      padding: 80px 0 90px
-      position: relative
-      color: #ffffff
-      & > img
-        position: absolute
-        object-fit: cover
-        width: 100%
-        height: 100%
-        top: 0
-        left: 0
-      h2.title
-        color: white
-        margin-bottom: 31px
-      .row > div
-        &:nth-of-type(2)
-          span
-            display: block
-            margin: 10px 0 20px
-            text-align: right
-          .tel
-            display: flex
-            align-items: center
-            justify-content: flex-end
-            font-weight: 700
-            font-size: 36px
-            line-height: 150%
-            color: #ffffff
-            position: relative
-            margin-bottom: 7px
+              background: linear-gradient(180deg, rgba(0, 0, 0, 0) 49.88%, #000000 100%)
             &:hover
-              color: rgba(255, 255, 255, 0.65)
-              text-decoration: unset
-            a
-              transition: 0.4s
-            &:after
-              content: ""
-              display: inline-block
-              position: relative
-              width: 49px
-              height: 49px
-              margin-left: 15px
-              border-radius: 3px
-              background: no-repeat center center / 20px 20px url('../images/dest/tel2.png')  $blue
-    &.about-us
-      padding: 80px 0
-      @include decent
-      .container
-        .btn
-          width: 235px
-          text-align: center
-        & > img
-          position: absolute
-          height: 100%
-          width: 60%
-          top: 0
-          right: 0
-          z-index: 1
-    &.last-news
-      margin-bottom: 95px
-      &.big
-        padding: 50px 0 25px
-        margin-bottom: 0
-        .news-inn
-          margin-bottom: 10px
-          & + .pagination
-            @include pagination
-            background: #FFFFFF
-            margin: 0 auto
-          .news-block
-            margin-bottom: 40px
-      h2.title
-        margin-bottom: 80px
-      .news-inn
-        display: flex
-        justify-content: space-between
-        margin-bottom: 70px
-        flex-wrap: wrap
-        & + .btn
-          margin: 0 auto
-          width: 236px
-          text-align: center
-        .news-block
-          width: calc(100% / 4 - 15px)
-          a:nth-of-type(1)
-            display: block
-            position: relative
-            height: 255px
-            border-radius: 5px
-            z-index: 2
-            display: flex
-            align-items: flex-end
-            text-decoration: unset
-            overflow: hidden
-            margin-bottom: 17px
-            &:hover
-              .title
-                text-decoration: none
-              &:after
-                transform: translateY(20%)
-            &:after
-              content: ""
-              height: 100%
-              width: 100%
-              border-radius: 5px
-              display: block
-              z-index: 2
-              left: 0
-              bottom: 0
-              position: absolute
-              background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30.52%, rgba(0, 0, 0, 0.92) 100%)
-              transition: 0.4s
-            .title
-              position: relative
-              font-weight: 700
-              font-size: 20px
-              line-height: 150%
-              color: #FFFFFF
-              padding: 0 15px 10px
-              z-index: 3
-            img
-              position: absolute
-              height: 100%
-              width: 100%
-              object-fit: cover
-              z-index: 1
-          p
-            line-height: 150%
-            margin-bottom: 25px
-          .more
-            line-height: 15px
-            text-decoration-line: underline
-            color: #003887
-            position: relative
-            display: flex
-            align-items: center
-            transition: 0.4s
-            &:hover
-              color: #496A99
-              &:after
-                transform: translateX(5px)
-                background: no-repeat center center / 100% url("../images/dest/arr8.svg")
-            &:after
-              content: ""
-              display: block
-              width: 15px
-              height: 15px
-              position: relative
-              margin-left: 9px
-              transition: 0.4s
-              background: no-repeat center center / 100% url("../images/dest/arr2.svg")
-    &.inn-banner
-      position: relative
-      width: 100%
-      padding: 25px 0 30px
-      &.clean
-        padding: 0
-        height: 305px
-      &.no-p
-        padding: 25px 0 70px
-      & + section
-        padding-top: 50px
-      &:after
-        content: ""
-        width: 100%
-        height: 100%
-        position: absolute
-        left: 0
-        z-index: 2
-        top: 0
-        background:  linear-gradient(180deg, rgba(69, 69, 69, 0) 0%, #454545 100%)
-      & > img
-        position: absolute
-        left: 0
-        top: 0
-        width: 100%
-        height: 100%
-        object-fit: cover
-        z-index: 1
-      .container
-        z-index: 3
-        position: relative
-        .tel
-          color: white
-          text-decoration: underline
-          font-size: 14px
-          display: block
-          line-height: 150%
-          &:hover
-            text-decoration: unset
-        .blue-block
-          padding: 35px 45px
-          box-shadow: 4px 15px 15px rgba(0, 0, 0, 0.1)
-          border-radius: 7px
-          max-width: 477px
-          margin-bottom: 25px
-
-          &.wb
-            max-width: 551px
-          &.db
-            max-width: 777px
-          &.l-blue
-            background: #4095CF
-          &.d-blue
-            background: #003887
-          &.red
-            background: #C32230
-          &.lred
-            background: #E93F33
-          &.orange
-            background: #F07D00
-          &.turq
-            background-color: #14b0a9
-          & + p
-            font-weight: 400
-            font-size: 14px
-            margin-bottom: 0
-            line-height: 140%
-            color: #FFFFFF
-            overflow: hidden
-            max-height: fit-content!important
-
-            &+ a
-              color: rgba(255, 255, 255, 0.69)
-              text-decoration: underline
-
-            &:not(:last-of-type)
-              margin-bottom: 15px
-          .crumbs
-            @include crumbs
-          h1.title
-            font-weight: 600
-            font-size: 24px
-            line-height: 140%
-            color: #FFFFFF
-            margin-bottom: 0
-    &.prod-list
-      padding: 50px 0 35px
-      .container
-        .prod-blk
-          @include tab
-          padding: 60px 80px 60px 95px
-
-          &>div:nth-of-type(1)
-            .cat
-              margin: 27px 0 7px
-            h3
-              color: $l-blue
-            &+p
-              //margin-bottom: 80px
-          &:not(:last-of-type)
-            margin-bottom: 20px
-
-          &:nth-of-type(even)
-            flex-direction: row-reverse
-            & > div:nth-of-type(2)
               img
-                margin-right: 30px
-                margin-left: 0
-    &.prod-catalog
-      padding: 50px 0 0
-      background-color: #ffffff
-      & + .phones-contact
-        background: #FFFFFF
-      .filt-btn
-        background-color: #5e5e67
-        width: 100%
-        height: 50px
-        display: flex
-        justify-content: center
-        align-items: center
-        font-size: 14px
-        line-height: 150%
-        letter-spacing: 0.02em
-        text-transform: capitalize
-        color: #FFFFFF
-        display: none
-        img
-          width: 23px
-          height: 23px
-          margin-right: 5px
-      .filter
-        .filter-box
-          background-color: #f4f4f4
-          border-radius: 10px
-          padding: 28px 45px 50px
-          margin-bottom: 15px
-          .title
-            font-weight: 700
-            font-size: 16px
-            line-height: 140%
-            letter-spacing: 0.05em
-            color: #000000
-            margin-bottom: 20px
-          .categories
-            padding-inline-start: 0
-            list-style: none
-            margin-bottom: 0
-            li
-              &:not(:last-of-type)
-                margin-bottom: 15px
-              a
-                font-weight: 400
-                font-size: 16px
-                line-height: 150%
-                text-decoration-line: underline
-                color: #000000
-                &:hover
-                  text-decoration: unset
-          .title-big
-            font-weight: 700
-            font-size: 16px
-            line-height: 140%
-            letter-spacing: 0.05em
-            color: #000000
-            position: relative
-            margin-bottom: 20px
-            &:before
-              content: ""
-              position: absolute
-              display: block
-              width: 23px
-              left: -26px
-              top: -1px
-              height: 23px
-              background: no-repeat center center / contain url("../images/dest/filter2.png")
-          .title-small
-            font-weight: 600
-            font-size: 16px
-            line-height: 150%
-            text-transform: uppercase
-            color: #000000
-            margin-bottom: 20px
-          .check-wrapper
-            display: flex
-            flex-direction: column
-            label
-              display: flex
-              justify-content: left
-              align-items: center
-              margin-bottom: 10px
-              cursor: pointer
-              &:last-of-type
-                margin-bottom: 20px
-              .check-inn
-                margin-right: 10px
-                width: 17px
-                height: 17px
-                position: relative
-                input
-                  width: 17px
-                  height: 17px
-                  appearance: none
-                  cursor: pointer
-                  z-index: 2
-                  position: relative
-                  &:checked
-                    & + span
-                      border: 1px solid #003887
-                      background: no-repeat center center / 10.5px 8px url("../images/dest/check.svg") #003887
-                span
-                  background: #FFFFFF
-                  border: 1px solid #000000
-                  border-radius: 4px
-                  z-index: 1
-                  display: block
-                  height: 100%
-                  width: 100%
-                  position: absolute
-                  left: 0
-                  top: 0
-              & > span
-      .prod-boxes
-        .p-box
-          margin-bottom: 30px
-          .inn
-            position: relative
-            a
-              img
-                border-radius: 10px
-                width: 100%
-                object-fit: cover
-                height: 219px
-                margin-bottom: 15px
-            .title
-              font-weight: 600
-              font-size: 20px
-              line-height: 150%
-              display: block
-              text-transform: uppercase
-              color: #000000
-              margin-bottom: 12px
-              cursor: pointer
-            .sub
-              font-weight: 700
-              font-size: 14px
-              line-height: 150%
-              letter-spacing: 0.05em
-              color: #777777
-              margin-bottom: 7px
-            p
-              line-height: 150%
-              color: #464647
-              margin-bottom: 20px
-            .bt-n
-              display: block
-              padding: 5px 22px
-              background-color: $blue
-              border-radius: 5px
-              font-weight: 600
-              width: fit-content
-              color: white
-              transition: 0.4s ease-out
-              &:hover
-                background-color: #0c74bc
-                text-decoration: unset
-        .pagination
-          @include pagination
-          margin-top: 20px
+                filter: grayscale(1)
 
-    &.prod-top
-      padding: 66px 0
-      background-color: $gray
-      .crumbs
-        @include crumbs
-    &.prod-main
-      padding: 60px 0
-      background-color: #FFFFFF
-      .container
-        .row
-          & > div
-            &:nth-of-type(1)
-              img
-                width: 100%
-                max-height: 540px
-                object-fit: cover
-                border-radius: 10px
-            &:nth-of-type(2)
-              h1.title
-                font-weight: 600
-                font-size: 24px
-                line-height: 150%
-                margin-bottom: 20px
-              .sub
-                font-weight: 700
-                font-size: 16px
-                line-height: 150%
-                text-transform: uppercase
-                letter-spacing: 0.05em
-                color: #7F7F86
-                margin-bottom: 22px
-              .text-block
-                max-width: 429px
-                &:not(:last-of-type)
-                  margin-bottom: 25px
-                h6.small-title
-                  font-weight: 700
-                  font-size: 16px
-                  line-height: 150%
-                  letter-spacing: 0.05em
-                  margin-bottom: 6px
-                p
-                  margin-bottom: 10px
-                ul
-                  padding-inline-start: 0px
-                  margin-bottom: 0
-                  list-style: none
-    &.variations
-      background-color: $gray
-      padding: 80px 0
-      .title-block
-        display: flex
-        justify-content: space-between
-        align-items: center
-        margin-bottom: 35px
-        .no-access
-          padding: 4px 10px
-          background-color: #ffe600
-          border-radius: 5px
-          a
-            font-weight: 700
-            text-decoration: underline
-            color: black
-            &:hover
-              text-decoration: unset
-      .variations-inn
-        .topper
-          font-weight: 700
-          margin-bottom: 10px
-          font-size: 14px
-          line-height: 150%
-          letter-spacing: 0.05em
-          color: rgba(255, 255, 255, 0.5)
-        .vars
-          padding: 24px 16px
-          background-color: #ffffff
-          border-radius: 5px
-          .name
-            font-weight: 500
-          .accesbl
-            a
-              color: black
-              font-weight: 300
-              &:before
-                content: ""
-                display: inline-block
-                width: 6px
-                height: 6px
-                border-radius: 50%
-                position: relative
-                top: -2px
-                margin-right: 10px
-                background-color: #0060EF
-            & + div
-              padding-left: 20px
-              a
-                text-decoration: underline
-                font-weight: 500
-                &:hover
-                  text-decoration: unset
-          &:not(:last-of-type)
-            margin-bottom: 10px
-    &.chars
-      padding: 80px 0 45px
-      h2.title
-        margin-bottom: 30px
-      .hars-inn
-        border-top: 1px dashed rgba(0, 0, 0, 0.21)
-        margin: 0
-        & > div
-          &:nth-of-type(1)
-            & > div
-              margin-right: 0
-          &:nth-of-type(2)
-            & > div
-              margin-left: 0
-          & > div
-            border-bottom: 1px dashed rgba(0, 0, 0, 0.21)
-            padding: 20px 0
-            & > div
-              display: flex
-              align-items: center
-              .name
-                font-weight: 400
-                text-transform: uppercase
-                font-size: 14px
-                line-height: 150%
-                letter-spacing: 0.05em
-                color: #7F7F86
-              .desc
-                font-weight: 400
-                font-size: 16px
-                line-height: 150%
-    &.adds
-      padding: 50px 0 45px
       h2.title
         margin-bottom: 85px
-      .adds-inn
-        .add
-          margin-bottom: 35px
-          img
-            height: 177px
-            border-radius: 5px
-            margin-bottom: 12px
-            width: 100%
-            object-fit: cover
-          .title
-            margin-bottom: 20px
-            a
-              font-size: 20px
-              font-weight: 600
-              line-height: 150%
-              color: #000000
+    h2.title
+      margin-bottom: 40px
+    .brand-inn
+      display: flex
+      margin-right: -12px
+      .brand-block
+        margin-right: 15px
+        width: calc(100%/6 - 15px)
+        height: 448px
+        position: relative
+        border-radius: 10px
+        overflow: hidden
 
+        & > .block
+          position: absolute
+          z-index: 3
+          display: flex
+          flex-direction: column
+          left: 34px
+          bottom: 50px
+          .title
+            font-size: 20px
+            line-height: 140%
+            text-transform: uppercase
+            color: #FFFFFF
+            display: block
+            margin-bottom: 10px
           .link
             font-size: 14px
             line-height: 140%
+            font-weight: 400
+            transition: 0.4s
             text-decoration-line: underline
-            color: #003887
-            &:hover
-              text-decoration: unset
-    &.recentered
-      @include decent
-      padding: 40px 0
-      .container
-        .card
-          .title
-            font-weight: 700
-            color: #464647
-            margin-bottom: 10px
-            position: relative
+            color: #FFFFFF
+        &.turq
+          border-bottom: 11px solid #14B0A9
+          &:hover
+            &>.block .link
+              color: #14B0A9
+        &.orange
+          border-bottom: 11px solid #F07D00
+          &:hover
+            &>.block .link
+              color: #F07D00
+        &.lred
+          border-bottom: 11px solid #E93F33
+          &:hover
+            &>.block .link
+              color: #E93F33
+        &.blue
+          border-bottom: 11px solid #003887
+          &:hover
+            &>.block .link
+              color: #003887
+        &.red
+          border-bottom: 11px solid #C32230
+          &:hover
+            &>.block .link
+              color: #C32230
+        & > a
+          display: block
+          width: 100%
+          height: 100%
+          display: flex
+          justify-content: center
+          align-items: center
+          &:hover
+            img
+              filter: grayscale(0)
+          .bg
+            position: absolute
+            object-fit: cover
+            width: 100%
+            top: 0
+            left: 0
+            height: calc(100% + 11px)
+            filter: grayscale(1)
+            transition: 0.4s
 
-            &:after
-              content: ""
-              position: absolute
-              width: 19px
-              height: 5px
-              display: block
-              background-color: $blue
-              left: -40px
-              top: 13px
-          ul
-            padding-inline-start: 15px
-            margin-bottom: 45px
-            color: #464647
-            &:last-of-type
-              margin-bottom: 0
-            li
-              margin-bottom: 0
-              &:not(:last-of-type)
-                margin-bottom: 5px
-    &.tripl_icon
-      padding: 40px 0
-      & + .bg-blk
-        margin: 40px 0 25px
-      & + .center-btn
-        padding-top: 40px
-      h2.title
-        margin-bottom: 50px
-      .row
-        & > div
-          .icon-inn
-            background: #FFFFFF
-            border-radius: 10px
-            padding: 30px 35px 20px
+          .logo
+            position: relative
+            z-index: 2
+            max-width: 70%
+            max-height: 106px
+
+  &.markets
+    padding: 80px 0 100px
+    h2.title
+      margin-bottom: 35px
+    .tabs
+      .swiper-button-next:after, .swiper-button-prev:after
+        display: none
+
+      & > ul
+        padding-inline-start: unset
+        display: flex
+        flex-wrap: wrap
+        list-style: none
+        margin-bottom: 15px
+        li
+          padding: 10px 18px
+          background-color: #ffffff
+          border-radius: 5px
+          margin-bottom: 10px
+          margin-right: 10px
+          cursor: pointer
+          font-size: 16px
+          line-height: 150%
+          transition: 0.4s
+          &.active, &:hover
+            background-color: $blue
+            color: #ffffff
+      .tab-inn
+        .tab
+          display: none
+          @include tab
+          &.active
             display: flex
-            flex-direction: column
-            align-items: center
-            text-align: center
-            height: 100%
-            img
-              margin-bottom: 30px
-              min-height: 59px
-            .title
-              font-weight: 700
-              font-size: 20px
-              line-height: 150%
-            p
-              font-weight: 400
-              margin-top: 30px
-              font-size: 16px
-              color: #464647
-              line-height: 150%
-    &.study-gal
-      padding-top: 80px
-      .container
-        h2.title
-          margin-bottom: 52px
-        .gal-inn
-          display: grid
-          grid-template-columns: repeat(3, 1fr)
-          grid-template-rows: repeat(2, 1fr) 0.2fr repeat(2, 1fr)
-          grid-column-gap: 15px
-          grid-row-gap: 15px
+  &.consult
+    padding: 80px 0 90px
+    position: relative
+    color: #ffffff
+    & > img
+      position: absolute
+      object-fit: cover
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+    h2.title
+      color: white
+      margin-bottom: 31px
+    .row > div
+      &:nth-of-type(2)
+        span
+          display: block
+          margin: 10px 0 20px
+          text-align: right
+        .tel
+          display: flex
+          align-items: center
+          justify-content: flex-end
+          font-weight: 700
+          font-size: 36px
+          line-height: 150%
+          color: #ffffff
+          position: relative
+          margin-bottom: 7px
+          &:hover
+            color: rgba(255, 255, 255, 0.65)
+            text-decoration: unset
           a
-            display: block
+            transition: 0.4s
+          &:after
+            content: ""
+            display: inline-block
             position: relative
-            img
-              display: block
-              width: 100%
-              height: 100%
-              object-fit: cover
-            &:nth-of-type(1)
-              grid-area: 1 / 1 / 3 / 2
-            &:nth-of-type(2)
-              grid-area: 1 / 2 / 4 / 3
-
-            &:nth-of-type(3)
-              grid-area: 1 / 3 / 3 / 4
-
-            &:nth-of-type(4)
-              grid-area: 3 / 1 / 6 / 2
-
-            &:nth-of-type(5)
-              grid-area: 4 / 2 / 6 / 3
-
-            &:nth-of-type(6)
-              grid-area: 3 / 3 / 6 / 4
-    &.bg-blk
-      position: relative
-      padding: 80px 0 90px
-      color: #FFFFFF
-      margin: 25px 0
-      &.wbnr
-        .row
-          & > div
-            &:nth-of-type(2)
-              display: flex
-              flex-direction: column
-              align-items: flex-end
-              .alarm
-                margin-bottom: 15px
-              .time
-                display: flex
-                flex-direction: column
-                text-align: right
-                margin-bottom: 61px
-                span
-                  line-height: 150%
-                  &:nth-of-type(1)
-                    font-size: 48px
-                  &:nth-of-type(2)
-                    font-size: 36px
-
-      &:after
-        content: ""
-        position: absolute
-        left: 0
-        top: 0
-        width: 100%
-        z-index: 2
-        height: 100%
-        background: rgba(70, 70, 74, 0.82)
-        backdrop-filter: blur(7px)
+            width: 49px
+            height: 49px
+            margin-left: 15px
+            border-radius: 3px
+            background: no-repeat center center / 20px 20px url('../images/dest/tel2.png')  $blue
+  &.about-us
+    padding: 80px 0
+    @include decent
+    .container
+      .btn
+        width: 235px
+        text-align: center
       & > img
         position: absolute
-        width: 100%
         height: 100%
-        left: 0
+        width: 60%
         top: 0
-        object-fit: cover
-      .container
-        z-index: 3
-        position: relative
-        .title
-          margin-bottom: 44px
-        p:not(:last-of-type)
-          margin-bottom: 20px
-        p:last-of-type
-          margin-bottom: 0
-          & + .btn
-            margin-top: 40px
-    &.mapper
-      .container
-        position: relative
-        .toblock
+        right: 0
+        z-index: 1
+  &.last-news
+    margin-bottom: 95px
+    &.big
+      padding: 50px 0 25px
+      margin-bottom: 0
+      .news-inn
+        margin-bottom: 10px
+        & + .pagination
+          @include pagination
+          background: #FFFFFF
+          margin: 0 auto
+        .news-block
+          margin-bottom: 40px
+    h2.title
+      margin-bottom: 80px
+    .news-inn
+      display: flex
+      justify-content: space-between
+      margin-bottom: 70px
+      flex-wrap: wrap
+      & + .btn
+        margin: 0 auto
+        width: 236px
+        text-align: center
+      .news-block
+        width: calc(100% / 4 - 15px)
+        a:nth-of-type(1)
+          display: block
+          position: relative
+          height: 255px
+          border-radius: 5px
+          z-index: 2
           display: flex
-          margin-bottom: 63px
-          .sidebar
-            padding-right: 10px
-      #listings
-        margin-bottom: 40px
-        .item
-          margin-bottom: 15px
-          &.active,&:hover
-            a
-              color: #FFFFFF
-              background: $blue
-              text-decoration: unset
-              &:after
-                transform: rotate(-90deg)
-                background: no-repeat center / 100% 100% url("../images/dest/arr11.svg")
-          a
-            display: flex
-            position: relative
-            font-size: 20px
-            line-height: 19px
-            color: #003887
-            padding: 20px 24px
-            width: 100%
-            align-items: center
-            border-left: 4px solid $blue
-            background: #FFFFFF
-            border-radius: 5px
-            transition: 0.4s
+          align-items: flex-end
+          text-decoration: unset
+          overflow: hidden
+          margin-bottom: 17px
+          &:hover
+            .title
+              text-decoration: none
             &:after
-              content: ""
-              display: block
-              position: absolute
-              width: 12px
-              height: 22px
-              right: 19px
-              background: no-repeat center / 100% 100% url("../images/dest/arr10.svg")
-              transition: 0.4s
-    &.article
-      padding: 20px
-      .container
-        .back
-          font-size: 16px
-          line-height: 20px
+              transform: translateY(20%)
+          &:after
+            content: ""
+            height: 100%
+            width: 100%
+            border-radius: 5px
+            display: block
+            z-index: 2
+            left: 0
+            bottom: 0
+            position: absolute
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30.52%, rgba(0, 0, 0, 0.92) 100%)
+            transition: 0.4s
+          .title
+            position: relative
+            font-weight: 700
+            font-size: 20px
+            line-height: 150%
+            color: #FFFFFF
+            padding: 0 15px 10px
+            z-index: 3
+          img
+            position: absolute
+            height: 100%
+            width: 100%
+            object-fit: cover
+            z-index: 1
+        p
+          line-height: 150%
+          margin-bottom: 25px
+        .more
+          line-height: 15px
           text-decoration-line: underline
           color: #003887
           position: relative
+          display: flex
+          align-items: center
           transition: 0.4s
-          margin-bottom: 45px
-          display: block
           &:hover
-            color: #496a99
-            &:before
-              transform: rotate(180deg) translateX(5px)
-              background: no-repeat center center/100% url("../images/dest/arr8.svg")
-          &:before
+            color: #496A99
+            &:after
+              transform: translateX(5px)
+              background: no-repeat center center / 100% url("../images/dest/arr8.svg")
+          &:after
             content: ""
+            display: block
             width: 15px
             height: 15px
-            display: inline-block
-            transform: rotate(180deg)
-            margin-right: 8px
+            position: relative
+            margin-left: 9px
             transition: 0.4s
-            background: no-repeat center center/100% url("../images/dest/arr2.svg")
-        h2.title
-          margin-bottom: 35px
-        .date
-          margin-bottom: 40px
-        .article-inn
-          color: #464647
-          p
-            white-space: pre-line
-            margin-bottom: 30px
-          ul
-            padding-inline-start: 17px
-          & > img
-            margin: 0 auto 20px
-            object-fit: contain
-            max-width: 100%
-            height: auto
-            width: auto
-            display: block
-            max-height: 750px
-          .four-img
-            display: flex
-            flex-wrap: wrap
-            justify-content: space-between
-            a
-              display: block
-              width: calc(50% - 7.5px)
-              margin-bottom: 15px
-              img
-                object-fit: cover
-                width: 100%
-                height: 100%
-                max-height: 500px
-          .tr-img
-            display: flex
-            flex-wrap: wrap
-            justify-content: space-between
-            a
-              display: block
+            background: no-repeat center center / 100% url("../images/dest/arr2.svg")
+  &.inn-banner
+    position: relative
+    width: 100%
+    padding: 25px 0 30px
+    &.clean
+      padding: 0
+      height: 305px
+    &.no-p
+      padding: 25px 0 70px
+    & + section
+      padding-top: 50px
+    &:after
+      content: ""
+      width: 100%
+      height: 100%
+      position: absolute
+      left: 0
+      z-index: 2
+      top: 0
+      background:  linear-gradient(180deg, rgba(69, 69, 69, 0) 0%, #454545 100%)
+    & > img
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      object-fit: cover
+      z-index: 1
+    .container
+      z-index: 3
+      position: relative
+      .tel
+        color: white
+        text-decoration: underline
+        font-size: 14px
+        display: block
+        line-height: 150%
+        &:hover
+          text-decoration: unset
+      .blue-block
+        padding: 35px 45px
+        box-shadow: 4px 15px 15px rgba(0, 0, 0, 0.1)
+        border-radius: 7px
+        min-width: 551px
+        width: fit-content
+        margin-bottom: 25px
 
-              margin-bottom: 15px
-              &:nth-of-type(1)
-                width: 100%
-              &:nth-of-type(n+2)
-                width: calc(50% - 7.5px)
-              img
-                object-fit: cover
-                width: 100%
-                height: 100%
-                max-height: 500px
+        &.l-blue
+          background: #4095CF
+        &.blue
+          background: #003887
+        &.red
+          background: #C32230
+        &.lred
+          background: #E93F33
+        &.orange
+          background: #F07D00
+        &.turq
+          background-color: #14b0a9
+        & + p
+          font-weight: 400
+          font-size: 14px
+          margin-bottom: 0
+          line-height: 140%
+          color: #FFFFFF
+          overflow: hidden
+          max-height: fit-content!important
 
+          &+ a
+            color: rgba(255, 255, 255, 0.69)
+            text-decoration: underline
 
-    &.textcols
-      padding: 40px 0 25px
-      h2.title
-        margin-bottom: 50px
-      .row
-        .col-inn
-          background-color: #FFFFFF
-          border-radius: 10px
-          padding: 50px 36px
-          line-height: 192%
-          height: 100%
-          .title
+          &:not(:last-of-type)
+            margin-bottom: 15px
+        .crumbs
+          @include crumbs
+        h1.title
+          font-weight: 600
+          font-size: 24px
+          line-height: 140%
+          color: #FFFFFF
+          margin-bottom: 0
+  &.prod-list
+    padding: 50px 0 35px
+    .container
+      .prod-blk
+        @include tab
+        padding: 60px 80px 60px 95px
+
+        &>div:nth-of-type(1)
+          .cat
+            margin: 27px 0 7px
+          h3
             color: $l-blue
-            margin-bottom: 30px
+          &+p
+        //margin-bottom: 80px
+        &:not(:last-of-type)
+          margin-bottom: 20px
+
+        &:nth-of-type(even)
+          flex-direction: row-reverse
+          & > div:nth-of-type(2)
+            img
+              margin-right: 30px
+              margin-left: 0
+  &.prod-catalog
+    padding: 50px 0 0
+    background-color: #ffffff
+    & + .phones-contact
+      background: #FFFFFF
+    .filt-btn
+      background-color: #5e5e67
+      width: 100%
+      height: 50px
+      display: flex
+      justify-content: center
+      align-items: center
+      font-size: 14px
+      line-height: 150%
+      letter-spacing: 0.02em
+      text-transform: capitalize
+      color: #FFFFFF
+      display: none
+      img
+        width: 23px
+        height: 23px
+        margin-right: 5px
+    .filter
+      .filter-box
+        background-color: #f4f4f4
+        border-radius: 10px
+        padding: 28px 45px 50px
+        margin-bottom: 15px
+        .title
+          font-weight: 700
+          font-size: 16px
+          line-height: 140%
+          letter-spacing: 0.05em
+          color: #000000
+          margin-bottom: 20px
+        .categories
+          padding-inline-start: 0
+          list-style: none
+          margin-bottom: 0
+          li
+            &:not(:last-of-type)
+              margin-bottom: 15px
+            a
+              font-weight: 400
+              font-size: 16px
+              line-height: 150%
+              text-decoration-line: underline
+              color: #000000
+              &:hover
+                text-decoration: unset
+        .title-big
+          font-weight: 700
+          font-size: 16px
+          line-height: 140%
+          letter-spacing: 0.05em
+          color: #000000
+          position: relative
+          margin-bottom: 20px
+          &:before
+            content: ""
+            position: absolute
+            display: block
+            width: 23px
+            left: -26px
+            top: -1px
+            height: 23px
+            background: no-repeat center center / contain url("../images/dest/filter2.png")
+        .title-small
+          font-weight: 600
+          font-size: 16px
+          line-height: 150%
+          text-transform: uppercase
+          color: #000000
+          margin-bottom: 20px
+        .check-wrapper
+          display: flex
+          flex-direction: column
+          label
+            display: flex
+            justify-content: left
+            align-items: center
+            margin-bottom: 10px
+            cursor: pointer
+            &:last-of-type
+              margin-bottom: 20px
+            .check-inn
+              margin-right: 10px
+              width: 17px
+              height: 17px
+              position: relative
+              input
+                width: 17px
+                height: 17px
+                appearance: none
+                cursor: pointer
+                z-index: 2
+                position: relative
+                &:checked
+                  & + span
+                    border: 1px solid #003887
+                    background: no-repeat center center / 10.5px 8px url("../images/dest/check.svg") #003887
+              span
+                background: #FFFFFF
+                border: 1px solid #000000
+                border-radius: 4px
+                z-index: 1
+                display: block
+                height: 100%
+                width: 100%
+                position: absolute
+                left: 0
+                top: 0
+            & > span
+    .prod-boxes
+      .p-box
+        margin-bottom: 30px
+        .inn
+          position: relative
+          a
+            img
+              border-radius: 10px
+              width: 100%
+              object-fit: cover
+              height: 219px
+              margin-bottom: 15px
+          .title
+            font-weight: 600
             font-size: 20px
+            line-height: 150%
+            display: block
+            text-transform: uppercase
+            color: #000000
+            margin-bottom: 12px
+            cursor: pointer
+          .sub
+            font-weight: 700
+            font-size: 14px
+            line-height: 150%
+            letter-spacing: 0.05em
+            color: #777777
+            margin-bottom: 7px
           p
-            margin-bottom: 0
+            line-height: 150%
             color: #464647
+            margin-bottom: 20px
+          .bt-n
+            display: block
+            padding: 5px 22px
+            background-color: $blue
+            border-radius: 5px
+            font-weight: 600
+            width: fit-content
+            color: white
+            transition: 0.4s ease-out
+            &:hover
+              background-color: #0c74bc
+              text-decoration: unset
+      .pagination
+        @include pagination
+        margin-top: 20px
+
+  &.prod-top
+    padding: 66px 0
+    background-color: $gray
+    .crumbs
+      @include crumbs
+  &.prod-main
+    padding: 60px 0
+    background-color: #FFFFFF
+    .container
+      .row
+        & > div
+          &:nth-of-type(1)
+            img
+              width: 100%
+              max-height: 540px
+              object-fit: cover
+              border-radius: 10px
+          &:nth-of-type(2)
+            h1.title
+              font-weight: 600
+              font-size: 24px
+              line-height: 150%
+              margin-bottom: 20px
+            .sub
+              font-weight: 700
+              font-size: 16px
+              line-height: 150%
+              text-transform: uppercase
+              letter-spacing: 0.05em
+              color: #7F7F86
+              margin-bottom: 22px
+
+
+            h6
+              font-weight: 700
+              font-size: 16px
+              line-height: 150%
+              letter-spacing: 0.05em
+              margin-bottom: 6px
+            p
+              margin-bottom: 10px
+              max-width: 429px
+            ul
+              padding-inline-start: 0px
+              margin-bottom: 0
+              list-style: none
+              margin-bottom: 25px
+  &.variations
+    background-color: $gray
+    padding: 80px 0
+    .title-block
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 35px
+      .no-access
+        padding: 4px 10px
+        background-color: #ffe600
+        border-radius: 5px
+        a
+          font-weight: 700
+          text-decoration: underline
+          color: black
+          &:hover
+            text-decoration: unset
+    .variations-inn
+      .topper
+        font-weight: 700
+        margin-bottom: 10px
+        font-size: 14px
+        line-height: 150%
+        letter-spacing: 0.05em
+        color: rgba(255, 255, 255, 0.5)
+      .vars
+        padding: 24px 16px
+        background-color: #ffffff
+        border-radius: 5px
+        .name
+          font-weight: 500
+        .accesbl
+          a
+            color: black
+            font-weight: 300
+            &:before
+              content: ""
+              display: inline-block
+              width: 6px
+              height: 6px
+              border-radius: 50%
+              position: relative
+              top: -2px
+              margin-right: 10px
+              background-color: #0060EF
+          & + div
+            padding-left: 20px
+            a
+              text-decoration: underline
+              font-weight: 500
+              &:hover
+                text-decoration: unset
+        &:not(:last-of-type)
+          margin-bottom: 10px
+  &.chars
+    padding: 80px 0 45px
+    h2.title
+      margin-bottom: 30px
+    .hars-inn
+      border-top: 1px dashed rgba(0, 0, 0, 0.21)
+      margin: 0
+      & > div
+        &:nth-of-type(1)
+          & > div
+            margin-right: 0
+        &:nth-of-type(2)
+          & > div
+            margin-left: 0
+        & > div
+          border-bottom: 1px dashed rgba(0, 0, 0, 0.21)
+          padding: 20px 0
+          & > div
+            display: flex
+            align-items: center
+            .name
+              font-weight: 400
+              text-transform: uppercase
+              font-size: 14px
+              line-height: 150%
+              letter-spacing: 0.05em
+              color: #7F7F86
+            .desc
+              font-weight: 400
+              font-size: 16px
+              line-height: 150%
+  &.adds
+    padding: 50px 0 45px
+    h2.title
+      margin-bottom: 85px
+    .adds-inn
+      .add
+        margin-bottom: 35px
+        img
+          height: 177px
+          border-radius: 5px
+          margin-bottom: 12px
+          width: 100%
+          object-fit: cover
+        .title
+          margin-bottom: 20px
+          a
+            font-size: 20px
+            font-weight: 600
+            line-height: 150%
+            color: #000000
+
+        .link
+          font-size: 14px
+          line-height: 140%
+          text-decoration-line: underline
+          color: #003887
+          &:hover
+            text-decoration: unset
+  &.recentered
+    @include decent
+    padding: 40px 0
+    .container
+      .card
+        .title
+          font-weight: 700
+          color: #464647
+          margin-bottom: 10px
+          position: relative
+
+          &:after
+            content: ""
+            position: absolute
+            width: 19px
+            height: 5px
+            display: block
+            background-color: $blue
+            left: -40px
+            top: 13px
+        ul
+          padding-inline-start: 15px
+          margin-bottom: 45px
+          color: #464647
+          &:last-of-type
+            margin-bottom: 0
+          li
+            margin-bottom: 0
+            &:not(:last-of-type)
+              margin-bottom: 5px
+  &.tripl_icon
+    padding: 40px 0
+    & + .bg-blk
+      margin: 40px 0 25px
+    & + .center-btn
+      padding-top: 40px
+    h2.title
+      margin-bottom: 50px
+    .row
+      & > div
+        .icon-inn
+          background: #FFFFFF
+          border-radius: 10px
+          padding: 30px 35px 20px
+          display: flex
+          flex-direction: column
+          align-items: center
+          text-align: center
+          height: 100%
+          img
+            margin-bottom: 30px
+            min-height: 59px
+          .title
+            font-weight: 700
+            font-size: 20px
+            line-height: 150%
+          p
+            font-weight: 400
+            margin-top: 30px
+            font-size: 16px
+            color: #464647
+            line-height: 150%
+  &.study-gal
+    padding-top: 80px
+    .container
+      h2.title
+        margin-bottom: 52px
+      .gal-inn
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: repeat(2, 1fr) 0.2fr repeat(2, 1fr)
+        grid-column-gap: 15px
+        grid-row-gap: 15px
+        a
+          display: block
+          position: relative
+          img
+            display: block
+            width: 100%
+            height: 100%
+            object-fit: cover
+          &:nth-of-type(1)
+            grid-area: 1 / 1 / 3 / 2
+          &:nth-of-type(2)
+            grid-area: 1 / 2 / 4 / 3
+
+          &:nth-of-type(3)
+            grid-area: 1 / 3 / 3 / 4
+
+          &:nth-of-type(4)
+            grid-area: 3 / 1 / 6 / 2
+
+          &:nth-of-type(5)
+            grid-area: 4 / 2 / 6 / 3
+
+          &:nth-of-type(6)
+            grid-area: 3 / 3 / 6 / 4
+  &.bg-blk
+    position: relative
+    padding: 80px 0 90px
+    color: #FFFFFF
+    margin: 25px 0
+    &.wbnr
+      .row
+        & > div
+          &:nth-of-type(2)
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+            .alarm
+              margin-bottom: 15px
+            .time
+              display: flex
+              flex-direction: column
+              text-align: right
+              margin-bottom: 61px
+              span
+                line-height: 150%
+                &:nth-of-type(1)
+                  font-size: 48px
+                &:nth-of-type(2)
+                  font-size: 36px
+
+    &:after
+      content: ""
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      z-index: 2
+      height: 100%
+      background: rgba(70, 70, 74, 0.82)
+      backdrop-filter: blur(7px)
+    & > img
+      position: absolute
+      width: 100%
+      height: 100%
+      left: 0
+      top: 0
+      object-fit: cover
+    .container
+      z-index: 3
+      position: relative
+      .title
+        margin-bottom: 44px
+      p:not(:last-of-type)
+        margin-bottom: 20px
+      p:last-of-type
+        margin-bottom: 0
+        & + .btn
+          margin-top: 40px
+  &.mapper
+    .container
+      position: relative
+      .toblock
+        display: flex
+        margin-bottom: 63px
+        .sidebar
+          padding-right: 10px
+    #listings
+      margin-bottom: 40px
+      .item
+        margin-bottom: 15px
+        &.active,&:hover
+          a
+            color: #FFFFFF
+            background: $blue
+            text-decoration: unset
+            &:after
+              transform: rotate(-90deg)
+              background: no-repeat center / 100% 100% url("../images/dest/arr11.svg")
+        a
+          display: flex
+          position: relative
+          font-size: 20px
+          line-height: 19px
+          color: #003887
+          padding: 20px 24px
+          width: 100%
+          align-items: center
+          border-left: 4px solid $blue
+          background: #FFFFFF
+          border-radius: 5px
+          transition: 0.4s
+          &:after
+            content: ""
+            display: block
+            position: absolute
+            width: 12px
+            height: 22px
+            right: 19px
+            background: no-repeat center / 100% 100% url("../images/dest/arr10.svg")
+            transition: 0.4s
+  &.article
+    padding: 20px
+    .container
+      .back
+        font-size: 16px
+        line-height: 20px
+        text-decoration-line: underline
+        color: #003887
+        position: relative
+        transition: 0.4s
+        margin-bottom: 45px
+        display: block
+        &:hover
+          color: #496a99
+          &:before
+            transform: rotate(180deg) translateX(5px)
+            background: no-repeat center center/100% url("../images/dest/arr8.svg")
+        &:before
+          content: ""
+          width: 15px
+          height: 15px
+          display: inline-block
+          transform: rotate(180deg)
+          margin-right: 8px
+          transition: 0.4s
+          background: no-repeat center center/100% url("../images/dest/arr2.svg")
+      h2.title
+        margin-bottom: 35px
+      .date
+        margin-bottom: 40px
+      .article-inn
+        color: #464647
+        p
+          white-space: pre-line
+          margin-bottom: 30px
+        ul
+          padding-inline-start: 17px
+        & > figure
+          margin: 0 auto 20px
+          object-fit: contain
+          max-width: 100%
+          height: auto
+          width: auto
+          display: block
+          max-height: 750px
+        .four-img
+          display: flex
+          flex-wrap: wrap
+          justify-content: space-between
+          a
+            display: block
+            width: calc(50% - 7.5px)
+            margin-bottom: 15px
+            img
+              object-fit: cover
+              width: 100%
+              height: 100%
+              max-height: 500px
+        .tr-img
+          display: flex
+          flex-wrap: wrap
+          justify-content: space-between
+          a
+            display: block
+
+            margin-bottom: 15px
+            &:nth-of-type(1)
+              width: 100%
+            &:nth-of-type(n+2)
+              width: calc(50% - 7.5px)
+            img
+              object-fit: cover
+              width: 100%
+              height: 100%
+              max-height: 500px
+
+
+  &.textcols
+    padding: 40px 0 25px
+    h2.title
+      margin-bottom: 50px
+    .row
+      .col-inn
+        background-color: #FFFFFF
+        border-radius: 10px
+        padding: 50px 36px
+        line-height: 192%
+        height: 100%
+        .title
+          color: $l-blue
+          margin-bottom: 30px
+          font-size: 20px
+        p
+          margin-bottom: 0
+          color: #464647
   .center-btn
     & + section.phones-contact.phones-contact
       padding-top: 50px
@@ -1482,49 +1519,58 @@ footer.footer
 +media-breakpoint-down(lg)
   header.header nav.menu .submenu .row > div
     padding: 0 8px
-  main.main
-    section
-      &.top-banner
-        .container
-          max-width: 1050px
-      &.phones-contact
-        .row
-          &>div
-            &:nth-of-type(1)
-              margin-bottom: 15px
-              .inn
-                padding: 15px 50px 15px 30px
-              .title
-                margin-right: 30px
-                max-width: 39%
-              .phones
-                a
-                  font-size: 16px
-            &:nth-of-type(2)
-              .inn
-                a
-                  padding: 35px 30px
-      &.brands
-        &.no-bg.services .brand-inn .brand-block
-          width: calc(33.33% - 7.5px)
-        .brand-inn
-          margin-right: 0
-          flex-wrap: wrap
-          justify-content: space-between
-          .brand-block
-            width: calc(33.33% - 7.5px)
-            margin-right: 0
+  header.header nav.menu .submenu .row
+    .title
+      font-size: 12px
+      margin-bottom: 10px
+    ul
+      margin-bottom: 10px
+      li
+        margin-bottom: 5px
+        a
+          font-size: 14px
+  section
+    &.top-banner
+      .container
+        max-width: 1050px
+    &.phones-contact
+      .row
+        &>div
+          &:nth-of-type(1)
             margin-bottom: 15px
-      &.consult
-        .row>div:nth-of-type(2) span
-          margin: 40px 0 20px
+            .inn
+              padding: 15px 50px 15px 30px
+            .title
+              margin-right: 30px
+              max-width: 39%
+            .phones
+              a
+                font-size: 16px
+          &:nth-of-type(2)
+            .inn
+              a
+                padding: 35px 30px
+    &.brands
+      &.no-bg.services .brand-inn .brand-block
+        width: calc(33.33% - 7.5px)
+      .brand-inn
+        margin-right: 0
+        flex-wrap: wrap
+        justify-content: space-between
+        .brand-block
+          width: calc(33.33% - 7.5px)
+          margin-right: 0
+          margin-bottom: 15px
+    &.consult
+      .row>div:nth-of-type(2) span
+        margin: 40px 0 20px
 
-      &.last-news
-        .news-inn
-          flex-wrap: wrap
-          .news-block
-            width: calc(50% - 7.5px)
-            margin-bottom: 30px
+    &.last-news
+      .news-inn
+        flex-wrap: wrap
+        .news-block
+          width: calc(50% - 7.5px)
+          margin-bottom: 30px
 
 +media-breakpoint-down(md)
   .modal
@@ -1541,14 +1587,15 @@ footer.footer
               margin: 0 auto
             & > span
               margin-bottom: 5px
-            input[type=text],input[type=tel],select,textarea
+            input[type=text],input[type=tel],select,textarea,input[type=email]
               width: 100%
   body
     margin-top: 180px
   header.header
     .top-bar
       .container
-        justify-content: center
+        ul
+          justify-content: center
     .mid-bar
       padding: 13px 0
       .container
@@ -1562,7 +1609,7 @@ footer.footer
         .search-block
           position: absolute
           left: 0
-          top: 129px
+          top: 139px
           width: 100%
           padding: 6px 15px
           z-index: 3
@@ -1752,207 +1799,207 @@ footer.footer
           stroke-dasharray: 90 207
           stroke-dashoffset: -134
           stroke-width: 6
-  main.main
-    section
-      &.top-banner
-        .container
-          max-width: 720px
-      &.markets
-        .tabs
-          padding-top: 70px
-          & > ul
-            display: none
-          .swiper-button-next
-            right: 0
-            outline: none
-          .swiper-button-prev
-            left: 0
-            transform: rotate(180deg)
-            outline: none
-          .swiper-button-next,.swiper-button-prev
-            background: no-repeat center center / 20px 20px url("../images/dest/arr6.svg")
-            display: block
-            &:after
-              display: none
-            top: 22px
-            width: calc(50% - 7.5px)
-            height: 44px
-            background-color: #ffffff
-            border-radius: 10px
-      &.prod-list
-        .container
-          .prod-blk
-            &:nth-of-type(even)
-              flex-direction: column-reverse
-            &>div:nth-of-type(1) h3+p
-              margin-bottom: 25px
-            &:nth-of-type(even)>div:nth-of-type(2) img
-              margin-left: 0
-              margin-right: 0
-      &.about-us
-        padding: 40px 0
-        .btn
-          margin: 0 auto
-      &.prod-catalog
-        .filt-btn
-          display: flex
-          margin-bottom: 30px
-        .filter
-          margin: 0 0 30px
+
+  section
+    &.top-banner
+      .container
+        max-width: 720px
+    &.markets
+      .tabs
+        padding-top: 70px
+        & > ul
           display: none
-          &.active
-            display: block
-      &.prod-main
-        padding: 15px 0 25px
-        .container .row>div:nth-of-type(1) img
-          margin-bottom: 15px
-      &.variations
-        padding: 40px 0 50px
-        .title-block
-          flex-direction: column
-          align-items: flex-start
-          margin-bottom: 30px
-
-          .title
-            margin-bottom: 25px
-        .variations-inn
-          .topper
+        .swiper-button-next
+          right: 0
+          outline: none
+        .swiper-button-prev
+          left: 0
+          transform: rotate(180deg)
+          outline: none
+        .swiper-button-next,.swiper-button-prev
+          background: no-repeat center center / 20px 20px url("../images/dest/arr6.svg")
+          display: block
+          &:after
             display: none
-          .vars
-            padding: 24px 25px
-            .name
-              margin-bottom: 14px
+          top: 22px
+          width: calc(50% - 7.5px)
+          height: 44px
+          background-color: #ffffff
+          border-radius: 10px
+    &.prod-list
+      .container
+        .prod-blk
+          &:nth-of-type(even)
+            flex-direction: column-reverse
+          &>div:nth-of-type(1) h3+p
+            margin-bottom: 25px
+          &:nth-of-type(even)>div:nth-of-type(2) img
+            margin-left: 0
+            margin-right: 0
+    &.about-us
+      padding: 40px 0
+      .btn
+        margin: 0 auto
+    &.prod-catalog
+      .filt-btn
+        display: flex
+        margin-bottom: 30px
+      .filter
+        margin: 0 0 30px
+        display: none
+        &.active
+          display: block
+    &.prod-main
+      padding: 15px 0 25px
+      .container .row>div:nth-of-type(1) img
+        margin-bottom: 15px
+    &.variations
+      padding: 40px 0 50px
+      .title-block
+        flex-direction: column
+        align-items: flex-start
+        margin-bottom: 30px
 
-            .accesbl
-              margin-bottom: 14px
-              &+div
-                padding-left: 7.5px
-      &.chars
-        padding: 40px 0 15px
-        h2.title
-          margin-bottom: 15px
-        .hars-inn
-          border-top: unset
+        .title
+          margin-bottom: 25px
+      .variations-inn
+        .topper
+          display: none
+        .vars
+          padding: 24px 25px
+          .name
+            margin-bottom: 14px
+
+          .accesbl
+            margin-bottom: 14px
+            &+div
+              padding-left: 7.5px
+    &.chars
+      padding: 40px 0 15px
+      h2.title
+        margin-bottom: 15px
+      .hars-inn
+        border-top: unset
+        &>div
           &>div
             &>div
-              &>div
-                .desc
-                  width: 100%
-                  text-align: end
-            &:nth-of-type(1)
-              &>div
-                margin-right: -7.5px
-            &:nth-of-type(2)
-              &>div
-                margin-left: -7.5px
-      &.tripl_icon
-        padding: 25px 0
+              .desc
+                width: 100%
+                text-align: end
+          &:nth-of-type(1)
+            &>div
+              margin-right: -7.5px
+          &:nth-of-type(2)
+            &>div
+              margin-left: -7.5px
+    &.tripl_icon
+      padding: 25px 0
 
-        .row>div
-          margin-bottom: 15px
-      &.recentered
-        padding: 25px 0
-        .container
-          .card
-            .title
+      .row>div
+        margin-bottom: 15px
+    &.recentered
+      padding: 25px 0
+      .container
+        .card
+          .title
+            padding-left: 35px
+            &:after
+              left: 3px
+            & + ul
+              padding-inline-start: 51px
+            & + p
               padding-left: 35px
-              &:after
-                left: 3px
-              & + ul
-                padding-inline-start: 51px
               & + p
                 padding-left: 35px
                 & + p
                   padding-left: 35px
-                  & + p
-                    padding-left: 35px
-            p.bullet
-              padding-left: 35px
-              &:after
-                left: 0
-      &.study-gal
-        .container
-          .gal-inn
-            display: grid
-            grid-template-columns: repeat(2, 1fr)
-            grid-template-rows: 1fr 0.2fr repeat(2, 1fr) 0.2fr 1fr
-            grid-column-gap: 15px
-            grid-row-gap: 15px
-            a
-              &:nth-of-type(1)
-                grid-area: 1 / 1 / 2 / 2
+          p.bullet
+            padding-left: 35px
+            &:after
+              left: 0
+    &.study-gal
+      .container
+        .gal-inn
+          display: grid
+          grid-template-columns: repeat(2, 1fr)
+          grid-template-rows: 1fr 0.2fr repeat(2, 1fr) 0.2fr 1fr
+          grid-column-gap: 15px
+          grid-row-gap: 15px
+          a
+            &:nth-of-type(1)
+              grid-area: 1 / 1 / 2 / 2
 
-              &:nth-of-type(2)
-                grid-area: 1 / 2 / 3 / 3
+            &:nth-of-type(2)
+              grid-area: 1 / 2 / 3 / 3
 
-              &:nth-of-type(3)
-                grid-area: 2 / 1 / 4 / 2
+            &:nth-of-type(3)
+              grid-area: 2 / 1 / 4 / 2
 
-              &:nth-of-type(4)
-                grid-area: 3 / 2 / 4 / 3
+            &:nth-of-type(4)
+              grid-area: 3 / 2 / 4 / 3
 
-              &:nth-of-type(5)
-                grid-area: 4 / 1 / 5 / 2
+            &:nth-of-type(5)
+              grid-area: 4 / 1 / 5 / 2
 
-              &:nth-of-type(6)
-                grid-area: 4 / 2 / 6 / 3
+            &:nth-of-type(6)
+              grid-area: 4 / 2 / 6 / 3
 
-              &:nth-of-type(7)
-                grid-area: 5 / 1 / 7 / 2
+            &:nth-of-type(7)
+              grid-area: 5 / 1 / 7 / 2
 
-              &:nth-of-type(8)
-                grid-area: 6 / 2 / 7 / 3
-      &.bg-blk
-        padding: 50px 0 95px
-        &.wbnr
-          .row
-            & > div
-              &:nth-of-type(1)
-                margin-bottom: 50px
-              &:nth-of-type(2)
-                align-items: flex-start
-                .time
-                  margin-bottom: 50px
-                  text-align: left
-      &.inn-banner
-        &.no-p
-          padding: 25px 0
-      &.mapper
-        .container
-          .toblock
-            flex-direction: column
-            margin-bottom: 15px
-
-            .sidebar
-              width: 100%
-              padding-right: 0
-              border-right: unset
-              margin-bottom: 15px
-            .map
-              width: 100%
-          #listings
-            margin-bottom: 0
-            .item
-              margin-bottom: 15px
-              a
-                padding: 15px 24px
-                font-size: 16px
-                line-height: 20px
-      &.article
-        .container
-          .back
-            margin-bottom: 35px
-
-          h2.title
-            margin-bottom: 20px
-          .date
-            margin-bottom: 20px
-      &.textcols
+            &:nth-of-type(8)
+              grid-area: 6 / 2 / 7 / 3
+    &.bg-blk
+      padding: 50px 0 95px
+      &.wbnr
         .row
           & > div
+            &:nth-of-type(1)
+              margin-bottom: 50px
+            &:nth-of-type(2)
+              align-items: flex-start
+              .time
+                margin-bottom: 50px
+                text-align: left
+    &.inn-banner
+      &.no-p
+        padding: 25px 0
+    &.mapper
+      .container
+        .toblock
+          flex-direction: column
+          margin-bottom: 15px
+
+          .sidebar
+            width: 100%
+            padding-right: 0
+            border-right: unset
             margin-bottom: 15px
-          .col-inn
-            padding: 38px 15px 50px
+          .map
+            width: 100%
+        #listings
+          margin-bottom: 0
+          .item
+            margin-bottom: 15px
+            a
+              padding: 15px 24px
+              font-size: 16px
+              line-height: 20px
+    &.article
+      .container
+        .back
+          margin-bottom: 35px
+
+        h2.title
+          margin-bottom: 20px
+        .date
+          margin-bottom: 20px
+    &.textcols
+      .row
+        & > div
+          margin-bottom: 15px
+        .col-inn
+          padding: 38px 15px 50px
   footer.footer
     .container
       flex-direction: column
@@ -1963,132 +2010,132 @@ footer.footer
 +media-breakpoint-down(sm)
   .modal .modal-inn>div
     padding: 50px 20px 60px
-  main.main section.tripl_icon+.center-btn
+  section.tripl_icon+.center-btn
     padding-top: 10px
-  main.main
-    section
-      &.top-banner
-        .container
-          max-width: 540px
-      &.phones-contact
-        .row
-          &>div:nth-of-type(1)
-            .inn
-              padding: 27px 22px
-              //background: no-repeat center right 23px/20px 20px url(../images/dest/phone.png) #4095cf
-            .title
-              font-size: 12px
-              width: 92px
-              max-width: unset
-              margin-right: 21px
-            .phones
-              a
-                font-size: 14px
-                &:nth-of-type(1):after
-                  right: 25px
-          &>div:nth-of-type(2) .inn
-            height: 80px
-            background: no-repeat center right 27px/16px 16px url(../images/dest/arr.png) #5e5e67
+
+  section
+    &.top-banner
+      .container
+        max-width: 540px
+    &.phones-contact
+      .row
+        &>div:nth-of-type(1)
+          .inn
+            padding: 27px 22px
+          //background: no-repeat center right 23px/20px 20px url(../images/dest/phone.png) #4095cf
+          .title
+            font-size: 12px
+            width: 92px
+            max-width: unset
+            margin-right: 21px
+          .phones
             a
-              font-size: 12px
-              padding: 30px 30px
-      &.brands
-        padding: 40px 0 67px
-        &.no-bg.services .brand-inn .brand-block:after
-          background: linear-gradient(180deg, rgba(0, 0, 0, 0) -1%, #000000 100%)
-        &.no-bg.services .brand-inn .brand-block
+              font-size: 14px
+              &:nth-of-type(1):after
+                right: 25px
+        &>div:nth-of-type(2) .inn
+          height: 80px
+          background: no-repeat center right 27px/16px 16px url(../images/dest/arr.png) #5e5e67
+          a
+            font-size: 12px
+            padding: 30px 30px
+    &.brands
+      padding: 40px 0 67px
+      &.no-bg.services .brand-inn .brand-block:after
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) -1%, #000000 100%)
+      &.no-bg.services .brand-inn .brand-block
+        width: 100%
+      &.no-bg
+        padding: 0
+        &.dumb
+          padding: 40px 0 15px
+        h2.title
+          margin-bottom: 38px
+      .brand-inn
+        margin-right: 0
+        .brand-block
           width: 100%
-        &.no-bg
-          padding: 0
-          &.dumb
-            padding: 40px 0 15px
-          h2.title
-            margin-bottom: 38px
-        .brand-inn
-          margin-right: 0
-          .brand-block
-            width: 100%
-            height: 286px
-            &.turq
-              &>.block
-                .link
-                  color: #14b0a9
-            &.blue
-              &>.block
-                .link
-                  color: #003887
-            &.red
-              &>.block
-                .link
-                  color: #c32230
-            &.orange
-              &>.block
-                .link
-                  color: #f07d00
-            &.lred
-              &>.block
-                .link
-                  color: #e93f33
+          height: 286px
+          &.turq
             &>.block
-              left: 30px
-              bottom: 30px
-      &.markets
-        padding: 40px 0
-      &.consult
-        padding: 40px 0 95px
-        .btn
-          display: none
-        .row>div
-          &:nth-of-type(2)
-            span
-              text-align: left
-              margin: 0 0 40px 35px
-            .tel
-              font-size: 24px
-      &.about-us
-      &.last-news
-        margin-bottom: 50px
-        h2.title
-          margin-bottom: 32px
-        .news-inn
-          margin-bottom: 0
-          padding: 0
-          .news-block
-            width: 100%
-      &.inn-banner
-        padding: 24px 0 18px
-        .container
-          .blue-block
-            padding: 35px 15px
-
-      &.prod-list
-        padding: 30px 0 15px
-        .container .prod-blk>div:nth-of-type(1)
-          padding: 0px 22px 45px
-      &.prod-catalog
-        padding: 25px 0 15px
-        .container
+              .link
+                color: #14b0a9
+          &.blue
+            &>.block
+              .link
+                color: #003887
+          &.red
+            &>.block
+              .link
+                color: #c32230
+          &.orange
+            &>.block
+              .link
+                color: #f07d00
+          &.lred
+            &>.block
+              .link
+                color: #e93f33
+          &>.block
+            left: 30px
+            bottom: 30px
+    &.markets
+      padding: 40px 0
+    &.consult
+      padding: 40px 0 95px
+      .btn
+        display: none
+      .row>div
+        &:nth-of-type(2)
+          span
+            text-align: left
+            margin: 0 0 40px 35px
+          .tel
+            font-size: 24px
+    &.about-us
+    &.last-news
+      margin-bottom: 50px
+      h2.title
+        margin-bottom: 32px
+      .news-inn
+        margin-bottom: 0
+        padding: 0
+        .news-block
           width: 100%
-        .prod-boxes
-          .consult
-            margin: 0 -15px 40px
-            &.w-btn
-              .btn
-                display: block
+    &.inn-banner
+      padding: 24px 0 18px
+      .container
+        .blue-block
+          padding: 35px 15px
 
-      &.adds
-        padding: 50px 0 15px
-        h2.title
-          margin-bottom: 75px
-        .adds-inn
-          .add
-            margin-bottom: 25px
-            img
-              height: 142px
-            .title
-              margin-bottom: 15px
-              a
-                font-size: 16px
+    &.prod-list
+      padding: 30px 0 15px
+      .container .prod-blk>div:nth-of-type(1)
+        padding: 0px 22px 45px
+    &.prod-catalog
+      padding: 25px 0 15px
+      .container
+        width: 100%
+      .prod-boxes
+        .consult
+          margin: 0 -15px 40px
+          &.w-btn
+            .btn
+              display: block
+
+    &.adds
+      padding: 50px 0 15px
+      h2.title
+        margin-bottom: 75px
+      .adds-inn
+        .add
+          margin-bottom: 25px
+          img
+            height: 142px
+          .title
+            margin-bottom: 15px
+            a
+              font-size: 16px
 
   footer.footer
     .btm-block
@@ -2118,27 +2165,27 @@ footer.footer
           text-align: center
           margin-bottom: 35px
 +media-breakpoint-down(xs)
-  main.main
-    section
-      &.top-banner
-        height: 578px
-        padding: 50px 0
-        &:after
-          display: none
-        .container
-          height: 100%
-          display: flex
-          align-items: flex-end
-          .text-block
-            padding: 33px
-            h1
-              font-weight: 400
-              font-size: 20px
-              line-height: 140%
-              margin-bottom: 0
-            p
-              display: none
+  section
+    &.top-banner
+      height: 578px
+      padding: 50px 0
+      &:after
+        display: none
+      .container
+        height: 100%
+        display: flex
+        align-items: flex-end
+        .text-block
+          padding: 33px
+          h1
+            font-weight: 400
+            font-size: 20px
+            line-height: 140%
+            margin-bottom: 0
+          p
+            display: none
+
 @media only screen and (min-width: 992px)
-  main.main section.markets .tabs .tab-inn .tab.active
+  section.markets .tabs .tab-inn .tab.active
     width: 100%!important
     margin-right: 0!important

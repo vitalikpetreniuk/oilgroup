@@ -245,7 +245,7 @@ input, textarea
 	border-radius: 7px
 	width: fit-content
 	li
-		a
+		a,span
 			display: flex
 			width: 51px
 			height: 51px
@@ -259,13 +259,18 @@ input, textarea
 				color: #FFFFFF
 				background-color: $blue
 				text-decoration: none
+			&.next
+				&:after
+					content: ">"
 	+media-breakpoint-down(sm)
 		padding: 7px 20px
 		li
-			a
+			a,span
 				margin-right: 8px
+				&.next
+
 			&:last-of-type
-				a
+				a,span
 					margin-right: 0
 @mixin tab
 	background-color: #ffffff
@@ -459,17 +464,17 @@ h2.title
 							display: none
 						span
 							color: rgba(233, 63, 51, 1)
-					input[type=text],input[type=tel]
+					input[type=text],input[type=tel],input[type=email]
 						@include input
-						width: 333px
+						width: 324px
 					select
 						@include input
-						width: 333px
+						width: 324px
 						cursor: pointer
 						background: no-repeat center right 14px / 10px 5px url('../images/dest/arr7.svg') #F2F2F2
 					textarea
 						@include input
-						width: 333px
+						width: 324px
 						resize: none
 						height: 82px
 
