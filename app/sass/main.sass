@@ -215,11 +215,15 @@ header.header
             padding: 67px 15px 45px
             display: block
             opacity: 1
-            height: auto
+            min-height: 90vh
+            height: 100%
+            overflow-y: scroll
             z-index: 5
             .row
               display: flex
           .mega-menu-row
+
+
             & > ul
               display: flex
               margin-bottom: 0
@@ -1833,7 +1837,6 @@ footer.footer
                   width: 16px
                   height: 16px
                   background: no-repeat center center / cover url('../images/dest/arr3.png')
-
     .menu-btn
       background-color: transparent
       border: none
@@ -1871,7 +1874,6 @@ footer.footer
           stroke-dasharray: 90 207
           stroke-dashoffset: -134
           stroke-width: 6
-
   section
     &.top-banner
       .container
@@ -2084,7 +2086,6 @@ footer.footer
     padding: 50px 20px 60px
   section.tripl_icon+.center-btn
     padding-top: 10px
-
   section
     &.top-banner
       .container
@@ -2179,6 +2180,9 @@ footer.footer
       .container
         .blue-block
           padding: 35px 15px
+          width: 100%
+          min-width: fit-content
+          max-width: 100%
 
     &.prod-list
       padding: 30px 0 15px
@@ -2255,7 +2259,6 @@ footer.footer
             margin-bottom: 0
           p
             display: none
-
 @media only screen and (min-width: 992px)
   section.markets .tabs .tab-inn .tab.active
     width: 100%!important
