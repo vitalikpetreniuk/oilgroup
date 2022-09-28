@@ -115,6 +115,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     prevEl: '.swiper-button-prev',
                 },
             })
+            $('.toblock').removeClass('active')
 
         } else {
 
@@ -163,6 +164,20 @@ document.addEventListener("DOMContentLoaded", function() {
             .addClass('active').siblings().removeClass('active')
             .closest('.tabs').find('.tab').removeClass('active').eq($(this).index()).addClass('active');
     });
+
+});
+$('.clicker').on('click', function() {
+    $(this).addClass('active');
+    $(this).parent().siblings().find('.clicker').removeClass('active');
+    $(this).parent().addClass('active');
+    $(this).parent().siblings().removeClass('active');
+});
+$('#listings').on('click', '.item:not(.active)', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $(this)
+        .addClass('active').siblings().removeClass('active')
+        .closest('.container').find('.toblock').removeClass('active').eq($(this).index()).addClass('active');
 });
 lightbox.option({
     'resizeDuration': 200,
