@@ -8,50 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
         $('nav.menu').toggleClass('active');
     })
 
-    // $(window).scroll(function(){
-    //     var sticky = $('header.header'),
-    //         scroll = $(window).scrollTop();
-    //
-    //     if (scroll >= 198) sticky.addClass('fixed');
-    //     else sticky.removeClass('fixed');
-    // });
-    // var didScroll;
-    // var lastScrollTop = 0;
-    // var delta = 5;
-    // var navbarHeight = $('header').outerHeight();
-    //
-    // $(window).scroll(function(event){
-    //     didScroll = true;
-    // });
-    //
-    // setInterval(function() {
-    //     if (didScroll) {
-    //         hasScrolled();
-    //         didScroll = false;
-    //     }
-    // }, 250);
-    //
-    // function hasScrolled() {
-    //     var st = $(this).scrollTop();
-    //
-    //     // Make sure they scroll more than delta
-    //     if(Math.abs(lastScrollTop - st) <= delta)
-    //         return;
-    //         // If they scrolled down and are past the navbar, add class .nav-up.
-    //         // This is necessary so you never see what is "behind" the navbar.
-    //         if (st > lastScrollTop && st > navbarHeight){
-    //             // Scroll Down
-    //             $('header').removeClass('nav-down').addClass('nav-up');
-    //         } else {
-    //             // Scroll Up
-    //             if(st + $(window).height() < $(document).height()) {
-    //                 $('header').removeClass('nav-up').addClass('nav-down');
-    //             }
-    //         }
-    //
-    //
-    //     lastScrollTop = st;
-    // }
+
     var prevScrollpos = window.pageYOffset;
 
     /* Get the header element and it's position */
@@ -164,26 +121,28 @@ document.addEventListener("DOMContentLoaded", function() {
             .addClass('active').siblings().removeClass('active')
             .closest('.tabs').find('.tab').removeClass('active').eq($(this).index()).addClass('active');
     });
+    $('.clicker').on('click', function() {
+        $(this).addClass('active');
+        $(this).parent().siblings().find('.clicker').removeClass('active');
+        $(this).parent().addClass('active');
+        $(this).parent().siblings().removeClass('active');
+    });
+    $('#listings').on('click', '.item:not(.active)', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $(this)
+            .addClass('active').siblings().removeClass('active')
+            .closest('.container').find('.toblock').removeClass('active').eq($(this).index()).addClass('active');
+    });
+    lightbox.option({
+        'resizeDuration': 200,
+        'disableScrolling': true,
+        'fitImagesInViewport': true
+    })
+});
 
-});
-$('.clicker').on('click', function() {
-    $(this).addClass('active');
-    $(this).parent().siblings().find('.clicker').removeClass('active');
-    $(this).parent().addClass('active');
-    $(this).parent().siblings().removeClass('active');
-});
-$('#listings').on('click', '.item:not(.active)', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    $(this)
-        .addClass('active').siblings().removeClass('active')
-        .closest('.container').find('.toblock').removeClass('active').eq($(this).index()).addClass('active');
-});
-lightbox.option({
-    'resizeDuration': 200,
-    'disableScrolling': true,
-    'fitImagesInViewport': true
-})
+
+
 // if($('.mapper').length > 0) {
 //     mapboxgl.accessToken = 'pk.eyJ1IjoiY2ljZXJvYWdlbnR1ciIsImEiOiJja2lyOTBuOXYwOGJ5MnhzY2kyMXRocG9nIn0.fYRg2TLIuWCaZuxVjhsadg';
 //
