@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         else{
             /* otherwise we're scrolling down & have passed the header so hide it */
-            headerDiv.style.top = "-178px";
+            headerDiv.style.top = "-192px";
         }
 
         prevScrollpos = currentScrollPos;
@@ -53,12 +53,12 @@ document.addEventListener("DOMContentLoaded", function() {
             $('.tabs').addClass('swiper');
             $('.tab-inn').addClass('swiper-wrapper')
             $('.tab').addClass('swiper-slide')
-            $('.lang-mob li:nth-of-type(1) a').on("click", function (e){
+            $('.lang-mob li.wpml-ls-current-language a').on("click", function (e){
                 e.stopPropagation()
                e.preventDefault();
-               $('.lang-mob li:nth-of-type(2)').show();
+               $('.lang-mob li:not(.wpml-ls-current-language)').show();
                $('*:not(.lang-mob li a)').on("click", function (){
-                   $('.lang-mob li:nth-of-type(2)').hide();
+                   $('.lang-mob li:not(.wpml-ls-current-language)').hide();
                })
             })
             const swiper = new Swiper('.swiper', {
