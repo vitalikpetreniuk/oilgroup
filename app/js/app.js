@@ -40,15 +40,19 @@ document.addEventListener("DOMContentLoaded", function() {
                 $('.filt-btn').on('click', function (){
                     $('.filter').toggleClass('active');
                 });
-            $(".mega-menu-item-has-children").on('click', function(e){
+            $(".mega-menu-item-has-children a").on('click', function(e){
                 e.stopPropagation()
                 e.preventDefault();
-                $(this).children(".mega-sub-menu").toggleClass('active');
+                $(this).parent().children(".mega-sub-menu").toggleClass('active');
             });
+
             $(".header.header nav.menu ul#mega-menu-primary>li>.mega-sub-menu").prepend('<div class="back"><span>Назад</span></div>');
-            $('header.header nav.menu ul#mega-menu-primary>li>.mega-sub-menu .mega-menu-row .mega-menu-title').on("click", function (){
+            $('header.header nav.menu ul#mega-menu-primary>li>.mega-sub-menu .mega-menu-row .bruise>ul>li>a').on("click", function (){
                 $(this).toggleClass("active")
-                // $(this).parent().siblings().removeClass("active");
+                $(this).parent().siblings().removeClass("active");
+            })
+            $('.back').on('click', function (){
+                $(this).parent().removeClass('active')
             })
             $('.tabs').addClass('swiper');
             $('.tab-inn').addClass('swiper-wrapper')
@@ -81,12 +85,12 @@ document.addEventListener("DOMContentLoaded", function() {
             $('.tab-inn').removeClass('swiper-wrapper');
             $('.tab').removeClass('swiper-slide');
             $(".mega-sub-menu").mouseleave(function(e){
-                e.stopPropagation(e);
+                // e.stopPropagation(e);
                 $(this).removeClass('active');
                 $('body').removeClass('fixed')
             });
             $(".mega-sub-menu").mouseover(function(e){
-                e.stopPropagation();
+                // e.stopPropagation(e);
                 $(this).addClass('active');
                 $('body').addClass('fixed')
             });
