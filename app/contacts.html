@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>OptimizedHTML 5</title>
+    <meta name="description" content="Startup HTML template OptimizedHTML 5">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="images/favicon.png">
+    <meta property="og:image" content="images/dest/preview.jpg">
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css">
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css">
+    <link rel="stylesheet" href="css/app.min.css">
+
+</head>
+<header id="site-header" class="header">
+    <div class="top-bar">
+        <div class="container">
+            <ul>
+                <li><a href="#">Контакти</a></li>
+                <li><a href="#">Правила та умови</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="mid-bar">
+        <div class="container">
+            <div class="logo">
+                <a href="#">
+                    <img src="images/dest/logo.png" alt="">
+                </a>
+            </div>
+            <div class="search-block">
+                <form action="">
+                    <input placeholder="Пошук..." type="text">
+                    <div class="cld"></div>
+                    <input value="" type="submit">
+                </form>
+            </div>
+            <div class="right-block">
+                <div class="lang">
+                    <ul>
+                        <li class="ua">
+                            <a href="#">
+                                <span>ua</span>
+                                <img src="images/dest/ua.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="en">
+                            <a href="#">
+                                <span>en</span>
+                                <img src="images/dest/en.jpg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <button class="menu-btn" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+                    <svg width="100" height="100" viewBox="0 0 100 100">
+                        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                        <path class="line line2" d="M 20,50 H 80" />
+                        <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <nav class="menu">
+        <div class="container">
+            <div id="mega-menu-wrap-primary" class="mega-menu-wrap"><ul id="mega-menu-primary" class="mega-menu max-mega-menu mega-menu-horizontal" data-event="hover_intent" data-effect="fade_up" data-effect-speed="200" data-effect-mobile="disabled" data-effect-speed-mobile="0" data-mobile-force-width="false" data-second-click="go" data-document-click="collapse" data-vertical-behaviour="standard" data-breakpoint="768" data-unbind="true" data-mobile-state="collapse_all" data-hover-intent-timeout="300" data-hover-intent-interval="100"><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-has-children mega-menu-megamenu mega-align-bottom-left mega-menu-grid mega-hide-arrow mega-menu-item-64" id="mega-menu-item-64"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/products/" aria-haspopup="true" aria-expanded="false" tabindex="0">Продукти<span class="mega-indicator" data-has-click-event="true"></span></a>
+                <ul class="mega-sub-menu">
+                    <li class="mega-menu-row" id="mega-menu-64-0">
+                        <ul class="mega-sub-menu">
+                            <li class="mega-menu-column mega-menu-columns-2-of-12" id="mega-menu-64-0-0">
+                                <ul class="mega-sub-menu">
+                                    <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-has-children mega-has-description mega-menu-item-652" id="mega-menu-item-652"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/motorni-mastyla-dlya-gruzovyh-dvyguniv/"><span class="mega-description-group"><span class="mega-menu-title">Моторні мастила для грузових двигунів</span><span class="mega-menu-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></span><span class="mega-indicator" data-has-click-event="true"></span></a>
+                                        <ul class="mega-sub-menu">
+                                            <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-661" id="mega-menu-item-661"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/pidkategoriya-1/">Підкатегорія 1</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-662" id="mega-menu-item-662"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/pidkategoriya-2/">Підкатегорія 2</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-663" id="mega-menu-item-663"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/pidkategoriya-3/">Підкатегорія 3</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-664" id="mega-menu-item-664"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/pidkategoriya-4/">Підкатегорія 4</a></li>			</ul>
+                                    </li>		</ul>
+                            </li><li class="mega-menu-column mega-menu-columns-2-of-12" id="mega-menu-64-0-1">
+                            <ul class="mega-sub-menu">
+                                <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-has-children mega-has-description mega-menu-item-651" id="mega-menu-item-651"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/kompresorni-mastyla/"><span class="mega-description-group"><span class="mega-menu-title">Компресорні мастила</span><span class="mega-menu-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></span><span class="mega-indicator" data-has-click-event="true"></span></a>
+                                    <ul class="mega-sub-menu">
+                                        <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-665" id="mega-menu-item-665"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/pidkategoriya-1/">Підкатегорія 1</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-666" id="mega-menu-item-666"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/pidkategoriya-2/">Підкатегорія 2</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-667" id="mega-menu-item-667"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/pidkategoriya-3/">Підкатегорія 3</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-668" id="mega-menu-item-668"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/pidkategoriya-4/">Підкатегорія 4</a></li>			</ul>
+                                </li>		</ul>
+                        </li><li class="mega-menu-column mega-menu-columns-2-of-12" id="mega-menu-64-0-2">
+                            <ul class="mega-sub-menu">
+                                <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-has-children mega-has-description mega-menu-item-650" id="mega-menu-item-650"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/zor/"><span class="mega-description-group"><span class="mega-menu-title">ЗОР</span><span class="mega-menu-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></span><span class="mega-indicator" data-has-click-event="true"></span></a>
+                                    <ul class="mega-sub-menu">
+                                        <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-669" id="mega-menu-item-669"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/pidkategoriya-1/">Підкатегорія 1</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-670" id="mega-menu-item-670"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/pidkategoriya-2/">Підкатегорія 2</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-671" id="mega-menu-item-671"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/pidkategoriya-3/">Підкатегорія 3</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-672" id="mega-menu-item-672"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/pidkategoriya-4/">Підкатегорія 4</a></li>			</ul>
+                                </li>		</ul>
+                        </li><li class="mega-menu-column mega-menu-columns-2-of-12" id="mega-menu-64-0-3">
+                            <ul class="mega-sub-menu">
+                                <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-current-products-ancestor mega-current-menu-parent mega-current-products-parent mega-menu-item-has-children mega-has-description mega-menu-item-649" id="mega-menu-item-649"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/vakuumni-mastyla/"><span class="mega-description-group"><span class="mega-menu-title">Вакуумні мастила</span><span class="mega-menu-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></span><span class="mega-indicator" data-has-click-event="true"></span></a>
+                                    <ul class="mega-sub-menu">
+                                        <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-673" id="mega-menu-item-673"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/pidkategoriya-1/">Підкатегорія 1</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-674" id="mega-menu-item-674"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/pidkategoriya-2/">Підкатегорія 2</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-675" id="mega-menu-item-675"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/pidkategoriya-3/">Підкатегорія 3</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-676" id="mega-menu-item-676"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/pidkategoriya-4/">Підкатегорія 4</a></li>			</ul>
+                                </li>		</ul>
+                        </li><li class="mega-menu-column mega-menu-columns-2-of-12" id="mega-menu-64-0-4">
+                            <ul class="mega-sub-menu">
+                                <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-has-children mega-has-description mega-menu-item-653" id="mega-menu-item-653"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/motorni-mastyla-dlya-legkovyh-dvyguniv/"><span class="mega-description-group"><span class="mega-menu-title">Моторні мастила для легкових двигунів</span><span class="mega-menu-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></span><span class="mega-indicator" data-has-click-event="true"></span></a>
+                                    <ul class="mega-sub-menu">
+                                        <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-677" id="mega-menu-item-677"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/pidkategoriya-1/">Підкатегорія 1</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-678" id="mega-menu-item-678"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/pidkategoriya-2/">Підкатегорія 2</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-679" id="mega-menu-item-679"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/pidkategoriya-3/">Підкатегорія 3</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-680" id="mega-menu-item-680"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/pidkategoriya-4/">Підкатегорія 4</a></li>			</ul>
+                                </li>		</ul>
+                        </li><li class="mega-menu-column mega-menu-columns-2-of-12" id="mega-menu-64-0-5">
+                            <ul class="mega-sub-menu">
+                                <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-has-children mega-has-description mega-menu-item-654" id="mega-menu-item-654"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/transmisijni-mastyla/"><span class="mega-description-group"><span class="mega-menu-title">Трансмісійні мастила</span><span class="mega-menu-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></span><span class="mega-indicator" data-has-click-event="true"></span></a>
+                                    <ul class="mega-sub-menu">
+                                        <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-681" id="mega-menu-item-681"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/pidkategoriya-1/">Підкатегорія 1</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-682" id="mega-menu-item-682"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/pidkategoriya-2/">Підкатегорія 2</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-687" id="mega-menu-item-687"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/pidkategoriya-3/">Підкатегорія 3</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-684" id="mega-menu-item-684"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/pidkategoriya-4/">Підкатегорія 4</a></li>			</ul>
+                                </li>		</ul>
+                        </li>	</ul>
+                    </li><li class="mega-menu-row" id="mega-menu-64-1">
+                    <ul class="mega-sub-menu">
+                        <li class="mega-menu-column mega-menu-columns-2-of-12" id="mega-menu-64-1-0">
+                            <ul class="mega-sub-menu">
+                                <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-current-products-ancestor mega-current-menu-parent mega-current-products-parent mega-menu-item-has-children mega-has-description mega-menu-item-655" id="mega-menu-item-655"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/vakuumni-mastyla/"><span class="mega-description-group"><span class="mega-menu-title">Вакуумні мастила</span><span class="mega-menu-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></span><span class="mega-indicator" data-has-click-event="true"></span></a>
+                                    <ul class="mega-sub-menu">
+                                        <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-685" id="mega-menu-item-685"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/pidkategoriya-1/">Підкатегорія 1</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-686" id="mega-menu-item-686"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/pidkategoriya-2/">Підкатегорія 2</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-683" id="mega-menu-item-683"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/pidkategoriya-3/">Підкатегорія 3</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-688" id="mega-menu-item-688"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/pidkategoriya-4/">Підкатегорія 4</a></li>			</ul>
+                                </li>		</ul>
+                        </li><li class="mega-menu-column mega-menu-columns-2-of-12" id="mega-menu-64-1-1">
+                        <ul class="mega-sub-menu">
+                            <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-has-description mega-menu-item-656" id="mega-menu-item-656"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/zor/"><span class="mega-description-group"><span class="mega-menu-title">ЗОР</span><span class="mega-menu-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></span></a></li>		</ul>
+                    </li><li class="mega-menu-column mega-menu-columns-2-of-12" id="mega-menu-64-1-2">
+                        <ul class="mega-sub-menu">
+                            <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-has-description mega-menu-item-657" id="mega-menu-item-657"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/kompresorni-mastyla/"><span class="mega-description-group"><span class="mega-menu-title">Компресорні мастила</span><span class="mega-menu-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></span></a></li>		</ul>
+                    </li><li class="mega-menu-column mega-menu-columns-2-of-12" id="mega-menu-64-1-3">
+                        <ul class="mega-sub-menu">
+                            <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-has-description mega-menu-item-658" id="mega-menu-item-658"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/motorni-mastyla-dlya-gruzovyh-dvyguniv/"><span class="mega-description-group"><span class="mega-menu-title">Моторні мастила для грузових двигунів</span><span class="mega-menu-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></span></a></li>		</ul>
+                    </li><li class="mega-menu-column mega-menu-columns-2-of-12" id="mega-menu-64-1-4">
+                        <ul class="mega-sub-menu">
+                            <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-has-description mega-menu-item-659" id="mega-menu-item-659"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/motorni-mastyla-dlya-legkovyh-dvyguniv/"><span class="mega-description-group"><span class="mega-menu-title">Моторні мастила для легкових двигунів</span><span class="mega-menu-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></span></a></li>		</ul>
+                    </li><li class="mega-menu-column mega-menu-columns-2-of-12" id="mega-menu-64-1-5">
+                        <ul class="mega-sub-menu">
+                            <li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-has-description mega-menu-item-660" id="mega-menu-item-660"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/product-cat/transmisijni-mastyla/"><span class="mega-description-group"><span class="mega-menu-title">Трансмісійні мастила</span><span class="mega-menu-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></span></a></li>		</ul>
+                    </li>	</ul>
+                </li></ul>
+            </li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-current-products-parent mega-align-bottom-left mega-menu-flyout mega-menu-item-63" id="mega-menu-item-63"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/brands/" tabindex="0">Бренди</a></li><li class="mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-align-bottom-left mega-menu-flyout mega-menu-item-65" id="mega-menu-item-65"><a class="mega-menu-link" href="#" tabindex="0">Сегменти ринку</a></li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-323" id="mega-menu-item-323"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/services/" tabindex="0">Сервіси</a></li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-67" id="mega-menu-item-67"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/about-us/" tabindex="0">Про нас</a></li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-68" id="mega-menu-item-68"><a class="mega-menu-link" href="http://oilgroup.ninesquares.studio/kontakty/" tabindex="0">Контакти</a></li></ul></div>            <div class="lang-mob">
+
+            <div class="wpml-ls-statics-shortcode_actions wpml-ls my-custom-switcher">
+
+                <ul>
+
+                    <li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-en wpml-ls-first-item my-custom-switcher-item">
+                        <a href="http://oilgroup.ninesquares.studio/en/">
+                            <span>en</span>
+                            <img src="http://oilgroup.ninesquares.studio/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png" alt="en" title="en">
+                        </a>
+                    </li>
+
+
+                    <li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-uk wpml-ls-current-language wpml-ls-last-item my-custom-switcher-item">
+                        <a href="http://oilgroup.ninesquares.studio/products/petronas-syntium-5000-xs-5w30/">
+                            <span>ua</span>
+                            <img src="http://oilgroup.ninesquares.studio/wp-content/plugins/sitepress-multilingual-cms/res/flags/uk.png" alt="uk" title="ua">
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+        </div>
+
+    </nav>
+</header>
+<main class="main">
+    <section class="inn-banner no-p">
+        <img src="images/dest/top-bg9.jpg" alt="">
+        <div class="container">
+            <div class="blue-block l-blue wb">
+                <div class="crumbs">
+                    <ul>
+                        <li>
+                            <a href="">Oilrgroup</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Сервіси
+                            </a>
+                        </li>
+                        <li>
+                            Контакти
+                        </li>
+                    </ul>
+                </div>
+                <h1 class="title">
+                    Контакти
+                </h1>
+            </div>
+            <a class="tel d-lg-none" href="+380507010070">+38 (050) 70-100-70</a>
+            <a class="tel d-lg-none" href="tel:380987020070">+38 (098) 70-200-70</a>
+        </div>
+    </section>
+    <section class="mapper">
+        <div class="container">
+            <div class="tobar">
+
+                <div class="toblock active">
+                    <div class="clicker">
+                        Київ
+                    </div>
+                    <div id="sidebar" class="sidebar">
+                        <div class="title">Київ (Центральний офіс)</div>
+                        <div><b>Адреса: </b>03083 вул. Пирогівський Шлях, 32</div>
+                        <div><b>Телефон: </b>044-537-06-44</div>
+                    </div>
+                    <div id="map" class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2544.3159979806915!2d30.5500765!3d50.37930759999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c60573d754a3%3A0x495d78332c50bc80!2z0LLRg9C70LjRhtGPINCf0LjRgNC-0LPRltCy0YHRjNC60LjQuSDRiNC70Y_RhSwgMzIsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1663832575720!5m2!1suk!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="toblock">
+                    <div class="clicker">
+                        Київ
+                    </div>
+                    <div id="sidebar" class="sidebar">
+                        <div class="title">Київ (Центральний офіс)</div>
+                        <div><b>Адреса: </b>03083 вул. Пирогівський Шлях, 32</div>
+                        <div><b>Телефон: </b>044-537-06-44</div>
+                    </div>
+                    <div id="map" class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2544.3159979806915!2d30.5500765!3d50.37930759999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c60573d754a3%3A0x495d78332c50bc80!2z0LLRg9C70LjRhtGPINCf0LjRgNC-0LPRltCy0YHRjNC60LjQuSDRiNC70Y_RhSwgMzIsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1663832575720!5m2!1suk!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="toblock ">
+                    <div class="clicker">
+                        Київ
+                    </div>
+                    <div id="sidebar" class="sidebar">
+                        <div class="title">Київ (Центральний офіс)</div>
+                        <div><b>Адреса: </b>03083 вул. Пирогівський Шлях, 32</div>
+                        <div><b>Телефон: </b>044-537-06-44</div>
+                    </div>
+                    <div id="map" class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2544.3159979806915!2d30.5500765!3d50.37930759999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c60573d754a3%3A0x495d78332c50bc80!2z0LLRg9C70LjRhtGPINCf0LjRgNC-0LPRltCy0YHRjNC60LjQuSDRiNC70Y_RhSwgMzIsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1663832575720!5m2!1suk!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div id="listings" class="listings row">
+                <div class="item col-lg-3 active">
+                    Київ
+                </div>
+                <div class="item col-lg-3">
+                    Миколаїв
+                </div>
+                <div class="item col-lg-3">
+                   Львів
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="phones-contact no-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="inn">
+                        <div class="title">
+                            Потрібна консультація?
+                        </div>
+                        <div class="phones">
+                            <a href="tel:380507010070">+38 (050) 70-100-70
+                            </a>
+                            <a href="tel:380987020070">+38 (098) 70-200-70</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-6">
+                    <div class="inn">
+                        <a href="#" class="request modal-open">
+                            Відправити запит
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="left-block">
+            <div class="menu">
+                <div class="title">Бренди</div>
+                <ul>
+                    <li>
+                        <a href="">Petronas</a>
+                    </li>
+                    <li>
+                        <a href="">ScandiOil</a>
+                    </li>
+                    <li>
+                        <a href="">CRC</a>
+                    </li>
+                    <li>
+                        <a href="">NRG</a>
+                    </li>
+                    <li>
+                        <a href="">Apar</a>
+                    </li>
+                    <li>
+                        <a href="">Nettuno</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu">
+                <div class="title">Сегменти ринку</div>
+                <ul>
+                    <li>
+                        <a href="">Сільське господарство</a>
+                    </li>
+                    <li>
+                        <a href="">Видобування</a>
+                    </li>
+                    <li>
+                        <a href="">Транспортні перевезення</a>
+                    </li>
+                    <li>
+                        <a href="">Харчова промисловість</a>
+                    </li>
+                    <li>
+                        <a href="">Металообробка</a>
+                    </li>
+                    <li>
+                        <a href="">Легкові автомобілі</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu">
+                <div class="title">Про нас</div>
+                <ul>
+                    <li>
+                        <a href="">Сертифікати</a>
+                    </li>
+                    <li>
+                        <a href="">Життя компанії</a>
+                    </li>
+                    <li>
+                        <a href="">Новини</a>
+                    </li>
+                    <li>
+                        <a href="">Вакансії</a>
+                    </li>
+                    <li>
+                        <a href="">Сервіси</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="right-block">
+            <div class="logo">
+                <a href="#">
+                    <img src="images/dest/logo2.png" alt="">
+                </a>
+            </div>
+            <div class="phones">
+					<span>
+						Потрібна консультація?
+					</span>
+                <a href="tel:380507010070">
+                    +38 (050) 70-100-70
+                </a>
+                <a href="tel:380987020070">
+                    +38 (098) 70-200-70
+                </a>
+            </div>
+            <a href="#" class="btn arr">
+                Зв’язатись з нами
+            </a>
+        </div>
+    </div>
+    <div class="btm-block">
+			<span>
+				Copyright © 2022 OILGROUP
+			</span>
+        <a href="#">
+            TERMS AND CONDITIONS
+        </a>
+        <a href="#">
+            CONTACT US
+        </a>
+    </div>
+</footer>
+<div class="modal">
+    <div class="bg">
+    </div>
+    <div class="modal-inn">
+        <div>
+            <div class="close"></div>
+            <h2 class="title">
+                Відправити запит
+            </h2>
+            <form action="">
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <span></span>
+                        <select name="" id="">
+                            <option value="">Консультація по підбору мастила</option>
+                            <option value="">Консультація по підбору мастила</option>
+                            <option value="">Консультація по підбору мастила</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-12">
+							<span>
+								Ім’я<span>*</span>
+							</span>
+                        <input required value="Тарас" type="text">
+                        <span class="wpcf7-not-valid-tip" aria-hidden="true">Please fill in the required field.</span>
+                    </div>
+                    <div class="col-lg-12">
+							<span>
+								Прізвище<span>*</span>
+							</span>
+                        <input required value="Шевченко" type="text">
+                        <span class="wpcf7-not-valid-tip" aria-hidden="true">Please fill in the required field.</span>
+                    </div>
+                    <div class="col-lg-12">
+							<span>
+								Компанія
+							</span>
+                        <input placeholder="Назва компанії" type="text">
+                    </div>
+                    <div class="col-lg-12">
+							<span>
+							Телефон<span>*</span>
+							</span>
+                        <input required placeholder="+380 (__) - ___ - __ - __" type="tel">
+                        <span class="wpcf7-not-valid-tip" aria-hidden="true">Please fill in the required field.</span>
+                    </div>
+                    <div class="col-lg-12">
+							<span>
+							Email
+							</span>
+                        <input placeholder="example@gmail.com" type="text">
+                        <span class="wpcf7-not-valid-tip" aria-hidden="true">Please fill in the required field.</span>
+                    </div>
+                    <div class="col-lg-12">
+							<span>
+								Деталі
+							</span>
+                        <textarea placeholder="Пишіть тут..." name="" id="text" ></textarea>
+                    </div>
+                    <div class="col-lg-12">
+                        <input class="btn" value="Передзвоніть мені" type="submit">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="js/app.min.js"></script>
+<script type="text/javascript" src="js/lightbox.min.js"></script>
+
+</body>
+</html>
