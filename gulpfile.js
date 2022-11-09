@@ -1,5 +1,5 @@
 let preprocessor = 'sass', // Preprocessor (sass, less, styl); 'sass' also work with the Scss syntax in blocks/ folder.
-		fileswatch   = 'html,htm,txt,json,md,woff2' // List of files extensions for watching & hard reload
+	fileswatch   = 'html,htm,txt,json,md,woff2' // List of files extensions for watching & hard reload
 
 import pkg from 'gulp'
 const { gulp, src, dest, parallel, series, watch } = pkg
@@ -45,9 +45,6 @@ function scripts() {
 		.pipe(webpackStream({
 			mode: 'production',
 			performance: { hints: false },
-			plugins: [
-				new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery', 'window.jQuery': 'jquery' }), // jQuery (npm i jquery)
-			],
 			module: {
 				rules: [
 					{
@@ -63,6 +60,12 @@ function scripts() {
 					}
 				]
 			},
+			plugins: [
+				new webpack.ProvidePlugin({
+					$: 'jquery',
+					jQuery: 'jquery'
+				})
+			],
 			optimization: {
 				minimize: true,
 				minimizer: [
@@ -73,7 +76,6 @@ function scripts() {
 				]
 			},
 		}, webpack)).on('error', (err) => {
-			this.emit('end')
 		})
 		.pipe(concat('app.min.js'))
 		.pipe(dest('app/js'))
@@ -86,7 +88,6 @@ function styles() {
 		.pipe(eval(preprocessor)({ 'include css': true }))
 		.pipe(postCss([
 			autoprefixer({ grid: 'autoplace' }),
-			cssnano({ preset: ['default', { discardComments: { removeAll: true } }] })
 		]))
 		.pipe(concat('app.min.css'))
 		.pipe(dest('app/css'))
@@ -108,7 +109,7 @@ function buildcopy() {
 		'!app/images/src/**/*',
 		'app/fonts/**/*'
 	], { base: 'app/' })
-	.pipe(dest('dist'))
+		.pipe(dest('dist'))
 }
 
 async function buildhtml() {

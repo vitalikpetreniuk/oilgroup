@@ -1,58 +1,615 @@
 // USER VARIABLES SECTION
 
-$accent: orange // Accent Color
-$fontsize: 16px // Body Font Size
-$textcolor: #333 // Text Color
-$lineheight: 1.65 // Document Line Height
-$userfont: roboto-oh5, sans-serif // User Font Family
-$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+$accent: orange
+// Accent Color
+$fontsize: 16px
+// Body Font Size
+$blue: #4095CF
+$l-blue: #003887
+$gray: #5E5E67
+$textcolor: #333
+// Text Color
+$lineheight: 1.65
+// Document Line Height
+$userfont: Montserrat, sans-serif
+// User Font Family
+$systemfont: -apple-system BlinkMacSystemFont, Arial, sans-serif
+// System Font Family
 
 // Bootstrap compatible gutter variable => $gutter
-$grid-gutter-width: 30px
+$grid-gutter-width: 15px
 $gutter: $grid-gutter-width
+$container-max-widths: (sm: 540px, md: 720px, lg: 1050px, xl: 1320px)
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1400px)
 
 // IMPORT SECTION
 
-@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
-@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
-// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
-// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'
+// Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'
+// Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss'
+// Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss'; // Optional Bootstrap Utilites
 
 // FONTS LOAD SECTION
 
 @mixin font($fname, $fstyle, $fweight, $furl)
-	@font-face
-		font-family: $fname
-		font-style: $fstyle
-		font-weight: $fweight
-		src: url($furl) format('woff2')
+  @font-face
+    font-family: $fname
+    font-style: $fstyle
+    font-weight: $fweight
+    src: local($fname), url($furl) format('woff2')
+// font-display: swap; // Uncomment to initially display system fonts
 
-@include font('roboto-oh5', normal, 400, '../fonts/roboto-regular-webfont.woff2')
-@include font('roboto-oh5', italic, 400, '../fonts/roboto-italic-webfont.woff2')
-@include font('roboto-oh5', normal, 700, '../fonts/roboto-bold-webfont.woff2')
-@include font('roboto-oh5', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+@include font('Montserrat', normal, 300, '../fonts/Montserrat-Light.woff2')
+@include font('Montserrat', normal, 400, '../fonts/Montserrat-Regular.woff2')
+@include font('Montserrat', normal, 500, '../fonts/Montserrat-Medium.woff2')
+@include font('Montserrat', normal, 600, '../fonts/Montserrat-SemiBold.woff2')
+@include font('Montserrat', normal, 700, '../fonts/Montserrat-Bold.woff2')
+@include font('Roboto', normal, 400, '../fonts/roboto-regular-webfont.woff2')
+@include font('Roboto', italic, 400, '../fonts/roboto-italic-webfont.woff2')
+@include font('Roboto', normal, 700, '../fonts/roboto-bold-webfont.woff2')
+@include font('Roboto', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
 
-// GENERAL CSS SETTINGS
+// GENERAL DOCUMENT STYLES
 
 ::placeholder
-	color: #666
+  color: #666
+
+a
+  text-decoration: none
 
 ::selection
-	background-color: $accent
-	color: #fff
+  background-color: $accent
+  color: #fff
 
 input, textarea
-	outline: none
-	&:focus:required:invalid
-		border-color: red
-	&:required:valid
-		border-color: green
+  outline: none
+
+  &:focus:required:invalid
+    border-color: red
+
+  &:required:valid
+    border-color: green
+
+.container
+  padding-left: 15px
+  padding-right: 15px
+
+@mixin input
+  background: #F2F2F2
+  border: 1px solid #F2F2F2
+  padding: 10px 20px 8px
+  border-radius: 5px
+  appearance: none
+  height: 39px
+  font-weight: 400
+  font-size: 14px
+  line-height: 150%
+  color: #777777
+  outline: none
+  &::placeholder
+    font-weight: 400
+    font-size: 14px
+    line-height: 150%
+    color: #777777
+  &:focus
+    border: 1px solid #9DCFF1
+  &.wpcf7-not-valid
+    border: 1px solid #FF685E
+  &:active
+    border: 1px solid #9DCFF1
+
+.lightbox
+  transform: translateY(-178px)
+
+  .lb-image
+    border: unset
+    border-radius: unset
+
+  .lb-nav
+    a
+      opacity: 1
+
+@mixin decent
+  position: relative
+  min-height: 715px
+  .container
+    position: relative
+
+    & > img
+      position: absolute
+      object-fit: cover
+      border-radius: 10px
+      height: 675px
+      width: 56%
+      top: 0
+      right: 15px
+      z-index: 1
+
+    h2.title
+      margin-bottom: 65px
+      max-width: 555px
+
+      & + .btn
+        margin: -30px 0 45px
+
+    .card
+      background: #FFFFFF
+      box-shadow: 4px 15px 15px rgba(0, 0, 0, 0.1)
+      border-radius: 10px
+      padding: 55px 111px 64px
+      width: 60%
+      z-index: 2
+      position: relative
+      color: #464647
+
+      .sub
+        font-size: 20px
+        font-weight: 700
+        margin-bottom: 20px
+
+      & + .btn
+        margin-top: 106px
+
+      &:not(:last-of-type)
+        margin-bottom: 15px
+
+      .title
+        font-weight: 400
+        font-size: 16px
+        line-height: 192%
+        color: #003887
+        margin-bottom: 20px
+
+        &.no-mb
+          margin-bottom: 0
+
+      p
+        line-height: 192%
+        color: #464647
+        margin-bottom: 20px
+        position: relative
+
+        &.bullet
+          span
+            font-weight: 700
+
+          &:after
+            content: ""
+            position: absolute
+            width: 19px
+            height: 5px
+            display: block
+            background-color: $blue
+            left: -40px
+            top: 13px
+
+      .name-block
+        display: flex
+        align-items: center
+
+        img
+          width: 50px
+          height: 50px
+          border-radius: 50%
+          border: 3px solid #4095CF
+          margin-right: 18px
+
+        div
+          span
+            display: block
+
+            &.name
+              color: #000000
+
+            &.sub
+              font-size: 14px
+              color: #7F7F86
+  +media-breakpoint-down(lg)
+    .container
+      & > img
+        height: 400px
+        width: 45%
+  +media-breakpoint-down(md)
+    min-height: auto
+    .container
+      & > img
+        display: none
+
+      h2.title
+        margin-bottom: 40px
+
+        & + .btn
+          margin: -10px 0 45px
+
+      .card
+        width: 100%
+
+        .name-block
+
+          .sub
+            margin-bottom: 0
+
+        & + .btn
+          margin: 20px auto 0
+
+
+  +media-breakpoint-down(sm)
+    .container
+      h2.title
+        margin-bottom: 36px
+
+        & + .btn
+          margin: 0 0 45px
+
+      .card
+        padding: 40px 15px 55px
+        box-shadow: unset
+
+        .title
+          margin-bottom: 20px
+
+@mixin crumbs
+  ul
+    padding-inline-start: 0
+    margin-bottom: 10px
+    list-style: none
+    display: flex
+    flex-wrap: wrap
+    color: #ffffff
+
+    li
+      &:not(:last-of-type)
+        margin-right: 7px
+
+        &:after
+          content: "/"
+
+      a
+        color: #ffffff
+        text-decoration: underline
+
+        &:hover
+          text-decoration: unset
+  +media-breakpoint-down(md)
+    font-size: 14px
+
+@mixin pagination
+  list-style: none
+  font-weight: 600
+  margin-bottom: 0
+  display: flex
+  padding: 7px 20px 7px 40px
+  background: #F5F5F5
+  border-radius: 7px
+  width: fit-content
+  li
+    a, span
+      display: flex
+      width: 51px
+      height: 51px
+      justify-content: center
+      align-items: center
+      color: black
+      margin-right: 15px
+      border-radius: 7px
+      transition: 0.4s
+
+      li.active &, &:hover
+        color: #FFFFFF
+        background-color: $blue
+        text-decoration: none
+
+      &.prev
+        &:after
+          content: "<"
+
+      &.next
+        &:after
+          content: ">"
+  +media-breakpoint-down(sm)
+    padding: 7px 20px
+    li
+      a, span
+        margin-right: 8px
+
+      &:last-of-type
+        a, span
+          margin-right: 0
+
+@mixin tab
+  background-color: #ffffff
+  border-radius: 10px
+  padding: 36px 36px 36px 111px
+  & > div
+    &:nth-of-type(1)
+      .cat
+        font-size: 14px
+        display: block
+        line-height: 150%
+        letter-spacing: 0.15em
+        text-transform: uppercase
+        color: #4095CF
+        margin: 52px 0 7px
+        font-weight: 600
+
+      h3
+        font-weight: 600
+        font-size: 36px
+        line-height: 140%
+        margin-bottom: 5px
+
+        & + p
+          font-weight: 400
+          font-size: 16px
+          line-height: 192%
+          color: #464647
+          margin-bottom: 30px
+
+    &:nth-of-type(2)
+      img
+        height: 439px
+        max-width: calc(100% - 35px)
+        margin-left: 35px
+        margin-right: 0
+        object-fit: cover
+        border-radius: 10px
+  +media-breakpoint-down(lg)
+    padding: 36px 36px 36px 27px
+  +media-breakpoint-down(md)
+    display: flex
+    padding: 0
+    margin: 0
+    flex-direction: column-reverse
+    border-radius: 10px
+    & > div
+      width: auto
+      padding: 22px
+
+      &:nth-of-type(1)
+        padding-top: 0
+
+        .cat
+          margin: 0 0 7px
+
+        h3
+          font-size: 24px
+          line-height: 140%
+          margin-bottom: 15px
+
+          & + p
+            margin-bottom: 25px
+
+        .btn
+          margin: 0 auto
+
+      &:nth-of-type(2) img
+        border-radius: 10px
+        width: 100%
+        max-width: 100%
+        margin-left: 0
+        margin-right: 0
+  +media-breakpoint-down(sm)
+    & > div:nth-of-type(2) img
+      height: 201px
+      width: 100%
 
 body
-	font-family: $userfont
-	font-size: $fontsize
-	line-height: $lineheight
-	color: $textcolor
-	min-width: 320px
-	position: relative
-	overflow-x: hidden
+  font-family: $userfont
+  font-size: $fontsize
+  line-height: $lineheight
+  color: $textcolor
+  min-width: 320px
+  font-weight: 400
+  position: relative
+  overflow-x: hidden
+  background-color: #F5F5F5
+  margin-top: 193px
+  overflow: overlay
+
+  &.fixed
+    overflow: hidden
+
+h2.title
+  font-weight: 600
+  max-width: 800px
+  font-size: 36px
+  line-height: 140%
+  color: #000000
+  padding-left: 30px
+  border-left: 4px solid $blue
+
+  &.no-shrink
+    max-width: 100%
+
+  &.revert
+    color: #ffffff
+
+  +media-breakpoint-down(md)
+    font-size: 24px
+
+.btn
+  border-radius: 3px
+  display: block
+  font-weight: 600
+  padding: 25px 60px 25px 30px
+  background: no-repeat center right 28px / 16px 16px url('../images/dest/arr.png') $blue
+  color: #ffffff
+  text-decoration: none
+  width: fit-content
+  transition: 0.4s
+  border: unset
+
+  &.no-arr
+    background: $blue
+    padding: 25px 30px
+
+    &:hover
+      background: #3282b9
+
+  &:hover
+    text-decoration: unset
+    color: #ffffff
+    background: no-repeat center right 20px / 16px 16px url('../images/dest/arr.png') #3282b9
+
+.menu-btn
+  display: none
+
+.pre
+  white-space: pre-line
+
+.modal
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: -5
+  opacity: 0
+  transition: 0.4s
+
+  &.open
+    display: block
+    opacity: 1
+    z-index: 111
+
+  .bg
+    position: absolute
+    background: rgba(245, 245, 245, 0.9)
+    width: 100%
+    height: 100%
+
+  .modal-inn
+    position: absolute
+
+    background: #FFFFFF
+    box-shadow: 4px 15px 15px rgba(0, 0, 0, 0.1)
+    border-radius: 10px
+    width: 651px
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+
+    & > div
+      position: relative
+      padding: 50px 105px 60px
+
+      .close
+        position: absolute
+        right: 29px
+        top: 29px
+        width: 24px
+        cursor: pointer
+        height: 24px
+        background: no-repeat center center / cover url("../images/dest/close.svg")
+
+    h2.title
+      font-size: 24px
+      line-height: 36px
+      margin-bottom: 34px
+
+    form
+      .row
+        & > div
+          display: flex
+          justify-content: flex-end
+          padding: 0 7.5px
+          flex-wrap: wrap
+
+          &:last-of-type
+            justify-content: flex-start
+
+          &:not(:last-of-type)
+            margin-bottom: 15px
+
+          &:nth-last-of-type(2)
+            margin-bottom: 40px
+
+          .btn
+            margin-left: 99px
+
+          & > span
+            font-weight: 400
+            font-size: 14px
+            line-height: 150%
+            color: #777777
+            display: block
+            margin-right: 19px
+
+            &.wpcf7-not-valid-tip
+              width: 100%
+              margin-top: 10px
+              color: red
+              margin-right: 0
+              padding-left: 123px
+              display: none
+
+            span
+              color: rgba(233, 63, 51, 1)
+
+          input[type=text], input[type=tel], input[type=email]
+            @include input
+            width: 324px
+
+          select
+            @include input
+            width: 324px
+            cursor: pointer
+            background: no-repeat center right 14px / 10px 5px url('../images/dest/arr7.svg') #F2F2F2
+
+          textarea
+            @include input
+            width: 324px
+            resize: none
+            height: 82px
+
+.sidebar
+  width: 33.3333%
+  height: 100%
+  top: 0
+  left: 0
+  overflow: hidden
+  border-right: 1px solid rgba(0, 0, 0, 0.25)
+
+  .title
+    font-weight: 400
+    max-width: 800px
+    font-size: 20px
+    line-height: 150%
+    color: $l-blue
+    padding-left: 23px
+    border-left: 4px solid $blue
+    margin-bottom: 15px
+
+  div:not(.title)
+    font-weight: 400
+    font-size: 16px
+    line-height: 191%
+    color: #777777
+
+.map
+  width: 66.6666%
+  height: 258px
+
+  iframe
+    max-height: 100%
+    width: 100%
+
+.listings
+
+  .item
+
+    &.active
+      background-color: #f8f8f8
+
+.marker
+  border: none
+  cursor: pointer
+  height: 56px
+  width: 56px
+  background-size: contain
+  background-position: center
+  background-repeat: no-repeat
+  background-image: url('../images/dest/marker.png')
