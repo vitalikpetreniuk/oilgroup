@@ -4748,7 +4748,7 @@ h2.title.revert {
   display: block;
   font-weight: 600;
   padding: 25px 60px 25px 30px;
-  background: no-repeat center right 28px/16px 16px url("../images/dest/arr.png") #4095CF;
+  background: no-repeat center right 28px/16px 16px url("../images/dist/arr.png") #4095CF;
   color: #ffffff;
   text-decoration: none;
   width: -webkit-fit-content;
@@ -4769,7 +4769,7 @@ h2.title.revert {
 .btn:hover {
   text-decoration: unset;
   color: #ffffff;
-  background: no-repeat center right 20px/16px 16px url("../images/dest/arr.png") #3282b9;
+  background: no-repeat center right 20px/16px 16px url("../images/dist/arr.png") #3282b9;
 }
 
 .menu-btn {
@@ -4827,7 +4827,7 @@ h2.title.revert {
   width: 24px;
   cursor: pointer;
   height: 24px;
-  background: no-repeat center center/cover url("../images/dest/close.svg");
+  background: no-repeat center center/cover url("../images/dist/close.svg");
 }
 .modal .modal-inn h2.title {
   font-size: 24px;
@@ -4949,7 +4949,7 @@ h2.title.revert {
   outline: none;
   width: 324px;
   cursor: pointer;
-  background: no-repeat center right 14px/10px 5px url("../images/dest/arr7.svg") #F2F2F2;
+  background: no-repeat center right 14px/10px 5px url("../images/dist/arr7.svg") #F2F2F2;
 }
 .modal .modal-inn form .row > div select::-webkit-input-placeholder {
   font-weight: 400;
@@ -5094,7 +5094,7 @@ h2.title.revert {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../images/dest/marker.png");
+  background-image: url("../images/dist/marker.png");
 }
 
 /*!
@@ -9847,7 +9847,7 @@ h2.title.revert {
   display: block;
   font-weight: 600;
   padding: 25px 60px 25px 30px;
-  background: no-repeat center right 28px/16px 16px url("../images/dest/arr.png") #4095CF;
+  background: no-repeat center right 28px/16px 16px url("../images/dist/arr.png") #4095CF;
   color: #ffffff;
   text-decoration: none;
   width: -webkit-fit-content;
@@ -9868,7 +9868,7 @@ h2.title.revert {
 .btn:hover {
   text-decoration: unset;
   color: #ffffff;
-  background: no-repeat center right 20px/16px 16px url("../images/dest/arr.png") #3282b9;
+  background: no-repeat center right 20px/16px 16px url("../images/dist/arr.png") #3282b9;
 }
 
 .menu-btn {
@@ -9926,7 +9926,7 @@ h2.title.revert {
   width: 24px;
   cursor: pointer;
   height: 24px;
-  background: no-repeat center center/cover url("../images/dest/close.svg");
+  background: no-repeat center center/cover url("../images/dist/close.svg");
 }
 .modal .modal-inn h2.title {
   font-size: 24px;
@@ -10048,7 +10048,7 @@ h2.title.revert {
   outline: none;
   width: 324px;
   cursor: pointer;
-  background: no-repeat center right 14px/10px 5px url("../images/dest/arr7.svg") #F2F2F2;
+  background: no-repeat center right 14px/10px 5px url("../images/dist/arr7.svg") #F2F2F2;
 }
 .modal .modal-inn form .row > div select::-webkit-input-placeholder {
   font-weight: 400;
@@ -10193,7 +10193,7 @@ h2.title.revert {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../images/dest/marker.png");
+  background-image: url("../images/dist/marker.png");
 }
 
 #mega-menu-primary {
@@ -10403,7 +10403,7 @@ h2.title.revert {
     width: 33px;
     height: 33px;
     border-radius: 5px;
-    background: no-repeat center/12px 6px url("../images/dest/arr5.svg") #EBEBEB;
+    background: no-repeat center/12px 6px url("../images/dist/arr5.svg") #EBEBEB;
     -webkit-transition: 0.4s ease-out;
     -o-transition: 0.4s ease-out;
     transition: 0.4s ease-out;
@@ -10471,7 +10471,7 @@ h2.title.revert {
     display: block;
     width: 16px;
     height: 16px;
-    background: no-repeat center center/cover url("../images/dest/arr3.png");
+    background: no-repeat center center/cover url("../images/dist/arr3.png");
   }
   ul#mega-menu-primary > li > .mega-sub-menu {
     display: none;
@@ -10514,7 +10514,7 @@ h2.title.revert {
     width: 6px;
     height: 12px;
     margin-right: 10px;
-    background: no-repeat center center/cover url("../images/dest/arr4.svg");
+    background: no-repeat center center/cover url("../images/dist/arr4.svg");
   }
   ul#mega-menu-primary > li > .mega-sub-menu .row > div.active .title:after {
     -webkit-transform: rotate(180deg);
@@ -10544,7 +10544,7 @@ h2.title.revert {
     width: 33px;
     height: 33px;
     border-radius: 5px;
-    background: no-repeat center/12px 6px url("../images/dest/arr5.svg") #EBEBEB;
+    background: no-repeat center/12px 6px url("../images/dist/arr5.svg") #EBEBEB;
     -webkit-transition: 0.4s ease-out;
     -o-transition: 0.4s ease-out;
     transition: 0.4s ease-out;
@@ -10589,7 +10589,7 @@ h2.title.revert {
     display: block;
     width: 16px;
     height: 16px;
-    background: no-repeat center center/cover url("../images/dest/arr3.png");
+    background: no-repeat center center/cover url("../images/dist/arr3.png");
   }
   .oilgroup-mega-wrap > ul {
     -webkit-column-count: 1;
@@ -15362,7 +15362,7 @@ h2.title.revert {
   display: block;
   font-weight: 600;
   padding: 25px 60px 25px 30px;
-  background: no-repeat center right 28px/16px 16px url("../images/dest/arr.png") #4095CF;
+  background: no-repeat center right 28px/16px 16px url("../images/dist/arr.png") #4095CF;
   color: #ffffff;
   text-decoration: none;
   width: -webkit-fit-content;
@@ -15383,7 +15383,7 @@ h2.title.revert {
 .btn:hover {
   text-decoration: unset;
   color: #ffffff;
-  background: no-repeat center right 20px/16px 16px url("../images/dest/arr.png") #3282b9;
+  background: no-repeat center right 20px/16px 16px url("../images/dist/arr.png") #3282b9;
 }
 
 .menu-btn {
@@ -15441,7 +15441,7 @@ h2.title.revert {
   width: 24px;
   cursor: pointer;
   height: 24px;
-  background: no-repeat center center/cover url("../images/dest/close.svg");
+  background: no-repeat center center/cover url("../images/dist/close.svg");
 }
 .modal .modal-inn h2.title {
   font-size: 24px;
@@ -15563,7 +15563,7 @@ h2.title.revert {
   outline: none;
   width: 324px;
   cursor: pointer;
-  background: no-repeat center right 14px/10px 5px url("../images/dest/arr7.svg") #F2F2F2;
+  background: no-repeat center right 14px/10px 5px url("../images/dist/arr7.svg") #F2F2F2;
 }
 .modal .modal-inn form .row > div select::-webkit-input-placeholder {
   font-weight: 400;
@@ -15708,7 +15708,7 @@ h2.title.revert {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../images/dest/marker.png");
+  background-image: url("../images/dist/marker.png");
 }
 
 header.header {
@@ -15823,7 +15823,7 @@ header.header .mid-bar .container .search-block form input[type=submit] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background: no-repeat center center/19px 18px url("../images/dest/search.svg");
+  background: no-repeat center center/19px 18px url("../images/dist/search.svg");
 }
 header.header .mid-bar .container .right-block {
   display: -webkit-box;
@@ -16073,17 +16073,17 @@ section.phones-contact .row > div:nth-of-type(1) .phones a:nth-of-type(1):after 
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
-  background: no-repeat center center/100% 100% url("../images/dest/phone.png");
+  background: no-repeat center center/100% 100% url("../images/dist/phone.png");
 }
 section.phones-contact .row > div:nth-of-type(2) .inn {
   height: 96px;
-  background: no-repeat center right 43px/16px 16px url("../images/dest/arr.png") #5E5E67;
+  background: no-repeat center right 43px/16px 16px url("../images/dist/arr.png") #5E5E67;
   -webkit-transition: 0.4s ease-out;
   -o-transition: 0.4s ease-out;
   transition: 0.4s ease-out;
 }
 section.phones-contact .row > div:nth-of-type(2) .inn:hover {
-  background: no-repeat center right 36px/16px 16px url("../images/dest/arr.png") #535357;
+  background: no-repeat center right 36px/16px 16px url("../images/dist/arr.png") #535357;
 }
 section.phones-contact .row > div:nth-of-type(2) .inn a {
   display: block;
@@ -16447,7 +16447,7 @@ section.consult .row > div:nth-of-type(2) .tel:after {
   height: 49px;
   margin-left: 15px;
   border-radius: 3px;
-  background: no-repeat center center/20px 20px url("../images/dest/tel2.png") #4095CF;
+  background: no-repeat center center/20px 20px url("../images/dist/tel2.png") #4095CF;
 }
 section.about-us {
   padding: 80px 0;
@@ -16784,7 +16784,7 @@ section.last-news .news-inn .news-block .more:hover:after {
   -webkit-transform: translateX(5px);
       -ms-transform: translateX(5px);
           transform: translateX(5px);
-  background: no-repeat center center/100% url("../images/dest/arr8.svg");
+  background: no-repeat center center/100% url("../images/dist/arr8.svg");
 }
 section.last-news .news-inn .news-block .more:after {
   content: "";
@@ -16796,7 +16796,7 @@ section.last-news .news-inn .news-block .more:after {
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
-  background: no-repeat center center/100% url("../images/dest/arr2.svg");
+  background: no-repeat center center/100% url("../images/dist/arr2.svg");
 }
 section.inn-banner {
   position: relative;
@@ -17051,6 +17051,32 @@ section.prod-catalog {
   padding: 50px 0 0;
   background-color: #ffffff;
 }
+section.prod-catalog .choosed-filter {
+  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+section.prod-catalog .choosed-filter span {
+  color: #777;
+  padding: 5px 35px 5px 17px;
+  border: 1px solid #777;
+  background: url("../images/dist/close.svg") calc(100% - 17px) center/13px no-repeat;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+section.prod-catalog .choosed-filter span + span {
+  margin-left: 12px;
+}
 section.prod-catalog + .phones-contact {
   background: #FFFFFF;
 }
@@ -17084,6 +17110,7 @@ section.prod-catalog .filter .filter-box {
   border-radius: 10px;
   padding: 28px 45px 50px;
   margin-bottom: 15px;
+  color: #000000;
 }
 section.prod-catalog .filter .filter-box .title {
   font-weight: 700;
@@ -17103,11 +17130,10 @@ section.prod-catalog .filter .filter-box .categories li:not(:last-of-type) {
   margin-bottom: 15px;
 }
 section.prod-catalog .filter .filter-box .categories li a {
-  font-weight: 400;
   font-size: 16px;
   line-height: 150%;
+  color: #000;
   text-decoration-line: underline;
-  color: #000000;
 }
 section.prod-catalog .filter .filter-box .categories li a:hover {
   text-decoration: unset;
@@ -17129,7 +17155,7 @@ section.prod-catalog .filter .filter-box .title-big:before {
   left: -26px;
   top: -1px;
   height: 23px;
-  background: no-repeat center center/contain url("../images/dest/filter2.png");
+  background: no-repeat center center/contain url("../images/dist/filter2.png");
 }
 section.prod-catalog .filter .filter-box .title-small {
   font-weight: 600;
@@ -17137,7 +17163,7 @@ section.prod-catalog .filter .filter-box .title-small {
   line-height: 150%;
   text-transform: uppercase;
   color: #000000;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 section.prod-catalog .filter .filter-box .check-wrapper {
   display: -webkit-box;
@@ -17158,11 +17184,11 @@ section.prod-catalog .filter .filter-box .check-wrapper label {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 3px;
   cursor: pointer;
 }
 section.prod-catalog .filter .filter-box .check-wrapper label:last-of-type {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 section.prod-catalog .filter .filter-box .check-wrapper label .check-inn {
   margin-right: 10px;
@@ -17182,7 +17208,7 @@ section.prod-catalog .filter .filter-box .check-wrapper label .check-inn input {
 }
 section.prod-catalog .filter .filter-box .check-wrapper label .check-inn input:checked + span {
   border: 1px solid #003887;
-  background: no-repeat center center/10.5px 8px url("../images/dest/check.svg") #003887;
+  background: no-repeat center center/10.5px 8px url("../images/dist/check.svg") #003887;
 }
 section.prod-catalog .filter .filter-box .check-wrapper label .check-inn span {
   background: #FFFFFF;
@@ -17225,7 +17251,7 @@ section.prod-catalog .prod-boxes .p-box .inn .sub {
   font-size: 14px;
   line-height: 150%;
   letter-spacing: 0.05em;
-  color: #777777;
+  color: #777;
   margin-bottom: 7px;
 }
 section.prod-catalog .prod-boxes .p-box .inn p {
@@ -18018,7 +18044,7 @@ section.mapper #listings .item:after, section.mapper .clicker:after {
   width: 12px;
   height: 22px;
   right: 19px;
-  background: no-repeat center/100% 100% url("../images/dest/arr10.svg");
+  background: no-repeat center/100% 100% url("../images/dist/arr10.svg");
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
@@ -18032,7 +18058,7 @@ section.mapper #listings .item.active:after, section.mapper #listings .item:hove
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  background: no-repeat center/100% 100% url("../images/dest/arr11.svg");
+  background: no-repeat center/100% 100% url("../images/dist/arr11.svg");
 }
 section.article {
   padding: 20px;
@@ -18056,7 +18082,7 @@ section.article .container .back:hover:before {
   -webkit-transform: rotate(180deg) translateX(5px);
       -ms-transform: rotate(180deg) translateX(5px);
           transform: rotate(180deg) translateX(5px);
-  background: no-repeat center center/100% url("../images/dest/arr8.svg");
+  background: no-repeat center center/100% url("../images/dist/arr8.svg");
 }
 section.article .container .back:before {
   content: "";
@@ -18070,7 +18096,7 @@ section.article .container .back:before {
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
-  background: no-repeat center center/100% url("../images/dest/arr2.svg");
+  background: no-repeat center center/100% url("../images/dist/arr2.svg");
 }
 section.article .container h2.title {
   margin-bottom: 35px;
@@ -18397,9 +18423,6 @@ footer.footer .btm-block a {
   header.header .mid-bar {
     padding: 13px 0;
   }
-  header.header .mid-bar .container .right-block .lang {
-    display: none;
-  }
   header.header .mid-bar .container .right-block .login {
     margin-right: 30px;
   }
@@ -18566,7 +18589,7 @@ footer.footer .btm-block a {
     outline: none;
   }
   section.markets .tabs .swiper-button-next, section.markets .tabs .swiper-button-prev {
-    background: no-repeat center center/20px 20px url("../images/dest/arr6.svg");
+    background: no-repeat center center/20px 20px url("../images/dist/arr6.svg");
     display: block;
     top: 22px;
     width: calc(50% - 7.5px);
@@ -18608,6 +18631,9 @@ footer.footer .btm-block a {
   }
   section.prod-catalog .filter.active {
     display: block;
+  }
+  section.prod-catalog .choosed-filter-desktop {
+    display: none;
   }
   section.prod-main {
     padding: 15px 0 25px;
@@ -18938,7 +18964,7 @@ footer.footer .btm-block a {
   }
   section.phones-contact .row > div:nth-of-type(2) .inn {
     height: 80px;
-    background: no-repeat center right 27px/16px 16px url(../images/dest/arr.png) #5e5e67;
+    background: no-repeat center right 27px/16px 16px url(../images/dist/arr.png) #5e5e67;
   }
   section.phones-contact .row > div:nth-of-type(2) .inn a {
     font-size: 12px;
@@ -19152,9 +19178,12 @@ footer.footer .btm-block a {
     display: none;
   }
 }
-@media only screen and (min-width: 992px) {
+@media (min-width: 992px) {
   section.markets .tabs .tab-inn .tab.active {
     width: 100% !important;
     margin-right: 0 !important;
+  }
+  section.prod-catalog .choosed-filter-mob {
+    display: none;
   }
 }

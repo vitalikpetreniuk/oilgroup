@@ -78,13 +78,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function windowSize(ma) {
         if ((ma && ma.matches) || $(window).width() < 992) {
-            console.log('<992')
             $('.collapse').readmore({
                 speed: 75,
                 moreLink: '<a href="#">See More</a>',
                 collapsedHeight: 89
             });
-            $('.filt-btn').on('click', function () {
+            $('body').on('click', '.filt-btn', function () {
                 $('.filter').toggleClass('active');
             });
             $("#mega-menu-primary>.mega-menu-item-has-children>a, .oilgroup-mega-wrap>ul>.mega-menu-item-has-children>a").on('click', function (e) {
@@ -126,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             $('.toblock').removeClass('active')
         } else {
-            console.log('>992')
+            $(".header.header nav.menu ul#mega-menu-primary>li>.mega-sub-menu").find('.back').remove();
             $('.collapse').readmore('destroy');
             $('.tabs').removeClass('swiper');
             $('.tab-inn').removeClass('swiper-wrapper');

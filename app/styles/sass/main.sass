@@ -94,7 +94,7 @@ header.header
               width: 47px
               border: none
               appearance: none
-              background: no-repeat center center / 19px 18px url('../images/dest/search.svg')
+              background: no-repeat center center / 19px 18px url('../images/dist/search.svg')
 
       .right-block
         display: flex
@@ -321,16 +321,16 @@ section
                   right: 43px
                   top: 39px
                   transition: 0.4s
-                  background: no-repeat center center / 100% 100% url('../images/dest/phone.png')
+                  background: no-repeat center center / 100% 100% url('../images/dist/phone.png')
 
         &:nth-of-type(2)
           .inn
             height: 96px
-            background: no-repeat center right 43px / 16px 16px url('../images/dest/arr.png') #5E5E67
+            background: no-repeat center right 43px / 16px 16px url('../images/dist/arr.png') #5E5E67
             transition: 0.4s ease-out
 
             &:hover
-              background: no-repeat center right 36px / 16px 16px url('../images/dest/arr.png') #535357
+              background: no-repeat center right 36px / 16px 16px url('../images/dist/arr.png') #535357
 
             a
               display: block
@@ -578,7 +578,7 @@ section
             height: 49px
             margin-left: 15px
             border-radius: 3px
-            background: no-repeat center center / 20px 20px url('../images/dest/tel2.png') $blue
+            background: no-repeat center center / 20px 20px url('../images/dist/tel2.png') $blue
 
   &.about-us
     padding: 80px 0
@@ -698,7 +698,7 @@ section
 
             &:after
               transform: translateX(5px)
-              background: no-repeat center center / 100% url("../images/dest/arr8.svg")
+              background: no-repeat center center / 100% url("../images/dist/arr8.svg")
 
           &:after
             content: ""
@@ -708,7 +708,7 @@ section
             position: relative
             margin-left: 9px
             transition: 0.4s
-            background: no-repeat center center / 100% url("../images/dest/arr2.svg")
+            background: no-repeat center center / 100% url("../images/dist/arr2.svg")
 
   &.inn-banner
     position: relative
@@ -841,6 +841,26 @@ section
     padding: 50px 0 0
     background-color: #ffffff
 
+    .choosed-filter
+      margin-bottom: 16px
+      display: flex
+      flex-wrap: wrap
+
+      span
+        color: $grey3topora
+        padding: 5px 35px 5px 17px
+        border: 1px solid $grey3topora
+        background: url("../images/dist/close.svg") calc(100% - 17px) center/13px no-repeat
+        border-radius: 5px
+        font-weight: 500
+        font-size: 14px
+        line-height: 150%
+        cursor: pointer
+        user-select: none
+
+        & + span
+          margin-left: 12px
+
     & + .phones-contact
       background: #FFFFFF
 
@@ -869,6 +889,7 @@ section
         border-radius: 10px
         padding: 28px 45px 50px
         margin-bottom: 15px
+        color: #000000
 
         .title
           font-weight: 700
@@ -888,11 +909,10 @@ section
               margin-bottom: 15px
 
             a
-              font-weight: 400
               font-size: 16px
               line-height: 150%
+              color: #000
               text-decoration-line: underline
-              color: #000000
 
               &:hover
                 text-decoration: unset
@@ -914,7 +934,7 @@ section
             left: -26px
             top: -1px
             height: 23px
-            background: no-repeat center center / contain url("../images/dest/filter2.png")
+            background: no-repeat center center / contain url("../images/dist/filter2.png")
 
         .title-small
           font-weight: 600
@@ -922,7 +942,7 @@ section
           line-height: 150%
           text-transform: uppercase
           color: #000000
-          margin-bottom: 20px
+          margin-bottom: 16px
 
         .check-wrapper
           display: flex
@@ -932,11 +952,11 @@ section
             display: flex
             justify-content: left
             align-items: center
-            margin-bottom: 10px
+            margin-bottom: 3px
             cursor: pointer
 
             &:last-of-type
-              margin-bottom: 20px
+              margin-bottom: 16px
 
             .check-inn
               margin-right: 10px
@@ -955,7 +975,7 @@ section
                 &:checked
                   & + span
                     border: 1px solid #003887
-                    background: no-repeat center center / 10.5px 8px url("../images/dest/check.svg") #003887
+                    background: no-repeat center center / 10.5px 8px url("../images/dist/check.svg") #003887
 
               span
                 background: #FFFFFF
@@ -999,7 +1019,7 @@ section
             font-size: 14px
             line-height: 150%
             letter-spacing: 0.05em
-            color: #777777
+            color: $grey3topora
             margin-bottom: 7px
 
           p
@@ -1453,7 +1473,7 @@ section
         width: 12px
         height: 22px
         right: 19px
-        background: no-repeat center / 100% 100% url("../images/dest/arr10.svg")
+        background: no-repeat center / 100% 100% url("../images/dist/arr10.svg")
         transition: 0.4s
 
       &.active, &:hover
@@ -1463,7 +1483,7 @@ section
 
         &:after
           transform: rotate(-90deg)
-          background: no-repeat center / 100% 100% url("../images/dest/arr11.svg")
+          background: no-repeat center / 100% 100% url("../images/dist/arr11.svg")
 
   &.article
     padding: 20px
@@ -1484,7 +1504,7 @@ section
 
           &:before
             transform: rotate(180deg) translateX(5px)
-            background: no-repeat center center/100% url("../images/dest/arr8.svg")
+            background: no-repeat center center/100% url("../images/dist/arr8.svg")
 
         &:before
           content: ""
@@ -1494,7 +1514,7 @@ section
           transform: rotate(180deg)
           margin-right: 8px
           transition: 0.4s
-          background: no-repeat center center/100% url("../images/dest/arr2.svg")
+          background: no-repeat center center/100% url("../images/dist/arr2.svg")
 
       h2.title
         margin-bottom: 35px
@@ -1785,9 +1805,6 @@ footer.footer
 
       .container
         .right-block
-          .lang
-            display: none
-
           .login
             margin-right: 30px
 
@@ -1943,7 +1960,7 @@ footer.footer
           outline: none
 
         .swiper-button-next, .swiper-button-prev
-          background: no-repeat center center / 20px 20px url("../images/dest/arr6.svg")
+          background: no-repeat center center / 20px 20px url("../images/dist/arr6.svg")
           display: block
 
           &:after
@@ -1984,6 +2001,9 @@ footer.footer
 
         &.active
           display: block
+
+      .choosed-filter-desktop
+        display: none
 
     &.prod-main
       padding: 15px 0 25px
@@ -2224,7 +2244,7 @@ footer.footer
         & > div:nth-of-type(1)
           .inn
             padding: 27px 22px
-          //background: no-repeat center right 23px/20px 20px url(../images/dest/phone.png) #4095cf
+          //background: no-repeat center right 23px/20px 20px url(../images/dist/phone.png) #4095cf
           .title
             font-size: 12px
             width: 92px
@@ -2240,7 +2260,7 @@ footer.footer
 
         & > div:nth-of-type(2) .inn
           height: 80px
-          background: no-repeat center right 27px/16px 16px url(../images/dest/arr.png) #5e5e67
+          background: no-repeat center right 27px/16px 16px url(../images/dist/arr.png) #5e5e67
 
           a
             font-size: 12px
@@ -2445,7 +2465,11 @@ footer.footer
           p
             display: none
 
-@media only screen and (min-width: 992px)
+@media (min-width: 992px)
   section.markets .tabs .tab-inn .tab.active
     width: 100% !important
     margin-right: 0 !important
+
+  section.prod-catalog
+    .choosed-filter-mob
+      display: none
