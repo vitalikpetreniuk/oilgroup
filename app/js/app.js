@@ -89,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function () {
             $("#mega-menu-primary>.mega-menu-item-has-children>a, .oilgroup-mega-wrap>ul>.mega-menu-item-has-children>a").on('click', function (e) {
                 e.stopPropagation()
                 e.preventDefault();
-                console.log('1')
                 $(this).parent().children(".mega-sub-menu").toggleClass('active');
             });
 
@@ -113,10 +112,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 })
             })
             const swiper = new Swiper('.swiper', {
-                // Default parameters
                 slidesPerView: 1,
                 spaceBetween: 10,
-                // Responsive breakpoints
                 allowTouchMove: true,
                 navigation: {
                     nextEl: '.swiper-button-next',
@@ -151,6 +148,8 @@ document.addEventListener('DOMContentLoaded', function () {
             $('.tabs .tab:nth-of-type(1)').addClass('active');
         }
     }
+
+
 
     windowSize();
 });

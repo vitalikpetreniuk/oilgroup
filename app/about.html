@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>OptimizedHTML 5</title>
+	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/dist/preview.jpg">
+	<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+	/>
+	<link rel="stylesheet" href="css/app.min.css">
+</head>
+<body>
+<header id="site-header" class="header">
+	<div class="top-bar">
+		<div class="container">
+			<ul>
+				<li><a href="#">Контакти</a></li>
+				<li><a href="#">Правила та умови</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="mid-bar">
+		<div class="container">
+			<div class="logo">
+				<a href="#">
+					<img src="images/dist/logo.png" alt="">
+				</a>
+			</div>
+			<div class="search-block">
+				<form action="">
+					<input placeholder="Пошук..." type="text">
+					<div class="cld"></div>
+					<input value="" type="submit">
+				</form>
+			</div>
+			<div class="right-block">
+				<div class="lang">
+					<ul>
+						<li class="ua ">
+							<a href="#">
+								<span>ua</span>
+								<img src="images/dist/ua.svg" alt="">
+							</a>
+						</li>
+						<li class="en wpml-ls-current-language">
+							<a href="#">
+								<span>en</span>
+								<img src="images/dist/en.jpg" alt="">
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<button class="menu-btn"
+						onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+						aria-label="Main Menu">
+					<svg width="100" height="100" viewBox="0 0 100 100">
+						<path class="line line1"
+							  d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"/>
+						<path class="line line2" d="M 20,50 H 80"/>
+						<path class="line line3"
+							  d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+	<nav class="menu">
+		<div class="container">
+			<ul id="mega-menu-primary" class="mega-menu max-mega-menu mega-menu-horizontal" data-event="hover_intent"
+				data-effect="fade_up" data-effect-speed="200" data-effect-mobile="disabled" data-effect-speed-mobile="0"
+				data-mobile-force-width="false" data-second-click="go" data-document-click="collapse"
+				data-vertical-behaviour="standard" data-breakpoint="768" data-unbind="true"
+				data-mobile-state="collapse_all" data-hover-intent-timeout="300" data-hover-intent-interval="100">
+				<li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-current-menu-ancestor mega-current-menu-parent mega-current_page_parent mega-current_page_ancestor mega-menu-item-has-children mega-menu-megamenu mega-align-bottom-left mega-menu-grid mega-hide-arrow mega-menu-item-64"
+					id="mega-menu-item-64"><a class="mega-menu-link" href="#"
+											  aria-haspopup="true" aria-expanded="false" tabindex="0">Продукти<span
+						class="mega-indicator" data-has-click-event="true"></span></a>
+					<ul class="mega-sub-menu">
+						<li class="mega-menu-row" id="mega-menu-64-0">
+							<ul class="mega-sub-menu">
+								<li class="mega-menu-column mega-bruise mega-menu-columns-12-of-12 bruise oilgroup-mega-wrap"
+									id="mega-menu-64-0-0">
+									<ul class="mega-sub-menu">
+										<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-has-children mega-menu-item-750"
+											id="mega-menu-item-750"><a class="mega-menu-link"
+																	   href="http://oilgroup.ninesquares.studio/product-cat/motorni-masla/">Моторні
+											масла<span class="mega-indicator" data-has-click-event="true"></span></a>
+											<ul class="mega-sub-menu">
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-751"
+													id="mega-menu-item-751"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-vantazhivok/">Для
+													вантажівок</a></li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-755"
+													id="mega-menu-item-755"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-sudovyh-dvyguniv/">Для
+													судових двигунів</a></li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-754"
+													id="mega-menu-item-754"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-silgosp-ta-budtehniky/">Для
+													сільгосп та будтехніки</a></li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-752"
+													id="mega-menu-item-752"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-dvotaktnyh-dvyguniv/">Для
+													двотактних двигунів</a></li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-753"
+													id="mega-menu-item-753"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-legkovyh-avto/">Для
+													легкових авто</a></li>
+											</ul>
+										</li>
+										<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-has-children mega-menu-item-791"
+											id="mega-menu-item-791"><a class="mega-menu-link"
+																	   href="http://oilgroup.ninesquares.studio/product-cat/transmisijni-masla/">Трансмісійні
+											масла<span class="mega-indicator" data-has-click-event="true"></span></a>
+											<ul class="mega-sub-menu">
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-775"
+													id="mega-menu-item-775"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-korobok-z-podvijnym-shheplennyam/">Для
+													коробок з подвійним щепленням</a></li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-777"
+													id="mega-menu-item-777"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-mostiv/">Для
+													мостів</a></li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-776"
+													id="mega-menu-item-776"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-mehanichnyh-korobok/">Для
+													механічних коробок</a></li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-779"
+													id="mega-menu-item-779"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/masla-stou/">Масла
+													STOU</a></li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-780"
+													id="mega-menu-item-780"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/masla-utto/">Масла
+													UTTO</a></li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-742"
+													id="mega-menu-item-742"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-silgosp-ta-budtehniky-3/">Для
+													сільгосп та будтехніки</a></li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-774"
+													id="mega-menu-item-774"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-budivelnoyi-tehniky/">Для
+													будівельної техніки</a></li>
+											</ul>
+										</li>
+										<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-has-children mega-menu-item-792"
+											id="mega-menu-item-792"><a class="mega-menu-link"
+																	   href="http://oilgroup.ninesquares.studio/product-cat/transmisijni-ridyny/">Трансмісійні
+											рідини<span class="mega-indicator" data-has-click-event="true"></span></a>
+											<ul class="mega-sub-menu">
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-769"
+													id="mega-menu-item-769"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-avtomatychnyh-korobok/">Для
+													автоматичних коробок</a></li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-770"
+													id="mega-menu-item-770"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-variatornyh-korobok/">Для
+													варіаторних коробок</a></li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-768"
+													id="mega-menu-item-768"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-salespeed/">Для
+													Salespeed</a></li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-771"
+													id="mega-menu-item-771"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-rulevyh-system/">Для
+													рулевих систем</a></li>
+											</ul>
+										</li>
+										<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-790"
+											id="mega-menu-item-790"><a class="mega-menu-link"
+																	   href="http://oilgroup.ninesquares.studio/product-cat/tormozni-ridyny/">Тормозні
+											рідини</a></li>
+										<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-has-children mega-menu-item-733"
+											id="mega-menu-item-733"><a class="mega-menu-link"
+																	   href="http://oilgroup.ninesquares.studio/product-cat/antyfryzy/">Антифризи<span
+												class="mega-indicator" data-has-click-event="true"></span></a>
+											<ul class="mega-sub-menu">
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-734"
+													id="mega-menu-item-734"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/na-neorganichnij-osnovi/">На
+													неорганічній основі</a></li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-735"
+													id="mega-menu-item-735"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/na-organichnij-osnovi/">На
+													органічній основі</a></li>
+											</ul>
+										</li>
+										<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-has-children mega-menu-item-738"
+											id="mega-menu-item-738"><a class="mega-menu-link"
+																	   href="http://oilgroup.ninesquares.studio/product-cat/gidravlichni-masla/">Гідравлічні
+											масла<span class="mega-indicator" data-has-click-event="true"></span></a>
+											<ul class="mega-sub-menu">
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-778"
+													id="mega-menu-item-778"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-silgosp-ta-budtehniky-2/">Для
+													сільгосп та будтехніки</a></li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-743"
+													id="mega-menu-item-743"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-standartnyh-terminiv-zaminy/">Для
+													стандартних термінів заміни</a></li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-744"
+													id="mega-menu-item-744"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-standartnogo-temperaturnogo-diapazonu/">Для
+													стандартного температурного діапазону</a></li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-745"
+													id="mega-menu-item-745"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-shyrokogo-temperaturnogo-diapazonu/">Для
+													широкого температурного діапазону</a></li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-739"
+													id="mega-menu-item-739"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-energozaoshhadlyvogo-vykorystannya/">Для
+													енергозаощадливого використання</a></li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-741"
+													id="mega-menu-item-741"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-potreb-vykorystannya-z-myyuchymy-vlastyvostyamy/">Для
+													потреб використання з миючими властивостями</a></li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-740"
+													id="mega-menu-item-740"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-zbilshenyh-terminiv-zaminy/">Для
+													збільшених термінів заміни</a></li>
+											</ul>
+										</li>
+										<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-has-children mega-menu-item-788"
+											id="mega-menu-item-788"><a class="mega-menu-link"
+																	   href="http://oilgroup.ninesquares.studio/product-cat/ruduktorni-masla/">Редукторні
+											масла<span class="mega-indicator" data-has-click-event="true"></span></a>
+											<ul class="mega-sub-menu">
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-782"
+													id="mega-menu-item-782"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-standartnyh-terminiv-zaminy-2/">Для
+													стандартних термінів заміни</a></li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-781"
+													id="mega-menu-item-781"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-zbilshenyh-terminiv-zaminy-3/">Для
+													збільшених термінів заміни</a></li>
+											</ul>
+										</li>
+										<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-796"
+											id="mega-menu-item-796"><a class="mega-menu-link"
+																	   href="http://oilgroup.ninesquares.studio/product-cat/tsyrkulyatsijni-masla/">Циркуляційні
+											масла</a></li>
+										<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-has-children mega-menu-item-783"
+											id="mega-menu-item-783"><a class="mega-menu-link"
+																	   href="http://oilgroup.ninesquares.studio/product-cat/kompresorni-masla/">Компресорні
+											масла<span class="mega-indicator" data-has-click-event="true"></span></a>
+											<ul class="mega-sub-menu">
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-784"
+													id="mega-menu-item-784"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-zbilshenyh-terminiv-zaminy-4/">Для
+													збільшених термінів заміни</a></li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-785"
+													id="mega-menu-item-785"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-standartnyh-terminiv-zaminy-3/">Для
+													стандартних термінів заміни</a></li>
+											</ul>
+										</li>
+										<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-has-description mega-menu-item-737"
+											id="mega-menu-item-737"><a class="mega-menu-link"
+																	   href="http://oilgroup.ninesquares.studio/product-cat/vakuumni-masla/"><span
+												class="mega-description-group"><span class="mega-menu-title">Вакуумні масла</span><span
+												class="mega-menu-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></span></a>
+										</li>
+										<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-794"
+											id="mega-menu-item-794"><a class="mega-menu-link"
+																	   href="http://oilgroup.ninesquares.studio/product-cat/turbinni-masla/">Турбінні
+											масла</a></li>
+										<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-736"
+											id="mega-menu-item-736"><a class="mega-menu-link"
+																	   href="http://oilgroup.ninesquares.studio/product-cat/bili-vazelinovi-masla/">Білі
+											вазелінові масла</a></li>
+										<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-has-children mega-menu-item-795"
+											id="mega-menu-item-795"><a class="mega-menu-link"
+																	   href="http://oilgroup.ninesquares.studio/product-cat/tsepni-masla/">Цепні
+											масла<span class="mega-indicator" data-has-click-event="true"></span></a>
+											<ul class="mega-sub-menu">
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-772"
+													id="mega-menu-item-772"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-benzopyl/">Для
+													бензопил</a></li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-773"
+													id="mega-menu-item-773"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-zbilshenyh-terminiv-zaminy-2/">Для
+													збільшених термінів заміни</a></li>
+											</ul>
+										</li>
+										<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-787"
+											id="mega-menu-item-787"><a class="mega-menu-link"
+																	   href="http://oilgroup.ninesquares.studio/product-cat/protyskachkovi-masla/">Протискачкові
+											масла</a></li>
+										<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-786"
+											id="mega-menu-item-786"><a class="mega-menu-link"
+																	   href="http://oilgroup.ninesquares.studio/product-cat/pnevmatychni-masla/">Пневматичні
+											масла</a></li>
+										<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-793"
+											id="mega-menu-item-793"><a class="mega-menu-link"
+																	   href="http://oilgroup.ninesquares.studio/product-cat/transformatorni-masla/">Трансформаторні
+											масла</a></li>
+										<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-789"
+											id="mega-menu-item-789"><a class="mega-menu-link"
+																	   href="http://oilgroup.ninesquares.studio/product-cat/teplonosiyi/">Теплоносії</a>
+										</li>
+										<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-has-children mega-menu-item-760"
+											id="mega-menu-item-760"><a class="mega-menu-link"
+																	   href="http://oilgroup.ninesquares.studio/product-cat/plastychni-mastyla/">Пластичні
+											мастила<span class="mega-indicator" data-has-click-event="true"></span></a>
+											<ul class="mega-sub-menu">
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-764"
+													id="mega-menu-item-764"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-silgosp-ta-budtehniky-4/">Для
+													сільгосп та будтехніки</a></li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-762"
+													id="mega-menu-item-762"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/vysokotemperaturni/">Високотемпературні</a>
+												</li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-766"
+													id="mega-menu-item-766"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-harchovoyi-promyslovosti/">Для
+													харчової промисловості</a></li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-763"
+													id="mega-menu-item-763"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-elektrodvyguniv/">Для
+													електродвигунів</a></li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-765"
+													id="mega-menu-item-765"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-trosiv/">Для
+													тросів</a></li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-761"
+													id="mega-menu-item-761"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/bagatotsilovi/">Багатоцільові</a>
+												</li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-767"
+													id="mega-menu-item-767"><a class="mega-menu-link"
+																			   href="http://oilgroup.ninesquares.studio/product-cat/dlya-shrus/">Для
+													Шрус</a></li>
+											</ul>
+										</li>
+										<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-has-children mega-has-description mega-menu-item-746"
+											id="mega-menu-item-746"><a class="mega-menu-link"
+																	   href="#"><span
+												class="mega-description-group"><span
+												class="mega-menu-title">ЗОР</span><span class="mega-menu-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></span><span
+												class="mega-indicator" data-has-click-event="true"></span></a>
+											<ul class="mega-sub-menu">
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-747"
+													id="mega-menu-item-747"><a class="mega-menu-link"
+																			   href="#">Водоемульсійні</a>
+												</li>
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-748"
+													id="mega-menu-item-748"><a class="mega-menu-link"
+																			   href="#">Масляні</a>
+												</li>
+											</ul>
+										</li>
+										<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-749"
+											id="mega-menu-item-749"><a class="mega-menu-link"
+																	   href="#">Консерваційні
+											масла</a></li>
+										<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-has-children mega-menu-item-758"
+											id="mega-menu-item-758"><a class="mega-menu-link"
+																	   href="#">Очисники<span
+												class="mega-indicator" data-has-click-event="true"></span></a>
+											<ul class="mega-sub-menu">
+												<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-product-cat mega-menu-item-759"
+													id="mega-menu-item-759"><a class="mega-menu-link"
+																			   href="#">Водоемульсійні</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-63"
+					id="mega-menu-item-63"><a class="mega-menu-link" href="#"
+											  tabindex="0">Бренди</a></li>
+				<li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-704"
+					id="mega-menu-item-704"><a class="mega-menu-link"
+											   href="#" tabindex="0">Сегменти
+					ринку</a></li>
+				<li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-323"
+					id="mega-menu-item-323"><a class="mega-menu-link"
+											   href="#"
+											   tabindex="0">Сервіси</a></li>
+				<li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-67"
+					id="mega-menu-item-67"><a class="mega-menu-link" href="#"
+											  tabindex="0">Про нас</a></li>
+				<li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-68"
+					id="mega-menu-item-68"><a class="mega-menu-link" href="#"
+											  tabindex="0">Контакти</a></li>
+			</ul>
+		</div>
+		<div class="lang-mob">
+		</div>
+		</div>
+	</nav>
+</header>
+<main class="main">
+	<section class="inn-banner">
+		<img src="images/dist/top-bg19.jpg" alt="">
+		<div class="container">
+			<div class="blue-block l-blue wb">
+				<div class="crumbs">
+					<ul>
+						<li>
+							<a href="">Oilrgroup</a>
+						</li>
+						<li>
+							<a href="#">
+								Про нас
+							</a>
+						</li>
+						<li>
+							Про компанію
+						</li>
+					</ul>
+				</div>
+				<h1 class="title">
+					Про компанію
+				</h1>
+			</div>
+			<p class="collapse">
+				Oil group – працює на ринку мастильних матеріалів з 1998 року. Сьогодні ми маємо офіси в 15 областях України, в яких працює 210 співробітників. Ми пропонуємо портфель продуктів, максимально адаптований до українського ринку. У нашому асортименті 578 масел та мастил від торгових марок Petronas, Texaco, Shark, Prista, MOL.
+			</p>
+		</div>
+	</section>
+	<section class="recentered">
+		<div class="container">
+			<img src="images/dist/about20.jpg" alt="">
+			<h2 class="title">
+				Простір для Вашого бізнесу
+			</h2>
+			<div class="card">
+				<p>
+					Oil group – працює на ринку мастильних матеріалів з 1998 року. Сьогодні ми маємо офіси в 15 областях України, в яких працює 210 співробітників. Ми пропонуємо портфель продуктів, максимально адаптований до українського ринку.
+				</p>
+				<p>
+					У нашому асортименті 578 масел та мастил від торгових марок Petronas, Texaco, Shark, Prista, MOL. Це продукти для різних галузей представлені у різних цінових сегментах. Крім цього, ми випускаємо власні мастильні матеріали під брендом NRG. Наша перевага - комплексний підхід: від підбору мастил до діагностики двигунів та гарантійного обслуговування.
+				</p>
+				<p>
+					Працюючи з OilGroup, Ви не думаєте про мастильні матеріали та займаєтеся розвитком свого бізнесу.
+				</p>
+			</div>
+		</div>
+	</section>
+	<section class="tripl_icon">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="icon-inn">
+						<img src="images/dist/d27.svg" alt="">
+						<div class="title">
+							Нам довіряють
+						</div>
+						<p>
+							4775 підприємств по всій країні - вже клієнти OIL GROUP. Серед них – і найбільші заводи, агрохолдинги та автопарки України, та невеликі локальні компанії. Ми прагнемо бути надійним партнером для бізнесу різного рівня.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="icon-inn">
+						<img src="images/dist/d18.svg" alt="">
+						<div class="title">
+							Вигідний постачальник
+						</div>
+						<p>
+							OIL GROUP — прямий постачальник та партнер провідних виробників мастильних матеріалів. Завдяки прямим поставкам наші клієнти отримують найвигідніші пропозиції.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="icon-inn">
+						<img src="images/dist/d28.svg" alt="">
+						<div class="title">
+							Інноваційні сервіси
+						</div>
+						<p>
+							Oil GROUP впроваджує інноваційні сервіси для клієнтів, наприклад безраборну діагностику двигунів та аналіз мастил на базі німецької лабораторії OelCheck.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="quote">
+		<div class="quote__item item-quote">
+			<img class="item-quote__ibg" src="images/dist/quote-bg1.jpg" alt="">
+			<div class="container">
+				<div class="item-quote__info">
+					<h2 class="item-quote__title title">OilGroup — Це коли є один партнер, який може обслужити філіали по всій Україні одночасно.</h2>
+				</div>
+			</div>
+		</div>
+		<div class="quote__item item-quote">
+			<img class="item-quote__ibg" src="images/dist/quote-bg2.jpg" alt="">
+			<div class="container">
+				<div class="item-quote__info item-quote__info_right">
+					<h2 class="item-quote__title title">OilGroup — це коли в суботу ранком Вам екстренно потрібне мастило, та її привозять цього ж дня.</h2>
+				</div>
+			</div>
+		</div>
+		<div class="quote__item item-quote">
+			<img class="item-quote__ibg" src="images/dist/quote-bg3.jpg" alt="">
+			<div class="container">
+				<div class="row">
+					<div class="item-quote__info col-lg-6">
+						<h2 class="item-quote__title title">OilGroup — це коли на підприємстві з'явилися нові машини, і Вам є, з ким порадитись щодо мастильних матеріалів для них.</h2>
+					</div>
+					<div class="item-quote__contact col-lg-6">
+						<span>Ви можете телефонувати нам при виникненні будь-яких питань</span>
+						<a href="tel:380507010070" class="tel">
+							+38 (050) 70-100-70
+						</a>
+						<a href="tel:380987020070" class="tel">
+							+38 (098) 70-200-70
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="markets">
+		<div class="container">
+			<h2 class="title">
+				Історія компанії
+			</h2>
+			<div class="tabs">
+				<ul class="tabs__caption">
+					<li class="active">1998</li>
+					<li>2001</li>
+					<li>2002</li>
+					<li>2004</li>
+					<li>2005</li>
+					<li>2007</li>
+					<li>2008</li>
+					<li>2009</li>
+					<li>2010</li>
+					<li>2011</li>
+					<li>2013</li>
+					<li>2014</li>
+					<li>2015</li>
+					<li>2016</li>
+				</ul>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+				<div class="tab-inn  ">
+					<div class="tab active row ">
+						<div class="col-lg-5">
+							<a class="cat" href="#">1998</a>
+							<h3>
+								Початок діяльності Oil GROUP
+							</h3>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+							</p>
+						</div>
+						<div class="col-lg-7">
+							<img src="images/dist/market1.jpg" alt="">
+						</div>
+					</div>
+					<div class="tab row ">
+						<div class="col-lg-5">
+							<a class="cat" href="#">2001</a>
+							<h3>
+								Lorem Ipsum is simply dummy text
+							</h3>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+							</p>
+						</div>
+						<div class="col-lg-7">
+							<img src="images/dist/market1.jpg" alt="">
+						</div>
+					</div>
+					<div class="tab row ">
+						<div class="col-lg-5">
+							<a class="cat" href="#">2002</a>
+							<h3>
+								Lorem Ipsum is simply dummy text
+							</h3>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+							</p>
+						</div>
+						<div class="col-lg-7">
+							<img src="images/dist/market1.jpg" alt="">
+						</div>
+					</div>
+					<div class="tab row ">
+						<div class="col-lg-5">
+							<a class="cat" href="#">2004</a>
+							<h3>
+								Lorem Ipsum is simply dummy text
+							</h3>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+							</p>
+						</div>
+						<div class="col-lg-7">
+							<img src="images/dist/market1.jpg" alt="">
+						</div>
+					</div>
+					<div class="tab row ">
+						<div class="col-lg-5">
+							<a class="cat" href="#">2005</a>
+							<h3>
+								Lorem Ipsum is simply dummy text
+							</h3>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+							</p>
+						</div>
+						<div class="col-lg-7">
+							<img src="images/dist/market1.jpg" alt="">
+						</div>
+					</div>
+					<div class="tab row ">
+						<div class="col-lg-5">
+							<a class="cat" href="#">2007</a>
+							<h3>
+								Lorem Ipsum is simply dummy text
+							</h3>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+							</p>
+						</div>
+						<div class="col-lg-7">
+							<img src="images/dist/market1.jpg" alt="">
+						</div>
+					</div>
+					<div class="tab row ">
+						<div class="col-lg-5">
+							<a class="cat" href="#">2008</a>
+							<h3>
+								Lorem Ipsum is simply dummy text
+							</h3>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+							</p>
+						</div>
+						<div class="col-lg-7">
+							<img src="images/dist/market1.jpg" alt="">
+						</div>
+					</div>
+					<div class="tab row ">
+						<div class="col-lg-5">
+							<a class="cat" href="#">2009</a>
+							<h3>
+								Lorem Ipsum is simply dummy text
+							</h3>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+							</p>
+						</div>
+						<div class="col-lg-7">
+							<img src="images/dist/market1.jpg" alt="">
+						</div>
+					</div>
+					<div class="tab row ">
+						<div class="col-lg-5">
+							<a class="cat" href="#">2010</a>
+							<h3>
+								Lorem Ipsum is simply dummy text
+							</h3>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+							</p>
+						</div>
+						<div class="col-lg-7">
+							<img src="images/dist/market1.jpg" alt="">
+						</div>
+					</div>
+					<div class="tab row ">
+						<div class="col-lg-5">
+							<a class="cat" href="#">2011</a>
+							<h3>
+								Lorem Ipsum is simply dummy text
+							</h3>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+							</p>
+						</div>
+						<div class="col-lg-7">
+							<img src="images/dist/market1.jpg" alt="">
+						</div>
+					</div>
+					<div class="tab row ">
+						<div class="col-lg-5">
+							<a class="cat" href="#">2013</a>
+							<h3>
+								Lorem Ipsum is simply dummy text
+							</h3>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+							</p>
+						</div>
+						<div class="col-lg-7">
+							<img src="images/dist/market1.jpg" alt="">
+						</div>
+					</div>
+					<div class="tab row ">
+						<div class="col-lg-5">
+							<a class="cat" href="#">2014</a>
+							<h3>
+								Lorem Ipsum is simply dummy text
+							</h3>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+							</p>
+						</div>
+						<div class="col-lg-7">
+							<img src="images/dist/market1.jpg" alt="">
+						</div>
+					</div>
+					<div class="tab row ">
+						<div class="col-lg-5">
+							<a class="cat" href="#">2015</a>
+							<h3>
+								Lorem Ipsum is simply dummy text
+							</h3>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+							</p>
+						</div>
+						<div class="col-lg-7">
+							<img src="images/dist/market1.jpg" alt="">
+						</div>
+					</div>
+					<div class="tab row ">
+						<div class="col-lg-5">
+							<a class="cat" href="#">2016</a>
+							<h3>
+								Lorem Ipsum is simply dummy text
+							</h3>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+							</p>
+						</div>
+						<div class="col-lg-7">
+							<img src="images/dist/market1.jpg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<section class="phones-contact no-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="inn">
+						<div class="title">
+							Потрібна консультація?
+						</div>
+						<div class="phones">
+							<a href="tel:380507010070">+38 (050) 70-100-70
+							</a>
+							<a href="tel:380987020070">+38 (098) 70-200-70</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-lg-6">
+					<div class="inn">
+						<a href="#" class="request modal-open">
+							Відправити запит
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+<footer class="footer">
+	<div class="container">
+		<div class="left-block">
+			<div class="menu">
+				<div class="title">Бренди</div>
+				<ul>
+					<li>
+						<a href="">Petronas</a>
+					</li>
+					<li>
+						<a href="">ScandiOil</a>
+					</li>
+					<li>
+						<a href="">CRC</a>
+					</li>
+					<li>
+						<a href="">NRG</a>
+					</li>
+					<li>
+						<a href="">Apar</a>
+					</li>
+					<li>
+						<a href="">Nettuno</a>
+					</li>
+				</ul>
+			</div>
+			<div class="menu">
+				<div class="title">Сегменти ринку</div>
+				<ul>
+					<li>
+						<a href="">Сільське господарство</a>
+					</li>
+					<li>
+						<a href="">Видобування</a>
+					</li>
+					<li>
+						<a href="">Транспортні перевезення</a>
+					</li>
+					<li>
+						<a href="">Харчова промисловість</a>
+					</li>
+					<li>
+						<a href="">Металообробка</a>
+					</li>
+					<li>
+						<a href="">Легкові автомобілі</a>
+					</li>
+				</ul>
+			</div>
+			<div class="menu">
+				<div class="title">Про нас</div>
+				<ul>
+					<li>
+						<a href="">Сертифікати</a>
+					</li>
+					<li>
+						<a href="">Життя компанії</a>
+					</li>
+					<li>
+						<a href="">Новини</a>
+					</li>
+					<li>
+						<a href="">Вакансії</a>
+					</li>
+					<li>
+						<a href="">Сервіси</a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+		<div class="right-block">
+			<div class="logo">
+				<a href="#">
+					<img src="images/dist/logo2.png" alt="">
+				</a>
+			</div>
+			<div class="phones">
+						<span>
+							Потрібна консультація?
+						</span>
+				<a href="tel:380507010070">
+					+38 (050) 70-100-70
+				</a>
+				<a href="tel:380987020070">
+					+38 (098) 70-200-70
+				</a>
+			</div>
+			<a href="#" class="btn arr">
+				Зв’язатись з нами
+			</a>
+		</div>
+	</div>
+	<div class="btm-block">
+				<span>
+					Copyright © 2022 OILGROUP
+				</span>
+		<a href="#">
+			TERMS AND CONDITIONS
+		</a>
+		<a href="#">
+			CONTACT US
+		</a>
+	</div>
+</footer>
+<div class="modal">
+	<div class="bg">
+	</div>
+	<div class="modal-inn">
+		<div>
+			<div class="close"></div>
+			<h2 class="title">
+				Відправити запит
+			</h2>
+			<form action="">
+
+				<div class="row">
+					<div class="col-lg-12">
+						<span></span>
+						<select name="" id="">
+							<option value="">Консультація по підбору мастила</option>
+							<option value="">Консультація по підбору мастила</option>
+							<option value="">Консультація по підбору мастила</option>
+						</select>
+					</div>
+					<div class="col-lg-12">
+							<span>
+								Ім’я<span>*</span>
+							</span>
+						<input required value="Тарас" type="text">
+						<span class="wpcf7-not-valid-tip" aria-hidden="true">Please fill in the required field.</span>
+					</div>
+					<div class="col-lg-12">
+							<span>
+								Прізвище<span>*</span>
+							</span>
+						<input required value="Шевченко" type="text">
+						<span class="wpcf7-not-valid-tip" aria-hidden="true">Please fill in the required field.</span>
+					</div>
+					<div class="col-lg-12">
+							<span>
+								Компанія
+							</span>
+						<input placeholder="Назва компанії" type="text">
+					</div>
+					<div class="col-lg-12">
+							<span>
+							Телефон<span>*</span>
+							</span>
+						<input required placeholder="+380 (__) - ___ - __ - __" type="tel">
+						<span class="wpcf7-not-valid-tip" aria-hidden="true">Please fill in the required field.</span>
+					</div>
+					<div class="col-lg-12">
+							<span>
+							Email
+							</span>
+						<input placeholder="example@gmail.com" type="text">
+						<span class="wpcf7-not-valid-tip" aria-hidden="true">Please fill in the required field.</span>
+					</div>
+					<div class="col-lg-12">
+							<span>
+								Деталі
+							</span>
+						<textarea placeholder="Пишіть тут..." name="" id="text"></textarea>
+					</div>
+					<div class="col-lg-12">
+						<input class="btn" value="Передзвоніть мені" type="submit">
+					</div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="js/app.min.js"></script>
+<script type="text/javascript" src="js/lightbox.min.js"></script>
+
+</body>
+</html>

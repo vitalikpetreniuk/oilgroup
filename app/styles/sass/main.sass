@@ -607,10 +607,10 @@ section
       .news-inn
         margin-bottom: 10px
 
-        & + .pagination
-          @include pagination
-          background: #FFFFFF
-          margin: 0 auto
+      //   & + .pagination
+      //     @include pagination
+      //     background: #FFFFFF
+      //     margin: 0 auto
 
         .news-block
           margin-bottom: 40px
@@ -1041,9 +1041,9 @@ section
               background-color: #0c74bc
               text-decoration: unset
 
-      .pagination
-        @include pagination
-        margin-top: 20px
+      // .pagination
+      //   @include pagination
+      //   margin-top: 20px
 
   &.prod-top
     padding: 66px 0
@@ -2473,3 +2473,657 @@ footer.footer
   section.prod-catalog
     .choosed-filter-mob
       display: none
+
+// ABOUT ========================================================>
+
+.quote
+  margin-bottom: 20px
+
+.item-quote
+  position: relative
+
+.item-quote .container
+  padding: 80px 15px
+
+.item-quote__ibg
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  object-fit: cover
+  z-index: -1
+
+.item-quote__info
+  display: flex
+
+.item-quote__info .title
+  color: #fff
+
+.item-quote__info_right
+  justify-content: flex-end
+
+.item-quote__info_right .title
+  padding: 0 30px 0 0
+  border-left: none
+  border-right: 4px solid #4095CF
+  text-align: right
+
+.item-quote__contact
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+
+.item-quote__contact span
+  display: block
+  margin: 10px 0 20px
+  text-align: right
+  color: #fff
+
+.item-quote__contact .tel
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  font-weight: 700
+  font-size: 36px
+  line-height: 150%
+  color: #ffffff
+  position: relative
+  margin-bottom: 7px
+
+.item-quote__contact .tel::after
+  content: ""
+  display: inline-block
+  position: relative
+  width: 49px
+  height: 49px
+  margin-left: 15px
+  border-radius: 3px
+  background: no-repeat center center/20px 20px url(../images/dist/tel2.png) #4095CF
+
+@media (max-width: 1399px)
+
+  section.phones-contact .row > div:nth-of-type(1) .title
+    flex: 0 0 120px
+    margin-right: 10px
+
+  section.phones-contact .row > div:nth-of-type(1) .phones a
+    font-size: 17px
+
+@media (max-width: 575.98px)
+
+  .item-quote__contact
+    margin-top: 60px
+
+  .item-quote__contact span
+    display: none
+
+  .item-quote__contact .tel
+    font-size: 24px
+  
+  .item-quote__contact .tel::after
+    content: ""
+    display: inline-block
+    position: relative
+    width: 49px
+    height: 49px
+    margin-left: 15px
+    border-radius: 3px
+    background: no-repeat center center/20px 20px url(../images/dist/tel2.png) #4095CF
+
+// CERTIFICATES ========================================================>
+
+.sertificates .container
+  margin-bottom: 40px
+
+.sertificates__box
+  display: flex
+  flex-wrap: wrap
+  column-gap: 100px
+  row-gap: 115px
+  background: #fff
+  border-radius: 10px
+  padding: 35px 80px 95px
+
+.item-sertificates
+  width: calc(33.33% - 100px)
+
+.item-sertificates__title
+  font-size: 20px
+  font-weight: 600
+  line-height: 1.5
+  padding-left: 30px
+  border-left: 4px solid #4095CF
+  margin-bottom: 50px
+
+
+.item-sertificates__ibox
+  display: block
+
+.item-sertificates__ibox img
+  width: 100%
+  height: 100%
+  object-fit: contain
+  object-position: top
+
+@media (max-width: 991px)
+
+  .sertificates .container
+    margin-bottom: 20px
+  
+  .sertificates__box
+    column-gap: 0
+    row-gap: 25px
+    background: transparent
+    border-radius: 0
+    padding: 0
+  
+  .item-sertificates
+    display: flex
+    align-items: flex-start
+    gap: 10px
+    width: 100%
+  
+  .item-sertificates__title
+    width: calc(50% - 5px)
+    font-size: 16px
+    padding-left: 15px
+    border-left: 4px solid #4095CF
+  
+  
+  .item-sertificates__ibox
+    width: calc(50% - 5px)
+
+// VACANCIES ========================================================>
+
+.block-vacancies__content
+  display: flex
+  flex-wrap: wrap
+  gap: 15px
+  margin-bottom: 35px
+
+.block-vacancies__title
+  margin-bottom: 40px
+
+.block-vacancies__all
+  font-size: 16px
+  font-weight: 400
+  text-align: right
+
+.block-vacancies__all a
+  display: inline-block
+  position: relative
+  line-height: 15px
+  padding-right: 25px
+
+.block-vacancies__all a::after
+  content: ""
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  right: 0
+  width: 15px
+  height: 15px
+  background: url(../images/dist/work-all.svg) center/contain no-repeat
+
+
+
+
+.item-block-vacancies
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  width: calc(33.33% - 10px)
+  background: #fff
+  padding: 5px
+  border-radius: 10px
+
+.item-block-vacancies__work
+  max-width: 133px
+  align-self: flex-end
+
+.item-block-vacancies__work img
+  width: 100%
+  height: 100%
+  object-fit: contain
+
+.item-block-vacancies__cont
+  padding: 0 30px 30px
+
+.item-block-vacancies__cont_pt
+  display: flex
+  flex-direction: column
+  height: 100%
+  padding: 45px 30px 30px
+
+.item-block-vacancies__title
+  font-size: 20px
+  font-weight: 600
+  line-height: 1.5
+  padding-left: 23px
+  border-left: 4px solid #4095CF
+  margin-bottom: 15px
+
+.item-block-vacancies__title a
+  color: #003887
+
+.item-block-vacancies__text
+  font-size: 16px
+  font-weight: 400
+  line-height: 1.9
+  color: #777777
+  padding-left: 30px
+  margin-bottom: 10px
+
+.item-block-vacancies__text p:not(:last-child)
+  margin-bottom: 10px
+
+.item-block-vacancies__text p:last-child
+  margin: 0
+
+.item-block-vacancies__salary
+  flex: 1 1 auto
+  font-size: 20px
+  font-weight: 600
+  line-height: 1.9
+  color: #4095CF
+  margin-bottom: 90px
+
+
+.item-block-vacancies__contact
+  display: flex
+  justify-content: space-between
+  align-items: flex-end
+
+.item-block-vacancies__location
+  display: block
+  position: relative
+  font-size: 20px
+  font-weight: 600
+  line-height: 1.9
+  color: #4095CF
+  padding-left: 43px
+  margin-right: 5px
+
+.item-block-vacancies__location::before
+  content: ""
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  left: 0
+  width: 33px
+  height: 33px
+  background: url(../images/dist/work-map.svg) left center/contain no-repeat
+
+.item-block-vacancies__link
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  padding: 0 28px
+  min-height: 65px
+  background: #4095CF
+  color: #fff
+
+@media (max-width: 1399px)
+
+  .block-vacancies__content
+    margin-bottom: 25px
+  
+  .block-vacancies__title
+    margin-bottom: 20px
+  
+  .block-vacancies__all
+    font-size: 14px
+  
+  .block-vacancies__all a
+    line-height: 10px
+    padding-right: 15px
+  
+  .block-vacancies__all a::after
+    width: 10px
+    height: 10px
+  
+  .item-block-vacancies
+    padding: 15px
+  
+  .item-block-vacancies__work
+    align-self: center
+    margin-bottom: 15px
+  
+  .item-block-vacancies__cont
+    padding: 0
+  
+  .item-block-vacancies__cont_pt
+    padding: 35px 15px 15px
+  
+  .item-block-vacancies__text
+    padding-left: 25px
+  
+  .item-block-vacancies__salary
+    margin-bottom: 40px
+  
+  .item-block-vacancies__location
+    font-size: 18px
+    padding-left: 25px
+  
+  .item-block-vacancies__location::before
+    width: 20px
+    height: 20px
+  
+  .item-block-vacancies__link
+    padding: 0 25px
+    min-height: 65px
+
+@media (max-width: 991.98px)
+
+  .item-block-vacancies
+    width: 100%
+
+// VACANCY PAGE ========================================================>
+
+.vacancy-description__back
+  font-size: 16px
+  font-weight: 600
+  line-height: 15px
+  color: #4095CF
+  margin-bottom: 30px
+
+.vacancy-description__back a
+  position: relative
+  padding-left: 20px
+
+.vacancy-description__back a::before
+  content: ""
+  position: absolute
+  left: 0
+  top: 50%
+  transform: translateY(-50%)
+  width: 9px
+  height: 15px
+  background: url(../images/dist/vacancy-back.svg) center/contain no-repeat
+
+.vacancy-description__pagination
+  margin: 0 auto
+
+.content-vacancy-description
+  display: flex
+  padding: 45px
+  background: #fff
+  border-radius: 10px
+  margin-bottom: 40px
+
+.content-vacancy-description__left
+  flex: 0 0 400px
+  margin-right: 100px
+
+.content-vacancy-description__list
+  list-style: none
+  padding: 0
+  margin: 0 0 20px 0
+
+.content-vacancy-description__list li
+  position: relative
+  font-size: 16px
+  font-weight: 400
+  line-height: 1.9
+  color: #222222
+  padding-left: 25px
+
+.content-vacancy-description__list li:not(.content-vacancy-description__title)::before
+  content: ""
+  position: absolute
+  top: 16px
+  left: 10px
+  width: 2px
+  height: 2px
+  border-radius: 50%
+  background: #222222
+
+li.content-vacancy-description__title
+  font-size: 20px
+  font-weight: 600
+  color: #003887
+  padding-left: 0
+
+.content-vacancy-description__contact
+  background: #F5F5F5
+  padding: 20px 25px
+
+.content-vacancy-description__contact p
+  font-size: 16px
+  font-weight: 600
+  line-height: 1.9
+  color: #777777
+
+.content-vacancy-description__contact p a
+  color: #4095CF
+
+.content-vacancy-description__fidback
+  display: none
+  align-items: center
+  justify-content: space-between
+  gap: 10px
+  margin-top: 45px
+
+.content-vacancy-description__fidback span
+  display: block
+  position: relative
+  font-size: 20px
+  font-weight: 600
+  line-height: 1.9
+  color: #4095CF
+  padding-left: 43px
+  margin-right: 5px
+
+.content-vacancy-description__fidback span::before
+  content: ""
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  left: 0
+  width: 33px
+  height: 33px
+  background: url(../images/dist/work-map.svg) left center/contain no-repeat
+
+.content-vacancy-description__fidback a
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  padding: 0 28px
+  min-height: 65px
+  background: #4095CF
+  color: #fff
+
+.info-content-vacancy-description
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+
+.info-content-vacancy-description__work
+  display: none
+  align-self: center
+  margin-bottom: 15px
+
+.info-content-vacancy-description__title
+  font-size: 20px
+  font-weight: 600
+  line-height: 1.5
+  padding-left: 23px
+  border-left: 4px solid #4095CF
+  margin-bottom: 15px
+
+.info-content-vacancy-description__text
+  font-size: 16px
+  font-weight: 400
+  line-height: 1.9
+  color: #777777
+  padding-left: 30px
+  margin-bottom: 10px
+
+.info-content-vacancy-description__text p:not(:last-child)
+  margin-bottom: 10px
+
+.info-content-vacancy-description__salary
+  flex: 1 1 auto
+  font-size: 20px
+  font-weight: 600
+  line-height: 1.9
+  color: #4095CF
+  margin-bottom: 90px
+
+.info-content-vacancy-description__links
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  row-gap: 10px
+  font-size: 20px
+  font-weight: 700
+  line-height: 1.5
+  color: #003887
+  margin-bottom: 35px
+
+.info-content-vacancy-description__links a
+  display: flex
+  align-items: center
+  width: 280px
+
+.info-content-vacancy-description__links a:hover p
+  text-decoration: underline
+
+.info-content-vacancy-description__links a p
+  flex: 1 1 auto
+  margin: 0 10px 0 0
+
+.info-content-vacancy-description__links a span
+  flex: 0 0 35px
+
+.info-content-vacancy-description__links a span img
+  width: 100%
+  height: 100%
+  object-fit: contain
+
+.info-content-vacancy-description__location
+  display: block
+  position: relative
+  font-size: 20px
+  font-weight: 600
+  line-height: 1.9
+  color: #4095CF
+  padding-left: 43px
+  margin-right: 5px
+
+.info-content-vacancy-description__location::before
+  content: ""
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  left: 0
+  width: 33px
+  height: 33px
+  background: url(../images/dist/work-map.svg) left center/contain no-repeat
+
+.pagination
+  list-style: none
+  font-weight: 600
+  margin-bottom: 0
+  display: flex
+  padding: 7px 20px 7px 40px
+  background: #F5F5F5
+  border-radius: 7px
+  width: fit-content
+
+.pagination_white
+  background: #fff
+
+.pagination li a
+  display: flex
+  width: 51px
+  height: 51px
+  justify-content: center
+  align-items: center
+  color: black
+  margin-right: 15px
+  border-radius: 7px
+  transition: 0.4s
+
+.pagination li a:hover
+  color: #FFFFFF
+  background-color: #4095CF
+  text-decoration: none
+
+
+@media (max-width: 991.98px)
+
+  .vacancy-description__back
+    margin-bottom: 25px
+  
+  .vacancy-description__back a
+    padding-left: 15px
+
+  .content-vacancy-description
+    flex-direction: column
+    padding: 15px
+    margin-bottom: 20px
+  
+  .content-vacancy-description__left
+    flex: 0 1 auto
+    margin-right: 0  
+  
+  .content-vacancy-description__contact
+    display: none
+  
+  .content-vacancy-description__fidback
+    display: flex
+
+  .info-content-vacancy-description__work
+    display: block
+  
+  .info-content-vacancy-description__text
+    padding-left: 25px
+  
+  .info-content-vacancy-description__salary
+    margin-bottom: 40px
+
+  .info-content-vacancy-description__links
+    margin-bottom: 40px
+  
+  .info-content-vacancy-description__location
+    display: none
+
+// ФІКС БАГІВ ========================================================>
+
+.swiper-slide a.btn
+  margin-bottom: 30px
+	
+@media (max-width: 1399px)
+
+  section.recentered .container h2.title
+    max-width: 400px
+
+@media (max-width: 991.98px)
+
+  section.about-us .container > img
+    display: none
+
+  section.about-us .container .card
+    width: 100%
+  
+  section.recentered .container > img
+    display: none
+
+  section.recentered .container .card
+    width: 100%
+
+  section.markets .tabs .tab-inn .tab.row
+    display: flex
+    margin-left: 0
+
+@media (max-width: 420px)
+
+  section.phones-contact .row > div:nth-of-type(1) .title
+    flex: 0 0 100px
+	
+  section.phones-contact .row > div:nth-of-type(1) .phones a
+    font-size: 14px
+
+
