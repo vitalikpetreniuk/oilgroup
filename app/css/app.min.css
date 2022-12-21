@@ -19566,13 +19566,13 @@ footer.footer .btm-block a {
   margin-right: 100px;
 }
 
-.content-vacancy-description__list {
+.content-vacancy-description__right > ul {
   list-style: none;
   padding: 0;
   margin: 0 0 20px 0;
 }
 
-.content-vacancy-description__list li {
+.content-vacancy-description__right > ul li {
   position: relative;
   font-size: 16px;
   font-weight: 400;
@@ -19581,7 +19581,7 @@ footer.footer .btm-block a {
   padding-left: 25px;
 }
 
-.content-vacancy-description__list li:not(.content-vacancy-description__title)::before {
+.content-vacancy-description__right > ul li:not(:first-child)::before {
   content: "";
   position: absolute;
   top: 16px;
@@ -19592,7 +19592,7 @@ footer.footer .btm-block a {
   background: #222222;
 }
 
-li.content-vacancy-description__title {
+.content-vacancy-description__right > ul li:first-child {
   font-size: 20px;
   font-weight: 600;
   color: #003887;
@@ -19912,6 +19912,10 @@ li.content-vacancy-description__title {
     display: none;
   }
 }
+.news__pagination {
+  margin-top: 30px;
+}
+
 .swiper-slide a.btn {
   margin-bottom: 30px;
 }
@@ -19949,6 +19953,10 @@ li.content-vacancy-description__title {
   }
   section.phones-contact .row > div:nth-of-type(1) .phones a {
     font-size: 14px;
+  }
+  .pagination li a {
+    width: 40px;
+    height: 40px;
   }
 }
 .lifestyle {
