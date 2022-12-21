@@ -19566,13 +19566,13 @@ footer.footer .btm-block a {
   margin-right: 100px;
 }
 
-.content-vacancy-description__right > ul {
+.content-vacancy-description__list {
   list-style: none;
   padding: 0;
   margin: 0 0 20px 0;
 }
 
-.content-vacancy-description__right > ul li {
+.content-vacancy-description__list li {
   position: relative;
   font-size: 16px;
   font-weight: 400;
@@ -19581,7 +19581,7 @@ footer.footer .btm-block a {
   padding-left: 25px;
 }
 
-.content-vacancy-description__right > ul li:not(:first-child)::before {
+.content-vacancy-description__list li:not(.content-vacancy-description__title)::before {
   content: "";
   position: absolute;
   top: 16px;
@@ -19592,7 +19592,7 @@ footer.footer .btm-block a {
   background: #222222;
 }
 
-.content-vacancy-description__right > ul li:first-child {
+li.content-vacancy-description__title {
   font-size: 20px;
   font-weight: 600;
   color: #003887;
@@ -19864,6 +19864,14 @@ footer.footer .btm-block a {
   background: #4095CF;
   color: #fff;
   margin-top: 40px;
+  -webkit-transition: all linear 0.2s;
+  -o-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+}
+
+.info-content-vacancy-description__fidback:hover {
+  color: #fff;
+  background: #3282b9;
 }
 
 @media (max-width: 991.98px) {
@@ -19912,10 +19920,6 @@ footer.footer .btm-block a {
     display: none;
   }
 }
-.news__pagination {
-  margin-top: 30px;
-}
-
 .swiper-slide a.btn {
   margin-bottom: 30px;
 }
@@ -19953,10 +19957,6 @@ footer.footer .btm-block a {
   }
   section.phones-contact .row > div:nth-of-type(1) .phones a {
     font-size: 14px;
-  }
-  .pagination li a {
-    width: 40px;
-    height: 40px;
   }
 }
 .lifestyle {
@@ -20051,6 +20051,10 @@ ul.row-lifestyle__list {
     margin-top: 30px;
   }
 }
+.news__pagination {
+  margin-top: 30px;
+}
+
 .collapse._close {
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -20095,6 +20099,10 @@ ul.row-lifestyle__list {
   }
   section.phones-contact .row > div:nth-of-type(1) .phones a {
     font-size: 14px;
+  }
+  .pagination li a {
+    width: 40px;
+    height: 40px;
   }
 }
 .prod-main__content {
