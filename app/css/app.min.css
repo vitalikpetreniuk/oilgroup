@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Bootstrap Reboot v5.2.2 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
@@ -19837,6 +19838,29 @@ li.content-vacancy-description__title {
   transition: 0.4s;
 }
 
+.pagination li span.current {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 51px;
+  height: 51px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  margin-right: 15px;
+  border-radius: 7px;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  color: #FFFFFF;
+  background-color: #4095CF;
+  text-decoration: none;
+}
+
 .pagination li a:hover {
   color: #FFFFFF;
   background-color: #4095CF;
@@ -20100,6 +20124,12 @@ ul.row-lifestyle__list {
   section.phones-contact .row > div:nth-of-type(1) .phones a {
     font-size: 14px;
   }
+  .pagination {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .pagination li a {
     width: 40px;
     height: 40px;
@@ -20123,4 +20153,32 @@ ul.row-lifestyle__list {
 
 .prod-main__text {
   width: 100%;
+}
+
+/* Сторінка пошуку =========================================================> */
+.prod-boxes {
+  padding: 100px 30px;
+}
+
+.prod-boxes .p-box {
+  margin-bottom: 15px;
+}
+
+.prod-boxes .p-box .inn .a-img {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.prod-boxes .p-box .inn .a-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.prod-boxes .p-box .inn p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
