@@ -446,11 +446,11 @@
 						</a>
 						<div class="info-content-vacancy-description__cont">
 							<p class="info-content-vacancy-description__title"><a href="#">Бухгалтер на нове підприємство</a></p>
-							<div class="info-content-vacancy-description__text">
+							<!-- <div class="info-content-vacancy-description__text">
 								<p>Адреса: 03083 вул. Пирогівський</p>
 								<p>Шлях, 32</p>
 								<p>Телефон: <a href="tel:0445370644">044-537-06-44</a></p>
-							</div>
+							</div> -->
 							<p class="info-content-vacancy-description__salary">ЗП: 10 000 - 12 000</p>
 							<p class="info-content-vacancy-description__request">
 								ПРОСИМ надсилати розгорнуте резюме у вигляді вкладеного файлу на вказані контактні дані з обов'язковою вказівкою назви вакансії МЕНЕДЖЕР З ПРОДАЖУ ЗМАЗОВИХ МАТЕРІАЛІВ
@@ -466,38 +466,50 @@
 										<span><img src="images/dist/mail-bg.svg" alt=""></span>
 									</a>
 								</div>
-								<span class="info-content-vacancy-description__location">Київ</span>
+								<div class="info-content-vacancy-description__location">
+									<span>Київ</span>
+									<p>03083 вул. Пирогівський Шлях, 32</p>
+								</div>
 								<a class="info-content-vacancy-description__fidback" href="#">Відгукнутись</a>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="content-vacancy-description__right">
-					<ul>
-						<li>Вимоги:</li>
-						<li>вища освіта</li>
-						<li>досвід в активних продажах не менше 2 років ОБОВ'ЯЗКОВИЙ! (додатковою перевагою буде досвід продажу мастильних матеріалів)</li>
-						<li>уміння будувати та підтримувати добрі особисті стосунки з Клієнтами</li>
-						<li>особисті якості (комунікабельність, чесність, прагнення досягти результату)</li>
-						<li>особистий автомобіль</li>
-						<li>відмінні знання ПК</li>
-					</ul>
-					<ul>
-						<li>Обов’язки:</li>
-						<li>розширення клієнтської бази, укладання договорів.</li>
-						<li>залучення нових клієнтів (прямий, активний пошук)</li>
-						<li>80% робочого часу — поза офісом, робота у «полі»</li>
-						<li>відповідальність за виконання плану продажу</li>
-						<li>ведення та звітності</li>
-					</ul>
-					<ul>
-						<li>Умови:</li>
-						<li>соціальний пакет</li>
-						<li>з/пл, за підсумками співбесіди</li>
-						<li>графік роботи: 8:00-17:00, 2 вихідні</li>
-					</ul>
+					<div>
+						<span>Вимоги:</span>
+						<ul>
+							<li>вища освіта</li>
+							<li>досвід в активних продажах не менше 2 років ОБОВ'ЯЗКОВИЙ! (додатковою перевагою буде досвід продажу мастильних матеріалів)</li>
+							<li>уміння будувати та підтримувати добрі особисті стосунки з Клієнтами</li>
+							<li>особисті якості (комунікабельність, чесність, прагнення досягти результату)</li>
+							<li>особистий автомобіль</li>
+							<li>відмінні знання ПК</li>
+						</ul>
+					</div>
+					<div>
+						<span>Обов’язки:</span>
+						<ul>
+							<li>розширення клієнтської бази, укладання договорів.</li>
+							<li>залучення нових клієнтів (прямий, активний пошук)</li>
+							<li>80% робочого часу — поза офісом, робота у «полі»</li>
+							<li>відповідальність за виконання плану продажу</li>
+							<li>ведення та звітності</li>
+						</ul>
+					</div>
+					<div>
+						<span>Умови:</span>
+						<ul>
+							<li>соціальний пакет</li>
+							<li>з/пл, за підсумками співбесіди</li>
+							<li>графік роботи: 8:00-17:00, 2 вихідні</li>
+						</ul>
+					</div>
 					<div class="content-vacancy-description__fidback">
-						<span>Київ</span>
+						<div class="info-content-vacancy-description__location info-content-vacancy-description__location_mb">
+							<span>Київ</span>
+							<p>03083 вул. Пирогівський Шлях, 32</p>
+						</div>
 						<a href="#">Відгукнутись</a>
 					</div>
 				</div>
@@ -649,32 +661,32 @@
 
 				<div class="row">
 					<div class="col-lg-12">
-						<span></span>
-						<select name="" id="">
-							<option value="">Консультація по підбору мастила</option>
-							<option value="">Консультація по підбору мастила</option>
-							<option value="">Консультація по підбору мастила</option>
+						<span>Тема</span>
+						<select name="service" data-value="" id="service">
+							<option value="1">Консультація по підбору мастила 1</option>
+							<option value="2">Консультація по підбору мастила 2</option>
+							<option value="3">Консультація по підбору мастила 3</option>
 						</select>
 					</div>
 					<div class="col-lg-12">
 							<span>
 								Ім’я<span>*</span>
 							</span>
-						<input required value="Тарас" type="text">
+						<input required placeholder="Тарас" type="text">
 						<span class="wpcf7-not-valid-tip" aria-hidden="true">Please fill in the required field.</span>
 					</div>
 					<div class="col-lg-12">
 							<span>
-								Прізвище<span>*</span>
+								Прізвище
 							</span>
-						<input required value="Шевченко" type="text">
+						<input placeholder="Шевченко" type="text">
 						<span class="wpcf7-not-valid-tip" aria-hidden="true">Please fill in the required field.</span>
 					</div>
 					<div class="col-lg-12">
 							<span>
-								Компанія
+								Компанія<span>*</span>
 							</span>
-						<input placeholder="Назва компанії" type="text">
+						<input required placeholder="Назва компанії" type="text">
 					</div>
 					<div class="col-lg-12">
 							<span>
@@ -684,17 +696,15 @@
 						<span class="wpcf7-not-valid-tip" aria-hidden="true">Please fill in the required field.</span>
 					</div>
 					<div class="col-lg-12">
-							<span>
-							Email
-							</span>
+							<span>Email</span>
 						<input placeholder="example@gmail.com" type="text">
 						<span class="wpcf7-not-valid-tip" aria-hidden="true">Please fill in the required field.</span>
 					</div>
 					<div class="col-lg-12">
 							<span>
-								Деталі
+								Деталі<span>*</span>
 							</span>
-						<textarea placeholder="Пишіть тут..." name="" id="text"></textarea>
+						<textarea required placeholder="Яке мастило вам потрібне?" name="" id="text"></textarea>
 					</div>
 					<div class="col-lg-12 justify-content-center">
 						<input class="btn" value="Передзвоніть мені" type="submit">

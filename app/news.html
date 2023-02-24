@@ -772,62 +772,60 @@
             <h2 class="title">
                 Відправити запит
             </h2>
-            <form action="">
+			<form action="">
 
-                <div class="row">
-                    <div class="col-lg-12">
-                        <span></span>
-                        <select name="" id="">
-                            <option value="">Консультація по підбору мастила</option>
-                            <option value="">Консультація по підбору мастила</option>
-                            <option value="">Консультація по підбору мастила</option>
-                        </select>
-                    </div>
-                    <div class="col-lg-12">
+				<div class="row">
+					<div class="col-lg-12">
+						<span>Тема</span>
+						<select name="service" data-value="" id="service">
+							<option value="1" style="display: none;">Консультація по підбору мастила 1</option>
+							<option value="2">Консультація по підбору мастила 2</option>
+							<option value="3">Консультація по підбору мастила 3</option>
+						</select>
+					</div>
+					<div class="col-lg-12">
 							<span>
 								Ім’я<span>*</span>
 							</span>
-                        <input required value="Тарас" type="text">
-                        <span class="wpcf7-not-valid-tip" aria-hidden="true">Please fill in the required field.</span>
-                    </div>
-                    <div class="col-lg-12">
+						<input required placeholder="Тарас" type="text">
+						<span class="wpcf7-not-valid-tip" aria-hidden="true">Please fill in the required field.</span>
+					</div>
+					<div class="col-lg-12">
 							<span>
-								Прізвище<span>*</span>
+								Прізвище
 							</span>
-                        <input required value="Шевченко" type="text">
-                        <span class="wpcf7-not-valid-tip" aria-hidden="true">Please fill in the required field.</span>
-                    </div>
-                    <div class="col-lg-12">
+						<input placeholder="Шевченко" type="text">
+						<span class="wpcf7-not-valid-tip" aria-hidden="true">Please fill in the required field.</span>
+					</div>
+					<div class="col-lg-12">
 							<span>
-								Компанія
+								Компанія<span>*</span>
 							</span>
-                        <input placeholder="Назва компанії" type="text">
-                    </div>
-                    <div class="col-lg-12">
+						<input required placeholder="Назва компанії" type="text">
+					</div>
+					<div class="col-lg-12">
 							<span>
 							Телефон<span>*</span>
 							</span>
-                        <input required placeholder="+380 (__) - ___ - __ - __" type="tel">
-                        <span class="wpcf7-not-valid-tip" aria-hidden="true">Please fill in the required field.</span>
-                    </div>
-                    <div class="col-lg-12">
+						<input required placeholder="+380 (__) - ___ - __ - __" type="tel">
+						<span class="wpcf7-not-valid-tip" aria-hidden="true">Please fill in the required field.</span>
+					</div>
+					<div class="col-lg-12">
+							<span>Email</span>
+						<input placeholder="example@gmail.com" type="text">
+						<span class="wpcf7-not-valid-tip" aria-hidden="true">Please fill in the required field.</span>
+					</div>
+					<div class="col-lg-12">
 							<span>
-							Email
+								Деталі<span>*</span>
 							</span>
-                        <input placeholder="example@gmail.com" type="text">
-                        <span class="wpcf7-not-valid-tip" aria-hidden="true">Please fill in the required field.</span>
-                    </div>
-                    <div class="col-lg-12">
-							<span>
-								Деталі
-							</span>
-                        <textarea placeholder="Пишіть тут..." name="" id="text" ></textarea>
-                    </div>
-                    <div class="col-lg-12 justify-content-center">
-                        <input class="btn" value="Передзвоніть мені" type="submit">
-                    </div>
-                </div>
-            </form>
+						<textarea required placeholder="Яке мастило вам потрібне?" name="" id="text"></textarea>
+					</div>
+					<div class="col-lg-12 justify-content-center">
+						<input class="btn" value="Передзвоніть мені" type="submit">
+					</div>
+				</div>
+			</form>
         </div>
 
     </div>

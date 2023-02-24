@@ -1008,7 +1008,7 @@ section
             img
               border-radius: 10px
               width: 100%
-              object-fit: cover
+              object-fit: contain
               height: 219px
               margin-bottom: 15px
 
@@ -1123,6 +1123,7 @@ section
         border-radius: 5px
 
         a
+
           font-weight: 700
           text-decoration: underline
           color: black
@@ -1456,6 +1457,7 @@ section
 
     #listings
       margin-bottom: 40px
+      
 
     #listings .item, .clicker
       margin-bottom: 15px
@@ -1466,7 +1468,7 @@ section
       line-height: 19px
       color: #003887
       padding: 20px 24px
-      width: 100%
+      width: calc(25% - 10px)
       align-items: center
       border-left: 4px solid $blue
       background: #FFFFFF
@@ -1860,7 +1862,6 @@ footer.footer
       padding: 0
       height: calc(100vh - 121px)
       width: 100%
-      overflow-y: scroll
       z-index: 5
       background-color: white
 
@@ -2205,6 +2206,7 @@ footer.footer
           padding: 15px 24px
           font-size: 16px
           line-height: 20px
+          width: 100%
 
           &:after
             top: 15px
@@ -2584,29 +2586,49 @@ footer.footer
 .sertificates .container
   margin-bottom: 40px
 
+.sertificates__content
+  background: #fff
+  padding: 50px 80px
+  border-radius: 10px
+
+.sertificates__content .sertificates__box:not(:last-child)
+  margin-bottom: 75px
+
 .sertificates__box
   display: flex
   flex-wrap: wrap
   column-gap: 100px
-  row-gap: 115px
-  background: #fff
-  border-radius: 10px
-  padding: 35px 80px 95px
+  row-gap: 50px
+//   padding: 35px 80px 95px
+
+.sertificates__title
+  width: 100%
+  max-width: none
+  margin-bottom: 0!important
 
 .item-sertificates
-  width: calc(33.33% - 100px)
+  width: calc(33.33% - 66.66px)
+
+.item-sertificates_big
+  width: calc(50% - 50px)
 
 .item-sertificates__title
-  font-size: 20px
-  font-weight: 600
+  display: block
+  font-size: 16px
+  font-weight: 300
   line-height: 1.5
-  padding-left: 30px
-  border-left: 4px solid #4095CF
-  margin-bottom: 50px
-
+  color: #000
+  cursor: pointer
 
 .item-sertificates__ibox
   display: block
+  margin-bottom: 18px
+  border: 3px solid transparent
+  transition: all linear 0.2s
+  border-radius: 10px
+
+.item-sertificates__ibox:hover
+  border: 3px solid #4095CF
 
 .item-sertificates__ibox img
   width: 100%
@@ -2620,27 +2642,27 @@ footer.footer
     margin-bottom: 20px
   
   .sertificates__box
-    column-gap: 0
+    column-gap: 12px
     row-gap: 25px
     background: transparent
     border-radius: 0
     padding: 0
   
   .item-sertificates
-    display: flex
-    align-items: flex-start
-    gap: 10px
-    width: 100%
-  
+    width: calc(33.33% - 8px)
+
+  .item-sertificates_big
+    width: calc(50% - 6px)
+
+  .sertificates__content
+    padding: 0
+    background: transparent
+
+@media (max-width: 768px)
+
   .item-sertificates__title
-    width: calc(50% - 5px)
-    font-size: 16px
-    padding-left: 15px
-    border-left: 4px solid #4095CF
-  
-  
-  .item-sertificates__ibox
-    width: calc(50% - 5px)
+    font-size: 10px
+
 
 // VACANCIES ========================================================>
 
@@ -2674,14 +2696,12 @@ footer.footer
   height: 15px
   background: url(../images/dist/work-all.svg) center/contain no-repeat
 
-
-
-
 .item-block-vacancies
   display: flex
   flex-direction: column
   justify-content: space-between
   width: calc(33.33% - 10px)
+  min-height: 450px
   background: #fff
   padding: 5px
   border-radius: 10px
@@ -2696,7 +2716,11 @@ footer.footer
   object-fit: contain
 
 .item-block-vacancies__cont
-  padding: 0 30px 30px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  padding: 30px
+  flex-grow: 1
 
 .item-block-vacancies__cont_pt
   display: flex
@@ -2735,23 +2759,20 @@ footer.footer
   font-weight: 600
   line-height: 1.9
   color: #4095CF
-  margin-bottom: 90px
-
+  margin-bottom: 10px
+//   margin-bottom: 90px
 
 .item-block-vacancies__contact
-  display: flex
-  justify-content: space-between
-  align-items: flex-end
+//   display: flex
+//   justify-content: space-between
+//   align-items: flex-end
 
 .item-block-vacancies__location
-  display: block
   position: relative
-  font-size: 20px
-  font-weight: 600
-  line-height: 1.9
   color: #4095CF
   padding-left: 43px
   margin-right: 5px
+  line-height: 1.5
 
 .item-block-vacancies__location::before
   content: ""
@@ -2762,6 +2783,14 @@ footer.footer
   width: 33px
   height: 33px
   background: url(../images/dist/work-map.svg) left center/contain no-repeat
+
+.item-block-vacancies__location span
+  font-size: 20px
+  font-weight: 600
+
+.item-block-vacancies__location p
+  font-size: 16px
+  font-weight: 400
 
 .item-block-vacancies__link
   display: inline-flex
@@ -2812,8 +2841,8 @@ footer.footer
   .item-block-vacancies__text
     padding-left: 25px
   
-  .item-block-vacancies__salary
-    margin-bottom: 40px
+//   .item-block-vacancies__salary
+//     margin-bottom: 40px
   
   .item-block-vacancies__location
     font-size: 18px
@@ -2831,6 +2860,7 @@ footer.footer
 
   .item-block-vacancies
     width: 100%
+    min-height: 400px
 
 // VACANCY PAGE ========================================================>
 
@@ -2918,25 +2948,25 @@ li.content-vacancy-description__title
   gap: 10px
   margin-top: 45px
 
-.content-vacancy-description__fidback span
-  display: block
-  position: relative
-  font-size: 20px
-  font-weight: 600
-  line-height: 1.9
-  color: #4095CF
-  padding-left: 43px
-  margin-right: 5px
+// .content-vacancy-description__fidback span
+//   display: block
+//   position: relative
+//   font-size: 20px
+//   font-weight: 600
+//   line-height: 1.9
+//   color: #4095CF
+//   padding-left: 43px
+//   margin-right: 5px
 
-.content-vacancy-description__fidback span::before
-  content: ""
-  position: absolute
-  top: 50%
-  transform: translateY(-50%)
-  left: 0
-  width: 33px
-  height: 33px
-  background: url(../images/dist/work-map.svg) left center/contain no-repeat
+// .content-vacancy-description__fidback span::before
+//   content: ""
+//   position: absolute
+//   top: 50%
+//   transform: translateY(-50%)
+//   left: 0
+//   width: 33px
+//   height: 33px
+//   background: url(../images/dist/work-map.svg) left center/contain no-repeat
 
 .content-vacancy-description__fidback a
   display: inline-flex
@@ -3016,14 +3046,11 @@ li.content-vacancy-description__title
   object-fit: contain
 
 .info-content-vacancy-description__location
-  display: block
   position: relative
-  font-size: 20px
-  font-weight: 600
-  line-height: 1.9
   color: #4095CF
   padding-left: 43px
   margin-right: 5px
+  line-height: 1.5
 
 .info-content-vacancy-description__location::before
   content: ""
@@ -3034,6 +3061,51 @@ li.content-vacancy-description__title
   width: 33px
   height: 33px
   background: url(../images/dist/work-map.svg) left center/contain no-repeat
+
+.info-content-vacancy-description__location span
+  font-size: 20px
+  font-weight: 600
+
+.info-content-vacancy-description__location p
+  font-size: 16px
+  font-weight: 400
+  margin: 0
+
+.content-vacancy-description__right > div:not(:last-child)
+  margin-bottom: 20px
+
+.content-vacancy-description__right > div > span
+  display: inline-block
+  font-size: 20px
+  font-weight: 600
+  line-height: 1.9
+  color: #003887
+
+.content-vacancy-description__right ul
+  margin: 0
+  padding: 0
+  list-style: none
+  font-size: 16px
+  font-weight: 400
+  line-height: 1.93
+  color: #222222
+
+
+.content-vacancy-description__right ul li
+  position: relative
+  padding-left: 10px
+
+.content-vacancy-description__right ul li:before
+  content: ""
+  position: absolute
+  top: 13px
+  left: 0
+  width: 2px
+  height: 2px
+  background: #000
+
+
+.content-vacancy-description__right
 
 .pagination
   list-style: none
@@ -3137,6 +3209,18 @@ li.content-vacancy-description__title
   .info-content-vacancy-description__location,
   .info-content-vacancy-description__fidback
     display: none
+
+  .info-content-vacancy-description__location_mb
+    display: block
+
+@media (max-width: 768px)
+  
+  .content-vacancy-description__fidback
+    flex-direction: column
+    align-items: flex-start
+
+
+
 
 // ФІКС БАГІВ ========================================================>
 
@@ -3331,23 +3415,338 @@ ul.row-lifestyle__list
 
 /* Сторінка пошуку =========================================================> */
 
-.prod-boxes 
+.prod-boxes
   padding: 100px 30px
 
-.prod-boxes .p-box 
+.prod-boxes .p-box
   margin-bottom: 15px
 
-.prod-boxes .p-box .inn .a-img 
+.prod-boxes .p-box .inn .a-img
   display: block
   margin-bottom: 10px
 
-.prod-boxes .p-box .inn .a-img img 
+.prod-boxes .p-box .inn .a-img img
   width: 100%
   height: 100%
   object-fit: contain
 
-.prod-boxes .p-box .inn p 
+.prod-boxes .p-box .inn p
   display: -webkit-box
   -webkit-line-clamp: 3
   -webkit-box-orient: vertical
   overflow: hidden
+
+/* Сторінка policy =========================================================> */
+
+.policy .container .policy__content
+  background: #fff
+  padding: 50px 110px 100px
+  border-radius: 10px
+
+.policy__title
+  display: inline-block
+  font-size: 36px
+  font-weight: 600
+  line-height: 1.38
+  color: #000
+  margin-bottom: 10px
+
+.policy__text
+  font-size: 16px
+  font-weight: 400
+  line-height: 1.93
+  color: #464647
+
+.policy__text strong
+  font-weight: 500
+
+@media (max-width: 991.98px)
+
+  .policy__content
+    background: transparent
+    padding: 0
+    border-radius: 0
+
+@media (max-width: 768px)
+
+  .policy__title
+    font-size: 24px
+
+  .policy__text
+    font-size: 16px
+
+
+
+// NEW MEGAMENU ==============================================>
+
+#mega-menu-primary > li > .mega-sub-menu .mega-menu-row > ul > li ul
+  display: flex
+  flex-direction: column
+
+#mega-menu-primary > li > .mega-sub-menu.active
+  min-height: calc(100vh - 193px)
+  min-width: 250px
+  width: auto
+  padding: 67px 0px 100px
+  padding-left: calc(50px + 250 * ((100vw - 992px) / (1920 - 992)))
+  overflow-y: unset
+  padding-top: 40px
+
+.oilgroup-mega-wrap > ul > li
+  display: block!important
+  margin: 0!important
+
+#mega-menu-primary > li > .mega-sub-menu .mega-menu-row .bruise > ul > li > a
+  min-height: unset
+  margin: 0
+  padding-right: 20px
+  border-right: 5px solid transparent
+  transition: all linear 0.2s
+
+#mega-menu-primary > li > .mega-sub-menu .mega-menu-row .bruise > ul > li > a:hover
+  background: #F5F5F5
+  border-right: 5px solid #D9D9D9
+
+#mega-menu-primary > li > .mega-sub-menu-top.active
+  padding: 40px 15px
+  min-height: unset
+  height: auto
+  width: 100%
+  overflow-y: visible
+
+.mega-sub-menu-top__cont
+  display: flex
+  gap: 15px
+  max-width: 1317px
+  margin: 0 auto
+
+.mega-sub-menu-top__item
+  display: flex
+  align-items: flex-end
+  position: relative
+  width: calc(16.66% - 12.5px)
+  height: 172px
+  border-radius: 10px
+  padding: 0!important
+  overflow: hidden
+
+.mega-sub-menu-top__item::before
+  content: ""
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 7px
+  background: #14B0A9
+  z-index: 3
+
+.mega-sub-menu-top__item::after
+  content: ""
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 50%
+  background: linear-gradient(0deg, rgba(31,33,37,1) 0%, rgba(31,33,37,0) 100%)
+  z-index: 2
+
+.mega-sub-menu-top__item_1::before
+  background: #14B0A9
+.mega-sub-menu-top__item_2::before
+  background: #F07D00
+.mega-sub-menu-top__item_3::before
+  background: #E93F33
+.mega-sub-menu-top__item_4::before
+  background: #003887
+.mega-sub-menu-top__item_5::before
+  background: #C32230
+.mega-sub-menu-top__item_6::before
+  background: #003887
+
+.mega-sub-menu-top__item p
+  position: relative
+  max-width: 130px
+  font-size: 14px
+  font-weight: 600
+  line-height: 1.21
+  color: #fff
+  margin: 0 0 18px 10px
+  z-index: 3
+
+.mega-sub-menu-top-item__ibg
+  position: absolute
+  width: 100%
+  height: 100%
+  object-fit: cover
+  filter: grayscale(1)
+  transition: all linear 0.2s
+
+.mega-sub-menu-top-item__ibg
+
+.mega-sub-menu-top-item__logo
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  z-index: 3
+
+.mega-sub-menu-top-item__logo img
+  width: 100%
+  height: 100%
+  object-fit: contain
+
+.mega-sub-menu-top__item_1 .mega-sub-menu-top-item__logo
+  width: 75px
+  height: 77px
+
+.mega-sub-menu-top__item_2 .mega-sub-menu-top-item__logo
+  width: 98px
+  height: 72px
+
+.mega-sub-menu-top__item_3 .mega-sub-menu-top-item__logo
+  width: 82px
+  height: 26px
+
+.mega-sub-menu-top__item_4 .mega-sub-menu-top-item__logo
+  width: 65px
+  height: 65px
+
+.mega-sub-menu-top__item_5 .mega-sub-menu-top-item__logo
+  width: 81px
+  height: 39px
+
+.mega-sub-menu-top__item_6 .mega-sub-menu-top-item__logo
+  width: 119px
+  height: 58px
+
+.mega-sub-menu-top-item:hover .mega-sub-menu-top-item__ibg
+  filter: grayscale(0)
+
+
+.mega-menu-row
+  height: 100%
+  overflow: auto
+
+.mega-menu-row::-webkit-scrollbar
+  width: 0px
+
+// .mega-menu-row::-webkit-scrollbar-track
+//   background: #fff
+
+// .mega-menu-row::-webkit-scrollbar-thumb
+//   background-color: #4095CF
+//   border-radius: 20px
+
+.sub-menu
+  display: block!important
+  opacity: 0
+  visibility: hidden
+  pointer-events: none
+  position: absolute
+  left: 99%
+  top: 0
+  height: calc(100vh - 193px)
+  width: 300px!important
+  background: #fff
+  padding: 45px 40px!important
+  overflow: auto
+  border-left: 2px solid #EFEFEF
+  transition: all linear 0.2s
+
+.sub-menu._active
+  opacity: 1
+  visibility: visible
+  pointer-events: all
+
+.sub-menu__close
+  display: none
+  position: absolute
+  top: 27px
+  right: 21px
+  width: 14px
+  height: 14px
+
+.sub-menu__close img
+  width: 100%
+  height: 100%
+  object-fit: contain
+
+.sub-menu__item
+  font-size: 13px
+  font-weight: 400
+  line-height: 1.53
+  color: #222222
+  margin-bottom: 11px!important
+
+@media (max-width: 992px)
+
+  #mega-menu-primary > li > .mega-sub-menu-top.active
+    height: 100%
+    overflow: auto
+
+  .mega-sub-menu-top__cont
+    margin: 30px auto 0
+    flex-wrap: wrap
+    gap: 16px
+
+  .mega-sub-menu-top__item
+    width: calc(50% - 8px)
+
+  #mega-menu-primary > li > .mega-sub-menu.active
+    width: 100%
+    padding: 80px 15px 110px 20px
+
+  .sub-menu
+    top: 0
+    height: 100%
+    width: 100%!important
+    background: #fff
+    padding: 70px 15px 20px 15px!important
+    overflow: auto
+    border: none
+    z-index: 2
+
+  .sub-menu._active
+    left: 0px
+
+  #mega-menu-primary > li > .mega-sub-menu .mega-menu-row .bruise > ul > li > a
+    border-right: none
+
+  #mega-menu-primary > li > .mega-sub-menu .mega-menu-row .bruise > ul > li > a:hover
+    border: none
+    background: transparent
+
+.mega-sub-menu.layer-2
+  position: relative
+
+.mega-sub-menu.layer-2::before
+  content: ""
+  position: absolute
+  top: 48px
+  left: calc(30px + 240 * ((100vw - 992px) / (1920 - 992)))
+  width: 15px
+  height: 15px
+  background: url(../images/dist/arr3.png) center/contain no-repeat
+  transform: rotate(90deg)
+  animation: move 1s infinite linear
+
+@keyframes move
+  0%
+    top: 48px
+  50%
+    top: 60px
+  100% 
+    top: 48px
+
+@media (max-width: 992px)
+  .mega-sub-menu.layer-2::before
+    top: 90px
+    left: 2px
+
+  @keyframes move
+    0%
+      top: 90px
+    50%
+      top: 100px
+    100% 
+      top: 90px
